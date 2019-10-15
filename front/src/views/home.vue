@@ -1,6 +1,7 @@
 <template>
     <div class="home-con">
         <h1>welcome to more-art-than.science</h1>
+        <h6>test deploy #4</h6>
     </div>
 </template>
 

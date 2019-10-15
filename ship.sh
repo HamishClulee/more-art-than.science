@@ -14,5 +14,5 @@ MSG=". Deployed: $DATE"
 git commit -m "$1 $MSG"
 git push
 echo "---------------------- Deploying lim ------------------------------------------"
-ssh mats 'cd /var/www/more-art-than.science && git reset --hard && git pull && sudo systemctl restart mats.service'
+ssh hamishclulee@more-art-than.science 'cd /var/www/more-art-than.science && git reset --hard && git pull && sudo systemctl restart mats.service'
 echo "---------------------- Deploy complete. Have a nice day. ----------------------"

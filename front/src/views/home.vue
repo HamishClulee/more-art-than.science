@@ -10,8 +10,7 @@
             <div class="intro">
                 <h4>Welcome to M~A~T~S</h4>
                 <h5>Home of Hamish Clulee</h5>
-                <p>I'm a Web Developer from New Zealand. It's more than likely you will find me working on the front end. I'm especially passionate about UI/UX design and Front End Ops.</p>
-                <p><em>Full Stack approved.</em></p>
+                <p>I'm a Web Developer from New Zealand, currently living in Asia. It's more than likely you will find me working on the front end. I'm especially passionate about building intelligent and performant user interfaces.</p>
                 <div class="header-icons-home">
                     <a href="https://github.com/HamishClulee" target="_blank" class="icon-container-item">
                         <img src="https://more-art-than.science/images/github.svg" height="30"/>
@@ -65,7 +64,7 @@
         margin-bottom: 15px
         margin-top: 10px
         letter-spacing: 4px
-        font-size: 4em
+        font-size: 5em
 .header-icons
   margin: 30px
 
@@ -84,24 +83,15 @@
   color: $font-light
   width: 320px
 
-.icons-container
-  position: absolute
-  top: 90vh
-  left: 50%
-  transform: translate(-50%, -50%)
-  display: flex
-  align-items: center
-  justify-content: center
-  flex-direction: row
-
 .icon-container-item
   margin: 20px
 
 .top
-  height: 70vh
-  width: 100%
+  height: 65vh
+  width: 100vw
   display: flex
   flex-direction: column
+  overflow-x: hidden !important
 
 .bottom
   height: 15vh

@@ -20,20 +20,12 @@
     display: flex
     flex-direction: row
     cursor: pointer
-    transition: all 0.4s ease
+    transition: all 0.6s ease
     h5
-        transition: all 1s
+        transition: all 0.6s
         color: whitesmoke
         font-size: 1.5em
         text-transform: uppercase
-    &:hover
-        background-color: white
-        transition: all 1s
-    &:hover
-        h5
-        border-bottom: 2px solid #ffd600
-        transition: all 1s
-        transition: all 1s
 .foot-itm
     width: 32%
     display: flex
@@ -41,6 +33,11 @@
     align-items: center
     justify-content: center
     border: 1px solid whitesmoke
+    &:hover
+        background-color: white
+        transition: all 0.2s
+        color: $tertiary
+        border: 1px solid transparent
 h1
     color: white
     font-size: 2em

@@ -1,5 +1,7 @@
 <template>
-    <div class="cv-con">cv</div>
+    <div class="cv-con">
+
+    </div>
 </template>
 
 <script>

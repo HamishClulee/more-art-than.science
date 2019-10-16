@@ -65,6 +65,10 @@
         margin-top: 10px
         letter-spacing: 4px
         font-size: 5em
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: 3em
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: 2em
 .header-icons
   margin: 30px
 
@@ -75,13 +79,14 @@
   margin-left: -20px
 
 .text-container
-  position: absolute
-  top: 55vh
-  right: -140px
-  transform: translate(-50%, -50%)
-  text-align: right
-  color: $font-light
-  width: 320px
+    position: absolute
+    top: 55vh
+    right: -140px
+    transform: translate(-50%, -50%)
+    text-align: right
+    color: $font-light
+    width: 320px
+
 
 .icon-container-item
   margin: 20px
@@ -102,6 +107,19 @@
   align-items: flex-end
 .intro
     width: 40vw
+    @media (min-width: 520px) and (max-width: 1080px)
+        width: 60vw
+    @media (min-width: 0px) and (max-width: 520px)
+        width: 94vw
     h5, p
         color: lighten($font, 30)
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: 1.2em
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: 1em
+    h5
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: 1.6em
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: 1.4em
 </style>

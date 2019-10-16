@@ -15,7 +15,7 @@
                     </figure>
                 </div>
                 <div class="tech-con">
-                    <h2>Stack</h2>
+                    <h3>Stack</h3>
                     <div class="tech-itm">
                         <div class="itm-name">Frontend:</div>
                         <div class="itm-val">{{ tech.front }}</div>
@@ -72,12 +72,27 @@
 </script>
 <style lang="sass" scoped>
 .sum-con
-    width: 90%
+    width: 95%
     margin-left: auto
     margin-right: auto
     margin-bottom: 150px
-h4
-    color: $font-light
+    @media (min-width: 0px) and (max-width: 780px)
+        width: 100%
+        margin-bottom: 50px
+    h2
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: 3.4em
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: 2em
+            margin-top: 10px
+            margin-bottom: 5px
+h3
+    color: darken($font-light, 20)
+    @media (min-width: 520px) and (max-width: 1080px)
+        font-size: 1.6em
+    @media (min-width: 0px) and (max-width: 520px)
+        margin-top: 10px
+        font-size: 1.4em
 .fin-con
     font-size: 3em
     width: 100%
@@ -87,6 +102,11 @@ h4
     justify-content: center
     color: $tertiary
     margin-top: 50px
+    @media (min-width: 520px) and (max-width: 1080px)
+        font-size: 1.6em
+    @media (min-width: 0px) and (max-width: 520px)
+        margin-top: 30px
+        height: 60px
 p
     font-size: 1.2em
 .fig-itm
@@ -98,15 +118,27 @@ figure
 .two-col
     display: flex
     flex-direction: row
+    @media (min-width: 0px) and (max-width: 780px)
+        flex-direction: column
 .tech-con
     width: 29%
     display: flex
     flex-direction: column
     padding: 20px 40px
+    @media (min-width: 0px) and (max-width: 780px)
+        width: 95%
+        margin-left: auto
+        margin-right: auto
+        padding: 0
     .tech-itm
         display: flex
         flex-direction: row
         font-size: 1.3em
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: 1.2em
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: 1.1em
+        font-size: 1.4em
         .itm-name
             color: $font-light
             width: 80px
@@ -118,7 +150,11 @@ figure
     grid-gap: 4px
     height: 50vh
     width: 70%
-    padding: 5px 2px 5px 8px
+    @media (min-width: 0px) and (max-width: 780px)
+        width: 95%
+        margin-left: auto
+        margin-right: auto
+    padding: 0
     transition: all 1s ease
     &:hover
         background: lighten($font, 60)

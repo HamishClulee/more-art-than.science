@@ -25,7 +25,12 @@
         transition: all 0.6s
         color: whitesmoke
         font-size: 1.5em
+        text-align: center
         text-transform: uppercase
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: 1.2em
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: 1em
 .foot-itm
     width: 32%
     display: flex

@@ -71,8 +71,8 @@
 .header-icons-home
   margin-top: 30px
   text-align: center
-  text-align: right
-  margin-right: -20px
+  text-align: left
+  margin-left: -20px
 
 .text-container
   position: absolute

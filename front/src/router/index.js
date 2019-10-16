@@ -7,6 +7,13 @@ import notfound from '../views/notfound'
 Vue.use(Router)
 export default new Router({
     mode: 'history',
+    scrollBehavior (to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            return { x: 0, y: 0 }
+        }
+    },
     routes: [
         {
             path: '/',
@@ -16,7 +23,7 @@ export default new Router({
         {
             path: '/work',
             name: 'work',
-            component: work
+            component: work,
         },
         {
             path: '/cv',

@@ -2,7 +2,7 @@ $primary: #fbc02d
 $secondary: #00bfa5
 $tertiary: #ff5722
 $highlight: white
-$link: #1976D2
+$link: #2196F3
 $font: #212121
 
 $primary-light: lighten($primary, 10)
@@ -14,7 +14,7 @@ $tertiary-dark: darken($tertiary, 20)
 $highlight-light: lighten($highlight, 20)
 $highlight-dark: darken($highlight, 30%)
 $link-light: lighten($link, 20)
-$font-light: lighten($font, 30)
+$font-light: lighten($font, 40)
 $font-dark: darken($font, 30)
 
 $h1-fontsize: 3.6rem !default
@@ -36,8 +36,15 @@ body
 html
     line-height: 1.5
     font-family: $heading-font
-    color: $font-dark
     font-weight: normal
+
+.sum-con
+    h3
+        color: lighten($font, 30)
+        font-size: 2.2em
+    h6
+        font-size: 1.8em
+        color: $secondary
 
 @import "typography"
 @import "button"

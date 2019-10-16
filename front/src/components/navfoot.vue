@@ -1,7 +1,7 @@
 <template>
     <div class="foot-con">
-        <router-link tag="h5" :to="{ path: '/work'}" class="foot-itm one">work</router-link>
-        <router-link tag="h5" :to="{ path: '/cv'}" class="foot-itm two">cv</router-link>
+        <router-link tag="h5" :to="{ path: '/work'}" class="foot-itm one">SHOWCASE</router-link>
+        <router-link tag="h5" :to="{ path: '/cv'}" class="foot-itm two">cv &amp; social media</router-link>
         <router-link tag="h5" :to="{ path: '/'}" class="foot-itm three">home</router-link>
     </div>
 </template>

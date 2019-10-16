@@ -71,7 +71,6 @@
             font-size: 2em
 .header-icons
   margin: 30px
-
 .header-icons-home
   margin-top: 30px
   text-align: center
@@ -86,18 +85,14 @@
     text-align: right
     color: $font-light
     width: 320px
-
-
 .icon-container-item
   margin: 20px
-
 .top
   height: 65vh
   width: 100vw
   display: flex
   flex-direction: column
   overflow-x: hidden !important
-
 .bottom
   height: 15vh
   width: 100%

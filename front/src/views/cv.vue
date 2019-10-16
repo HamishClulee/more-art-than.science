@@ -1,5 +1,25 @@
 <template>
     <div class="cv-con">
+        <h1 class="main">Ciriculum Vitae</h1>
+        
+        <div class="header-icons-home">
+            <a href="https://github.com/HamishClulee" target="_blank" class="icon-container-item">
+                <img src="https://more-art-than.science/images/github.svg" height="60"/>
+            </a>
+            <a href="https://www.linkedin.com/in/hamish-clulee-163b1950/" target="_blank" class="icon-container-item">
+                <img src="https://more-art-than.science/images/linkedin.svg" height="60" />
+            </a>
+        </div>
+        <div class="key-con">
+            <p>VueJs - 3+ years</p>
+            <p>Javascript - 4+ years</p>
+            <p>Java - 4+ years</p>
+            <p>NodeJs - 2+ years</p>
+            <p>Linux - 4+ years</p>
+            <p>Working Remote - 3+ years</p>
+            <p>Web Development - 5+ years</p>
+        </div>
+        <div class="fin-con">~</div>
         <div v-for="(v, i) in jobs" :key="i">
             <h2>{{ v.employer }}</h2>
             <h3>{{ v.title }}</h3>
@@ -19,7 +39,7 @@
                     {
                         title: 'Software Developer',
                         employer: 'Freelance',
-                        dates: 'April 2015 - Present',
+                        dates: 'April 2015 - Present (4+ years)',
                         description: [
                             `Over the last five years I have taken on a number of freelance web dev jobs, both while working in waged positions and as a full freelancer.`,
                             `Noteable highlights:`,
@@ -92,37 +112,37 @@ usage throughout the code base.`,
     @media (min-width: 520px) and (max-width: 1080px)
         width: 90%
     @media (min-width: 0px) and (max-width: 520px)
-        width: 98%
+        width: 95%
     h2
         margin-bottom: 10px
         font-size: 3em
         @media (min-width: 520px) and (max-width: 1080px)
-            width: 90%
+            font-size: 2.6em
         @media (min-width: 0px) and (max-width: 520px)
-            width: 98%
+            font-size: 1.8em
     h3
         margin-top: 10px
         font-size: 2.5em
         color: $font-light
         @media (min-width: 520px) and (max-width: 1080px)
-            width: 90%
+            font-size: 2.2em
         @media (min-width: 0px) and (max-width: 520px)
-            width: 98%
+            font-size: 1.6em
     h5
         font-size: 1.6em
         color: $secondary
         @media (min-width: 520px) and (max-width: 1080px)
-            width: 90%
+            font-size: 1.5em
         @media (min-width: 0px) and (max-width: 520px)
-            width: 98%
+            font-size: 1.4em
     p
         font-size: 1.3em
         line-height: 1.5
         margin: 5px 0
         @media (min-width: 520px) and (max-width: 1080px)
-            width: 90%
+            font-size: 1.2em
         @media (min-width: 0px) and (max-width: 520px)
-            width: 98%
+            font-size: 1.2em
 .fin-con
     font-size: 3em
     width: 100%
@@ -137,4 +157,10 @@ usage throughout the code base.`,
     @media (min-width: 0px) and (max-width: 520px)
         margin-top: 30px
         height: 60px
+.header-icons-home
+    a
+        margin-right: 30px
+.key-con
+    p
+        font-size: 1.5em
 </style>

@@ -118,6 +118,7 @@ figure
 .two-col
     display: flex
     flex-direction: row
+    width: 100%
     @media (min-width: 0px) and (max-width: 780px)
         flex-direction: column
 .tech-con
@@ -151,7 +152,7 @@ figure
     height: 50vh
     width: 70%
     @media (min-width: 0px) and (max-width: 780px)
-        width: 95%
+        width: 100%
         margin-left: auto
         margin-right: auto
     padding: 0
@@ -165,7 +166,11 @@ figure
         &:after
             transition: all 1s ease
             content: 'view full size images...'
-            font-size: 2em
+            font-size: 1.3em
+            padding-left: 5px
+            @media (min-width: 0px) and (max-width: 780px)
+                font-size: 1.2em
+                content: 'gallery...'
             color: white
             position: realtive
             left: 50%

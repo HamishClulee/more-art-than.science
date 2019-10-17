@@ -1,7 +1,10 @@
 <template>
-    <div class="cv-con">
-        <h1 class="main">Ciriculum Vitae</h1>
-        
+    <div class="cv-con" id="print-vis-on">
+        <h1 class="main">Hamish Clulee</h1>
+        <h5>hamish.clulee@gmail.com</h5>
+        <h6>Located in Bali, Indonesia.</h6>
+        <h6>New Zealand Citizen.</h6>
+        <div class="fin-con">~</div>
         <div class="header-icons-home">
             <a href="https://github.com/HamishClulee" target="_blank" class="icon-container-item">
                 <img src="https://more-art-than.science/images/github.svg" height="60"/>
@@ -104,6 +107,15 @@ usage throughout the code base.`,
 </script>
 
 <style lang="sass" scoped>
+@media print
+  body *
+    visibility: hidden
+  #print-vis-on, #print-vis-on *
+    visibility: visible
+  #print-vis-on
+    position: absolute
+    left: 0
+    top: 0
 .cv-con
     width: 80%
     margin-left: auto
@@ -167,6 +179,7 @@ usage throughout the code base.`,
 .header-icons-home
     a
         margin-right: 30px
+        margin-bottom: 25px
 .key-con
     p
         font-size: 1.5em

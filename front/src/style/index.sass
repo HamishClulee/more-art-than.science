@@ -38,6 +38,16 @@ html
     font-family: $heading-font
     font-weight: normal
 
+@media print
+  body *
+    visibility: hidden
+  #print-vis-on, #print-vis-on *
+    visibility: visible
+  #print-vis-on
+    position: absolute
+    left: 0
+    top: 0
+
 @import "typography"
 @import "button"
 

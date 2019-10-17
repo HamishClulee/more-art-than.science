@@ -23,7 +23,7 @@
             <p>Web Development - 5+ years</p>
         </div>
         <div class="fin-con">~</div>
-        <div v-for="(v, i) in jobs" :key="i">
+        <div class="job-con" v-for="(v, i) in jobs" :key="i">
             <h2>{{ v.employer }}</h2>
             <h3>{{ v.title }}</h3>
             <h5>{{ v.dates }}</h5>
@@ -107,15 +107,6 @@ usage throughout the code base.`,
 </script>
 
 <style lang="sass" scoped>
-@media print
-  body *
-    visibility: hidden
-  #print-vis-on, #print-vis-on *
-    visibility: visible
-  #print-vis-on
-    position: absolute
-    left: 0
-    top: 0
 .cv-con
     width: 80%
     margin-left: auto

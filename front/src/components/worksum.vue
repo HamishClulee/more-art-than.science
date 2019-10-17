@@ -142,7 +142,7 @@ figure
         font-size: 1.4em
         .itm-name
             color: $font-light
-            width: 80px
+            min-width: 97px
         .itm-val
             color: $tertiary
 .img-grid

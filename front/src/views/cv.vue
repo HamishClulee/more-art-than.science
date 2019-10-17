@@ -41,7 +41,7 @@
                         employer: 'Freelance',
                         dates: 'April 2015 - Present (4+ years)',
                         description: [
-                            `Over the last five years I have taken on a number of freelance web dev jobs, both while working in waged positions and as a full freelancer.`,
+                            `Since early 2015 I have taken on a number of freelance web dev jobs, both while working in waged positions and as a full time freelancer.`,
                             `Noteable highlights:`,
                             `A booking, payment and staff allocation app for an education outfit in New Zealand.`,
                             `A booking, payment and calendar management app for an company that provides co-working and co-living spaces for digital nomads.`,
@@ -51,7 +51,7 @@
                         ],
                         references: true,
                     },
-                                        {
+                    {
                         title: 'Senior Front End Developer',
                         employer: 'Netograph',
                         dates: 'August 2018 - August 2019 (1 year 1 month)',
@@ -63,7 +63,7 @@
                         ],
                         references: true,
                     },
-                                        {
+                    {
                         title: 'Software Developer',
                         employer: 'Fusion Sport Inc.',
                         dates: 'October 2017 - April 2018 (7 months)',
@@ -82,7 +82,7 @@ percentage spent writing Java and providing API support to the front end team.`,
                         ],
                         references: true,
                     },
-                                        {
+                    {
                         title: 'Web Application Developer',
                         employer: 'Profiler Corporation',
                         dates: 'August 2016 - October 2017 (1 year 3 months)',
@@ -113,6 +113,13 @@ usage throughout the code base.`,
         width: 90%
     @media (min-width: 0px) and (max-width: 520px)
         width: 95%
+    h1
+        margin-bottom: 10px
+        font-size: 3.5em
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: 2.8em
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: 2.2em
     h2
         margin-bottom: 10px
         font-size: 3em

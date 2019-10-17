@@ -39,8 +39,8 @@ export default {
             + `@RONIN is a co-working villa. As more locations are added they want all bookings to flow through `
             + `the website.`,
             neto_txt: `I was almost solely responsible for building the frontend of the current version hosted at `
-            + `<a href="https://netograph.io" target="_blank">netograph.io</a>. In almost a year of `
-            + `dev the CEO and my self took netograph from a hobby project into a commericial reality. Netograph `
+            + `<a href="https://netograph.io" target="_blank">netograph.io</a>. In my time at netograph `
+            + `the CEO and my self took netograph from a hobby project into a commericial reality. Netograph `
             + `has an incredible amount of data, presenting it in an easyily readable and user freindly manner `
             + `was an enjoyable challenge.`,
             babyaid_txt: `Static website and booking app written for a now defunct medical start up in New Zealand. `
@@ -48,8 +48,8 @@ export default {
             + `and allocate them to trainers.`,
             dbb_txt: `Built while working at Fusion Sport Australia. I was the project lead. This app allows customers to build `
             + `their own dashboards to display data visually. When I moved from the backend to the frontend team, all dashboards `
-            + `were being built by hand, it was time consuming and expensive for customers. By the time I left the Dashboard Builder `
-            + `allowed them to build very detailed dashboards without tying up our frontend developers. A very cool piece of Javascript!`,
+            + `were being built by hand, it was time consuming and expensive for customers. By the time I left, the Dashboard Builder `
+            + `allowed customers to build very detailed dashboards without tying up our frontend developers. A very cool piece of Javascript!`,
             babimg: [
                 "https://more-art-than.science/images/bab1-lowqual.jpg",
                 "https://more-art-than.science/images/bab3-lowqual.jpg",
@@ -91,7 +91,7 @@ export default {
                 db: "Google Big Table",
             },
             baby_tech: {
-                front: "Vue, Bulma Scss, D3.js, C3.js",
+                front: "Vue, Bulma Scss",
                 tooling: "Webpack",
                 devops: "Ubuntu 16.04 on DigitalOcean",
                 deploys: "Shell script",
@@ -99,7 +99,7 @@ export default {
                 db: "Mongo",
             },
             dbb_tech: {
-                front: "Vue, Bulma Scss",
+                front: "Vue, Bulma Scss, D3.js, C3.js",
                 tooling: "Custom Webpack Config",
                 devops: "CentOS, Amazon CDN",
                 deploys: "Shell scripts",

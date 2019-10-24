@@ -94,7 +94,7 @@
   flex-direction: column
   overflow-x: hidden !important
 .bottom
-  height: 15vh
+  height: 13vh
   width: 100%
   display: flex
   flex-direction: column

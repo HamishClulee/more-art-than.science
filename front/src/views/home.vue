@@ -72,11 +72,14 @@
 .header-icons
   margin: 30px
 .header-icons-home
-  margin-top: 30px
-  text-align: center
-  text-align: left
-  margin-left: -20px
-  margin-bottom: 10px
+    margin-top: 30px
+    text-align: center
+    text-align: left
+    margin-left: -20px
+    margin-bottom: 10px
+    @media (min-width: 0px) and (max-width: 520px)
+        margin-top: 15px
+        margin-bottom: 15px 
 .text-container
     position: absolute
     top: 55vh
@@ -117,7 +120,4 @@
             font-size: 1.6em
         @media (min-width: 0px) and (max-width: 520px)
             font-size: 1.4em
-    p
-        @media (min-width: 0px) and (max-width: 520px)
-            font-size: 0.9em
 </style>

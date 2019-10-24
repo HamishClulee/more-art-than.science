@@ -39,8 +39,7 @@ export default {
             + `@RONIN is a co-working villa. As more locations are added they want all bookings to flow through `
             + `the website.`,
             neto_txt: `I was almost solely responsible for building the frontend of the current version hosted at `
-            + `<a href="https://netograph.io" target="_blank">netograph.io</a>. In my time at netograph `
-            + `the CEO and my self took netograph from a hobby project into a commericial reality. Netograph `
+            + `<a href="https://netograph.io" target="_blank">netograph.io</a>. Netograph `
             + `has an incredible amount of data, presenting it in an easyily readable and user freindly manner `
             + `was an enjoyable challenge.`,
             babyaid_txt: `Static website and booking app written for a now defunct medical start up in New Zealand. `

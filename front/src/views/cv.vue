@@ -50,7 +50,7 @@
                             `A booking, payment and calendar management app for an company that provides co-working and co-living spaces for digital nomads.`,
                             `I spent a lot of time working as a contract developer for a design and prototyping company attached to a large US health care firm. I rebuilt their front end build system, introduced them to VueJs and built a lot of prototypes for them to on sell to the parent company.`,
                             `Countless hours tinkering for personal enjoyment`,
-                            `Everything I do uses Vue in some way shape or form.`,
+                            `Almost everything I do uses VueJs in some way, shape or form.`,
                         ],
                         references: true,
                     },

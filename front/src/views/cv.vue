@@ -59,10 +59,9 @@
                         employer: 'Netograph',
                         dates: 'August 2018 - August 2019 (1 year 1 month)',
                         description: [
-                            `For almost a year I worked with the CEO to take the site from a hobby project into a market ready product.`,
-                            `The front end is written in Vue and Typescript, back by a custom webpack configuration. Visualisations are written in d3.js.`,
-                            `Netographs product was essentially a very advanced level web crawler which gathered a vast amount of data by visiting links found on social media then serialised the publicly avaliable information and returned it to the servers. Primarily focued on security and privacy insights, but with the potential to provide intelligence in almost any industry due to the size of the database and the level of detail that website capture provided.`,
-                            `This was an awesome place to work and I thoroughly enjoyed the challangesencountered.`,
+                            `The Frontend is written in Vue and Typescript, backed by a custom webpack configuration. Visualisations are written in d3.js.`,
+                            `Netograph's product is data. That data is gathered by a web crawler. Beginning by crawling open social media platforms like Twitter and 4chan each crawler thread follows any links encountered. When the crawler thread encounters a new domain it uses a headless browser to record all the worthwhile information and send it back to the Netograph servers, then starts a new crawl. At the time I left there were over 2000 threads, which performed a capture in around 2 minutes and were constantly running. Netograph has a lot of data, 18 billion http request pairs captured at last count!`,
+                            `Primarily focused on security and privacy insights, but with the potential to provide intelligence in almost any industry due to the size of the database and the level of detail that website capture provided. This was an awesome place to work and I thoroughly enjoyed the challenges encountered.`,
                         ],
                         references: true,
                     },
@@ -71,17 +70,10 @@
                         employer: 'Fusion Sport Inc.',
                         dates: 'October 2017 - April 2018 (7 months)',
                         description: [
-                            `Fusion Sport is a sport science company that provides web and hardware
-products to assist athletes and sports teams. My main focus was to improve
-the Web portal, which is a data in, insights out model.`,
-                            `Most of my time at
-Fusion was spend on the the insights out part of the business. Building
-visualisations in d3.js and C3.js in the form of dashboards which displayed the
-data entered by the sports team in question.`,
-                            `Project lead on the Dashboard Builder which provided a tool for teams to write
-their own dashboards without using any developers.
-Most of my time was spent writing Vue and Javascript, with a smaller
-percentage spent writing Java and providing API support to the front end team.`,
+                            `Fusion is a sports science company that sells web and hardware products designed to provide athletes and sports teams with competitive advantages.`,
+                            `My main focus was Smartabase, Fusions' main product. It's a web application with a "data-in-insights-out" model. Most of my time at Fusion was spent on the insights out part of the business.`,
+                            `Building visualisations in d3.js and C3.js in the form of dashboards which displayed the data entered by the sports team in question. Project lead on the Dashboard Builder which provided a tool for teams to write their own dashboards without using any developers. Most of my time was spent writing Vue and Javascript, with a smaller percentage spent writing Java and providing API support to the front end team.`,
+
                         ],
                         references: true,
                     },

@@ -79,7 +79,7 @@
     margin-bottom: 10px
     @media (min-width: 0px) and (max-width: 520px)
         margin-top: 15px
-        margin-bottom: 15px 
+        margin-bottom: 25px 
 .text-container
     position: absolute
     top: 55vh

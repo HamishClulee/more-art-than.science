@@ -117,4 +117,7 @@
             font-size: 1.6em
         @media (min-width: 0px) and (max-width: 520px)
             font-size: 1.4em
+    p
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: 0.9em
 </style>

@@ -76,7 +76,7 @@
   text-align: center
   text-align: left
   margin-left: -20px
-
+  margin-bottom: 10px
 .text-container
     position: absolute
     top: 55vh

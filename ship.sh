@@ -13,6 +13,6 @@ git add .
 MSG=". Deployed: $DATE"
 git commit -m "$1 $MSG"
 git push
-echo "---------------------- Deploying lim ------------------------------------------"
+echo "---------------------- Deploying more art than science ------------------------------------------"
 ssh hamishclulee@more-art-than.science 'cd /var/www/more-art-than.science && sudo git reset --hard && sudo git pull && sudo systemctl restart mats.service'
 echo "---------------------- Deploy complete. Have a nice day. ----------------------"

@@ -34,13 +34,13 @@ export default {
     components: { worksum, gallerymodal },
     data () {
         return {
-            ronin_txt: `Static website built in October 2019. Booking Application under developement. `
+            ronin_txt: `Static website built in October 2019 with a booking app currently in developement. `
             + `Clients are growing an accomodation business in Bali, focused on the digital nomad market. `
             + `@RONIN is a co-working villa. As more locations are added they want all bookings to flow through `
             + `the website.`,
             neto_txt: `I was almost solely responsible for building the frontend of the current version hosted at `
             + `<a href="https://netograph.io" target="_blank">netograph.io</a>. Netograph `
-            + `has an incredible amount of data, presenting it in an easyily readable and user freindly manner `
+            + `has an incredible amount of data, presenting it in an easily readable and user friendly manner `
             + `was an enjoyable challenge.`,
             babyaid_txt: `Static website and booking app written for a now defunct medical start up in New Zealand. `
             + `I built a calendar app, checkout and payment system, and an admin area for staff to manage courses `

@@ -15,7 +15,7 @@
             </a>
         </div>
         <div class="key-con">
-            <h6 class="exp-head">A list of years of experience; while working in commercial environments/production web applications</h6>
+            <h6 class="exp-head">(while working in commercial environments/production web applications)</h6>
             <p><em>VueJs</em> - 3+ years</p>
             <p>Javascript - 4+ years</p>
             <p>Java - 4+ years</p>

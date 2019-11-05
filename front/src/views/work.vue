@@ -23,6 +23,7 @@
             :images="dbbimg" :text="dbb_txt"
             :tech="dbb_tech">
         </worksum>
+        
     </div>
 </template>
 
@@ -35,13 +36,12 @@ export default {
     data () {
         return {
             ronin_txt: `Static website built in October 2019 with a booking app currently in developement. `
-            + `Clients are growing an accomodation business in Bali, focused on the digital nomad market. `
-            + `@RONIN is a co-working villa. As more locations are added they want all bookings to flow through `
-            + `the website.`,
+            + `The clients are a growing accomodation business in Bali; their primary focus is providing Co-Live-Co-Work spaces for Digital Nomads. `
+            + `The boking application that is currently in developement will allow customers and guests to check availability of rooms, book rooms and co-working desks, make payments and include customisable packages which will increase or decrease costs. Estimated time of completion is early in 2020.`,
             neto_txt: `I was almost solely responsible for building the frontend of the current version hosted at `
             + `<a href="https://netograph.io" target="_blank">netograph.io</a>. Netograph `
             + `has an incredible amount of data, presenting it in an easily readable and user friendly manner `
-            + `was an enjoyable challenge.`,
+            + `was an enjoyable challenge. More details can be found on my <a href="/cv">C.V</a>.`,
             babyaid_txt: `Static website and booking app written for a now defunct medical start up in New Zealand. `
             + `I built a calendar app, checkout and payment system, and an admin area for staff to manage courses `
             + `and allocate them to trainers.`,

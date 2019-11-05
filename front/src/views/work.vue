@@ -35,20 +35,32 @@ export default {
     components: { worksum, gallerymodal },
     data () {
         return {
-            ronin_txt: `Static website built in October 2019 with a booking app currently in developement. `
-            + `The clients are a growing accomodation business in Bali; their primary focus is providing Co-Live-Co-Work spaces for Digital Nomads. `
-            + `The boking application that is currently in developement will allow customers and guests to check availability of rooms, book rooms and co-working desks, make payments and include customisable packages which will increase or decrease costs. Estimated time of completion is early in 2020.`,
-            neto_txt: `I was almost solely responsible for building the frontend of the current version hosted at `
-            + `<a href="https://netograph.io" target="_blank">netograph.io</a>. Netograph `
-            + `has an incredible amount of data, presenting it in an easily readable and user friendly manner `
-            + `was an enjoyable challenge. More details can be found on my <a href="/cv">C.V</a>.`,
-            babyaid_txt: `Static website and booking app written for a now defunct medical start up in New Zealand. `
-            + `I built a calendar app, checkout and payment system, and an admin area for staff to manage courses `
-            + `and allocate them to trainers.`,
-            dbb_txt: `Built while working at Fusion Sport Australia. I was the project lead. This app allows customers to build `
-            + `their own dashboards to display data visually. When I moved from the backend to the frontend team, all dashboards `
-            + `were being built by hand, it was time consuming and expensive for customers. By the time I left, the Dashboard Builder `
-            + `allowed customers to build very detailed dashboards without tying up our frontend developers. A very cool piece of Javascript!`,
+            ronin_txt: `Static website built in October 2019 with a booking app currently in developement. 
+                The clients are a growing accomodation business in Bali. Their primary focus is providing 
+                Co-Live-Co-Work spaces for Digital Nomads. The boking application that is currently in 
+                developement will allow customers and guests to check availability of rooms, book rooms 
+                and co-working desks, make payments and include customisable packages which will increase 
+                or decrease costs. Estimated time of completion is early in 2020. This is a scratch build 
+                using my boilerplate and a custom deploy pipe.`,
+            neto_txt: `I was almost solely responsible for building the frontend of the current version 
+                hosted at <a href="https://netograph.io" target="_blank">netograph.io</a>. Netograph 
+                has an incredible amount of data, presenting it in an easily readable and user friendly manner 
+                was an enjoyable challenge. More details can be found on my <a href="/cv">C.V</a>. The incredible 
+                amount of data captured for each domain or IP address made building the frontend of this app 
+                a wonderful challenge.`,
+            babyaid_txt: `Static website and booking app written for a now defunct medical start up in New Zealand. 
+                I built a calendar app using a forked Vue calendar found on GitHub. A checkout and payment system 
+                built using a hashed URL stored in the DB so that bookings would persist over time and could be 
+                returned to at any time, and a round trip to the server every time a change was made by the user 
+                to ensure correctness of information displayed on the page. Payments were made using Stripe. 
+                The app included an admin area, secured by a session token, for staff to manage courses and allocate 
+                trainers at various times and dates. SEO was taken care of by a small meta tagging library which 
+                I wrote myself. This was an enjoyable project, and I was happy with the result.`,
+            dbb_txt: `Built while working at Fusion Sport Australia. I was the project lead. This app allows 
+                customers to build their own dashboards to display data visually. When I moved from the backend 
+                to the frontend team, all dashboards were being built by hand, it was time consuming and expensive 
+                for customers. By the time I left, the Dashboard Builder allowed customers to build very detailed 
+                dashboards without tying up our frontend developers. A very cool piece of Javascript!`,
             babimg: [
                 "https://more-art-than.science/images/bab1-lowqual.jpg",
                 "https://more-art-than.science/images/bab3-lowqual.jpg",

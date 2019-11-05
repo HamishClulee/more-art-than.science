@@ -71,9 +71,8 @@
                         dates: 'October 2017 - April 2018 (7 months)',
                         description: [
                             `Fusion is a sports science company that sells web and hardware products designed to provide athletes and sports teams with competitive advantages.`,
-                            `My main focus was Smartabase, Fusions' main product. It's a web application with a "data-in-insights-out" model. Most of my time at Fusion was spent on the insights out part of the business.`,
-                            `Building visualisations in d3.js and C3.js in the form of dashboards which displayed the data entered by the sports team in question. Project lead on the Dashboard Builder which provided a tool for teams to write their own dashboards without using any developers. Most of my time was spent writing Vue and Javascript, with a smaller percentage spent writing Java and providing API support to the front end team.`,
-
+                            `My main focus was Smartabase; Fusion's main product. It's a web application with a "data-in-insights-out" model. Most of my time at Fusion was spent on the insights-out part of their business, I wrote software that generated charts and tables from the data provided by customers and rebuilt frontend tooling from a Gulp and JQuery system to a more modern and efficent Webpack and Vue system. Althought productivity is hard to quantify, the new tooling setup was heralded as very large success and is still in usage today.`,
+                            `Building visualisations in d3.js and C3.js in the form of dashboards which displayed the data entered by the sports team in question. Project lead on the Dashboard Builder which provided a tool for teams to write their own dashboards without using any developers. Most of my time was spent writing Vue and Javascript, with a smaller percentage spent writing Java and providing API support to the frontend team.`,
                         ],
                         references: true,
                     },
@@ -84,7 +83,7 @@
                         description: [
                             `Profiler is sports science company based in Dunedin, New Zealand. Most of
 my time was spent writing Java on the back end of a large web portal which
-focused on providing custom form entry to sports teams and atheletes.`,
+focused on providing custom form entry to sports teams and athletes.`,
                             `Nearer
 the end of my time in this position my focus shifted to be far more fron end
 focused, with a lot of my time spent writing Vue and beginning to increase its

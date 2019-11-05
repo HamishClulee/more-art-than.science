@@ -32,6 +32,7 @@
             <h2>{{ v.employer }}</h2>
             <h3>{{ v.title }}</h3>
             <h5>{{ v.dates }}</h5>
+            <h6 v-if="v.references">References available</h6>
             <p v-for="(p, x) in v.description" :key="x" v-html="p"></p>
             <div class="fin-con">~</div>
         </div>
@@ -50,15 +51,12 @@
                         dates: 'April 2015 - Present (4+ years)',
                         description: [
                             `Since early 2015 I have taken on a number of freelance web dev jobs, both while working in waged positions and as a full time freelancer.`,
-                            `~`,
-                            `Noteable highlights:`,
+                            `Breif summary of works:`,
                             `<ul>`,
-                            `<li>A booking, payment and staff allocation app for an education outfit in New Zealand.</li>`,
-                            `<li>A booking, payment and calendar management app for a company that provides co-working and co-living spaces for digital nomads.</li>`,
-                            `<li>I spent a lot of time working as a contract developer for a design and prototyping company attached to a large US health care firm. I rebuilt their frontend build system, introduced them to <em>VueJs</em> and built a lot of prototypes for them to on sell to their parent company.</li>`,
-                            `<li>Countless hours tinkering for personal enjoyment.</li>`,
+                            `<li>Scratch build a booking, payment and staff allocation app for BabyAidNZ, an education outfit in New Zealand. Details on the <a href="/work">showcase page</a>.</li>`,
+                            `<li>Scratch build a booking, payment and calendar management app for @RONIN company that provides co-working and co-living spaces for digital nomads. Details on the <a href="/work">showcase page</a>.</li>`,
+                            `<li>A number of static websites, built from scratch and self hosted on DigitalOcean.</li>`,
                             `</ul>`,
-                            `~`,
                             `Almost everything I do uses <em>VueJs</em> in some way, shape or form.`,
                         ],
                         references: true,
@@ -68,11 +66,20 @@
                         employer: 'Netograph',
                         dates: 'August 2018 - August 2019 (1 year 1 month)',
                         description: [
-                            `Netograph provides a web app and API as a service, their frontend is written in <em>VueJs</em> and Typescript, backed by a custom webpack configuration. Visualisations are written in d3.js. I was responsible for the vast majority of the frontend code currently hosted at <a href="https://netograph.io" target="_blank">https://netpgraph.io</a>`,
+                            `Netograph provides a web app and an API service, their frontend is written in <em>VueJs</em> and Typescript, backed by a custom webpack configuration. Visualisations are written in d3.js. I was responsible for the vast majority of the frontend code currently hosted at <a href="https://netograph.io" target="_blank">https://netpgraph.io</a>`,
                             `Netograph's product is data. That data is gathered by a web crawler. Beginning by crawling open social media platforms like Twitter and 4chan each crawler thread follows any links encountered. When the crawler thread encounters a new domain it uses a headless browser to record all the worthwhile information and sends it back to the Netograph servers, then starts a new crawl. At the time I left there were over 2000 threads, which performed a capture in around 2 minutes and were constantly running. Netograph has a lot of data, 19 billion http request pairs captured at last count!`,
                             `Netograph is primarily focused on security and privacy insights, but has the potential to provide intelligence in almost any industry due to the size of the database and the level of detail that website capture provided. This was an awesome place to work and I thoroughly enjoyed the challenges encountered.`,
                         ],
                         references: true,
+                    },
+                                        {
+                        title: 'Contract Frontend Developer',
+                        employer: 'Allow Design',
+                        dates: 'Intermittent between January 2017 - February 2019 (Contracts totalling 9+ months)',
+                        description: [
+                            `Allow Design was a studio based in Dunedin, New Zealand. They had one primary client, a US healthcare giant. They would create functioning mini applications as design templates for developers working directly for healthcare firm. I was employed on and off for a number of these prototypes, I would create mini-web-apps from a Photoshop file provided by a Allow designer. I was also responsible for overhauling the frontend tooling and build system, to enact a <em>VueJs</em> and Webpack boilerplate, which was in usage until the company folded early this year.`,
+                        ],
+                        references: false,
                     },
                     {
                         title: 'Software Developer',
@@ -152,12 +159,15 @@ usage throughout the code base.`,
         @media (min-width: 520px) and (max-width: 1080px)
             font-size: 1.2em
         @media (min-width: 0px) and (max-width: 520px)
-            font-size: 1.2em
-
+            font-size: 1.1em
 .exp-head
     color: lighten($font, 40)
     font-size: 1.6em
     margin: 30px 0 10px
+    @media (min-width: 520px) and (max-width: 1080px)
+        font-size: 1.3em
+    @media (min-width: 0px) and (max-width: 520px)
+        font-size: 1.2em
 .fin-con
     font-size: 3em
     width: 100%
@@ -179,4 +189,8 @@ usage throughout the code base.`,
 .key-con
     p
         font-size: 1.5em
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: 1.3em
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: 1.1em
 </style>

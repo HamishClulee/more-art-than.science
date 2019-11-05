@@ -2,7 +2,7 @@
     <div class="cv-con" id="print-vis-on">
         <h1 class="main">Hamish Clulee</h1>
         <h5>hamish.clulee@gmail.com</h5>
-        <h6>Located in Bali, Indonesia.</h6>
+        <h6>Digital Nomad, primarily located in Asia.</h6>
         <h6>New Zealand Citizen.</h6>
         <div class="fin-con">~</div>
         <div class="header-icons-home">

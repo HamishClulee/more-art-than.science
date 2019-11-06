@@ -1,29 +1,33 @@
 <template>
     <div class="work-con">
         <gallerymodal v-if="showmodal" :images="act_array"></gallerymodal>
+
         <worksum
-            title="@RONIN" sub="Website"
-            :images="roninimg" :text="ronin_txt"
-            :islive="true" aref="https://atronin.space"
-            :tech="ronin_tech">
+            title="Dashboard Builder" sub="Web App"
+            :images="dbbimg" :text="dbb_txt"
+            :tech="dbb_tech">
         </worksum>
+
         <worksum 
             title="Netograph" sub="Web App" 
             :images="netimg" :text="neto_txt"
             :islive="true" aref="https://netograph.io"
             :tech="neto_tech">
         </worksum>
+
+        <worksum
+            title="@RONIN" sub="Website"
+            :images="roninimg" :text="ronin_txt"
+            :islive="true" aref="https://atronin.space"
+            :tech="ronin_tech">
+        </worksum>
+
         <worksum
             title="Baby Aid NZ" sub="Web App"
             :images="babimg" :text="babyaid_txt"
             :tech="baby_tech">
         </worksum>
-        <worksum
-            title="Dashboard Builder" sub="Web App"
-            :images="dbbimg" :text="dbb_txt"
-            :tech="dbb_tech">
-        </worksum>
-        
+
     </div>
 </template>
 
@@ -35,32 +39,68 @@ export default {
     components: { worksum, gallerymodal },
     data () {
         return {
-            ronin_txt: `Static website built in October 2019 with a booking app currently in developement. 
+            ronin_txt: [`Static website built in October 2019 with a booking app currently in developement. 
                 The clients are a growing accomodation business in Bali. Their primary focus is providing 
-                Co-Live-Co-Work spaces for Digital Nomads. The boking application that is currently in 
+                Co-Live-Co-Work spaces for Digital Nomads. `,
+                `The boking application that is currently in 
                 developement will allow customers and guests to check availability of rooms, book rooms 
                 and co-working desks, make payments and include customisable packages which will increase 
-                or decrease costs. Estimated time of completion is early in 2020. This is a scratch build 
-                using my boilerplate and a custom deploy pipe.`,
-            neto_txt: `I was almost solely responsible for building the frontend of the current version 
-                hosted at <a href="https://netograph.io" target="_blank">netograph.io</a>. Netograph 
-                has an incredible amount of data, presenting it in an easily readable and user friendly manner 
-                was an enjoyable challenge. More details can be found on my <a href="/cv">C.V</a>. The incredible 
-                amount of data captured for each domain or IP address made building the frontend of this app 
-                a wonderful challenge.`,
-            babyaid_txt: `Static website and booking app written for a now defunct medical start up in New Zealand. 
-                I built a calendar app using a forked Vue calendar found on GitHub. A checkout and payment system 
+                or decrease costs. `,
+                `I've included a number of screenshots of the various areas of the app, which can be seen by clicking 
+                <a class="pickup-modal-clicks" data-ref="roninimg">here</a>`],
+            neto_txt: [`I built the frontend of the web app currently  
+                hosted at <a href="https://netograph.io" target="_blank">netograph.io</a>.`,
+                `This was a 
+                start up environment with a small team. Netograph provides an incredible amount of 
+                data in very fine grained form. The primary frontend challenges revolved around 
+                around creating user interfaces that displayed that detail without feelin cluttered.`,
+                `We made heavy use of an <a href="https://netograph.io/datasets/social/" target="_blank">infinite scroll library</a>, 
+                and a <a href="https://netograph.io/datasets/social/domain/facebook.com" target="_blank">masonary cards</a> 
+                system, both custom built by myself. Netograph also captures privacy and cookie policy pages via 
+                machine learning. The user interface for viewing the captured pages is worth 
+                <a href="https://netograph.io/datasets/social/recentpolicies" target="_blank">checking out</a> 
+                It uses a custom built system for display text which is captured by a headless chrominium browser, 
+                well before the painting and rendering stage, then displays it as an over to a full page 
+                screen shot captured of the same web page. Overall, this was an awesome developement experience.`],
+            babyaid_txt: [
+                `Static website and booking app written for a now defunct medical start up in New Zealand.`,
+                `I built a calendar app using a forked Vue calendar found on GitHub. A checkout and payment system
                 built using a hashed URL stored in the DB so that bookings would persist over time and could be 
                 returned to at any time, and a round trip to the server every time a change was made by the user 
-                to ensure correctness of information displayed on the page. Payments were made using Stripe. 
-                The app included an admin area, secured by a session token, for staff to manage courses and allocate 
+                to ensure correctness of information displayed on the page. Payments were made using Stripe.`,
+                `The app included an admin area, secured by a session token, for staff to manage courses and allocate 
                 trainers at various times and dates. SEO was taken care of by a small meta tagging library which 
-                I wrote myself. This was an enjoyable project, and I was happy with the result.`,
-            dbb_txt: `Built while working at Fusion Sport Australia. I was the project lead. This app allows 
-                customers to build their own dashboards to display data visually. When I moved from the backend 
-                to the frontend team, all dashboards were being built by hand, it was time consuming and expensive 
-                for customers. By the time I left, the Dashboard Builder allowed customers to build very detailed 
-                dashboards without tying up our frontend developers. A very cool piece of Javascript!`,
+                I wrote myself.`,
+                `I've included a number of screenshots of the various areas of the app, which can 
+                be seen by clicking <a class="pickup-modal-clicks" data-ref="babimg">here</a>`
+                ],
+            dbb_txt: [`Built while working with the frontend team at Fusion Sport Australia. Originally customers 
+                would request custom built dashboards to aggregate their input data. This would 
+                require a lot of spec work and communication, and then lead for development.`, 
+                `We identified a large 
+                number of common elements that were being requested by customers and propsed building an app that 
+                would allow creation of dashboards without needing developers. I was lucky enough to be given 
+                leadership of the project and the Dashboard Builder was born. `, 
+                `For legacy reasons which existed in the Smartabase platform, it needed to built in two parts: 
+                an editor and a viewer.`,
+                `This app allowed customers to create pages, sections, and widgets. We built widgets for bar, 
+                line, spline and area graphs. Widgets which allowed the input of customisable filters, which 
+                could be applied to the data before it reached a chart, think date or number ranges. We 
+                built a tile widget for displaying single numbers, think averages or maxiumums from a range of 
+                datas. All of the widdgets had customisable icons, background colors and positions in sections 
+                and pages. `,
+                `I was also the only developer involved that had backend experience and access so in addition 
+                to the working on the frontend 
+                I built the API in Java, the deploy and integrations pipeline (using shell scripts and 
+                gitlab in conjunction with amazon CDN) and the developement environment, which needed to 
+                mock the production API and the save and publish 
+                functionality of the editor and viewer (this was done using NodeJS and some npm hackery), 
+                finally I built the storage layer in Java, so the JSON object from the frontend could be stored and 
+                retrieved in and from our PSQL database.`,
+                `From conversations I've had with friends who stil work at Fusion I'm told that the Dashboard Builder 
+                is big customer favorite, and a big win from a business perspective. Developing this app was still 
+                the best fun I've had while programming. I've included a number of screenshots of the various 
+                areas of the app, which can be seen by clicking <a class="pickup-modal-clicks" data-ref="dbbimg">here</a>`],
             babimg: [
                 "https://more-art-than.science/images/bab1-lowqual.jpg",
                 "https://more-art-than.science/images/bab3-lowqual.jpg",
@@ -122,6 +162,22 @@ export default {
         }
     },
     mounted () {
+        const els = [].slice.call(document.getElementsByClassName('pickup-modal-clicks'))
+        if (els) {
+            els.forEach(v => {
+                
+                v.onclick = () => {
+                    let trans = []
+                    const attr = v.getAttribute("data-ref")
+                    this[attr].forEach(v => {
+                    trans.push(this.transform(v))
+                })
+                this.act_array = trans
+                this.showmodal = true
+                }
+            })
+        }
+        
         this.$on('open-modal', (images) => {
             let trans = []
             images.forEach(v => {

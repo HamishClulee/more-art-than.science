@@ -44,7 +44,7 @@
             </div>
 
             <div class="text-con">
-                <p v-html="text"></p>
+                <p v-for="(t, i) in text" :key="i" v-html="t"></p>
             </div>
             <div class="fin-con">~</div>
         </div>

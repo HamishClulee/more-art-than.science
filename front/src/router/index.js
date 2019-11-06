@@ -1,15 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import home from '../views/home.vue'
-import work from '../views/work.vue'
-import cv from '../views/cv.vue'
-import blog from '../views/blog.vue'
-import notfound from '../views/notfound'
-import ronin from '../views/projects/ronin.vue'
-import netograph from '../views/projects/netograph.vue'
-import babyaid from '../views/projects/babyaid.vue'
-import dbb from '../views/projects/dbb.vue'
+
+const home = () => import('../views/home.vue')
+const work = () => ('../views/work.vue')
+const cv = () => import('../views/cv.vue')
+const blog = () => ('../views/blog.vue')
+const notfound = () => import('../views/notfound')
+const ronin = () => import('../views/projects/ronin.vue')
+const netograph = () => import('../views/projects/netograph.vue')
+const babyaid = () => import('../views/projects/babyaid.vue')
+const dbb = () => import('../views/projects/dbb.vue')
+
 Vue.use(Router)
+
 export default new Router({
     mode: 'history',
     scrollBehavior (to, from, savedPosition) {

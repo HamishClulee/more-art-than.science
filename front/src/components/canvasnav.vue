@@ -65,22 +65,21 @@ export default {
     .canvas-text-con
         width: 100%
         text-align: right
-        margin: 100px 50px 0 0
-        a
-            font-size: 4em
-            font-family: $heading-font
-            text-transform: capitalize
-.active-route
+        margin: 100px 70px 0 0
+        h2
+            cursor: pointer
+            &:hover
+                color: lighten($tertiary, 20)
+.router-link-exact-active
     display: flex
     flex-direction: column
     &:after
         content: ''
-        width: 10px
-        height: 2px
-        background-color: $primary
+        background-color: $highlight
         position: relative
-        top: 2px
-        right: 2px
+        width: 30px
+        height: 1px
+        left: 96%
 .canvas
     &:after
         left: 320px
@@ -93,9 +92,9 @@ export default {
 .big-x
     cursor: pointer
     position: absolute
-    top: 12px
-    right: 6px
-    padding: 20px
+    top: 23px
+    right: 15px
+    padding: 30px
     &:hover
         opacity: 0.8
     .line

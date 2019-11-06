@@ -45,8 +45,10 @@ export default {
     justify-content: center
     margin-right: 20px
     position: fixed
-    top: 20px
-    right: 10px
+    top: 10px
+    right: 0
+    cursor: pointer
+    padding: 30px
     .line
         height: 1px
         width: 25px

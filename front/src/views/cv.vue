@@ -194,7 +194,6 @@
         @media (min-width: 0px) and (max-width: 520px)
             font-size: 1.1em
 .exp-head
-    color: lighten($font, 20)
     font-size: 2em
     margin: 30px 0 10px
     @media (min-width: 520px) and (max-width: 1080px)
@@ -203,6 +202,7 @@
         font-size: 1.3em
 .key-con
     p
+        color: lighten($font, 20)
         font-size: 1.5em
         @media (min-width: 520px) and (max-width: 1080px)
             font-size: 1.3em

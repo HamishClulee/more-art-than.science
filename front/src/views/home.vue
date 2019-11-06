@@ -68,8 +68,9 @@ p
     margin-top: 30px
     text-align: center
     text-align: left
-    margin-left: -20px
     margin-bottom: 10px
+    img
+        height: 50px
     @media (min-width: 0px) and (max-width: 520px)
         margin-top: 15px
         margin-bottom: 25px

@@ -93,20 +93,6 @@ h3
     @media (min-width: 0px) and (max-width: 520px)
         margin-top: 10px
         font-size: 1.4em
-.fin-con
-    font-size: 3em
-    width: 100%
-    height: 80px
-    display: flex
-    align-items: center
-    justify-content: center
-    color: $tertiary
-    margin-top: 50px
-    @media (min-width: 520px) and (max-width: 1080px)
-        font-size: 1.6em
-    @media (min-width: 0px) and (max-width: 520px)
-        margin-top: 30px
-        height: 60px
 p
     font-size: 1.2em
 .fig-itm

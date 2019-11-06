@@ -3,7 +3,7 @@
         <h1>Hamish Clulee</h1>
         <h2>Full Stack Web Developer</h2>
         <h3>Specialising in VueJs</h3>
-        <p>Born in New Zealand, currently living in Asia. It's more than likely you will find me working on the frontend. I'm especially passionate about building intelligent and performant user interfaces.</p>
+        <p>Born in New Zealand, currently living in Asia. It's more than likely you will find me working on the frontend. I'm passionate about user interfaces and frontend ops.</p>
         <div class="header-icons-home">
             <a href="https://github.com/HamishClulee" target="_blank" class="icon-container-item">
                 <img src="https://more-art-than.science/images/github.svg" height="30"/>

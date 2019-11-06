@@ -1,9 +1,9 @@
 <template>
     <div class="foot-con">
+        <router-link tag="h5" :to="{ path: '/'}" class="foot-itm four">home</router-link>
         <router-link tag="h5" :to="{ path: '/work'}" class="foot-itm one">projects</router-link>
         <router-link tag="h5" :to="{ path: '/cv'}" class="foot-itm two">cv</router-link>
         <router-link tag="h5" :to="{ path: '/blog'}" class="foot-itm three">blog</router-link>
-        <router-link tag="h5" :to="{ path: '/'}" class="foot-itm four">home</router-link>
     </div>
 </template>
 

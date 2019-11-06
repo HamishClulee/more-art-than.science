@@ -159,21 +159,9 @@ figure
     transition: all 1s ease
     &:hover
         background: lighten($font, 60)
-        grid-template-rows: 22vh 22vh 8vh
         cursor: pointer
         transition: all 1s ease
         border-radius: 2px
-        &:after
-            transition: all 1s ease
-            content: 'view full size images...'
-            font-size: 1.3em
-            padding-left: 5px
-            @media (min-width: 0px) and (max-width: 780px)
-                font-size: 1.2em
-                content: 'gallery...'
-            color: white
-            position: realtive
-            left: 50%
 .img-grid-0
     grid-column: 1 / span 2
     transition: all 1s ease

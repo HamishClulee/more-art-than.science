@@ -15,5 +15,4 @@
 <style lang="sass" scoped>
     .god-div
         overflow-x: hidden !important
-
 </style>

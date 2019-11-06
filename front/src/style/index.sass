@@ -1,9 +1,9 @@
 $primary: #fbc02d
 $secondary: #00bfa5
 $tertiary: #ff5722
-$highlight: white
+$highlight: #03A9F4
 $link: #2196F3
-$font: #212121
+$font: #575757
 
 $primary-light: lighten($primary, 10)
 $primary-dark: darken($primary, 20)
@@ -14,7 +14,7 @@ $tertiary-dark: darken($tertiary, 20)
 $highlight-light: lighten($highlight, 20)
 $highlight-dark: darken($highlight, 30%)
 $link-light: lighten($link, 20)
-$font-light: lighten($font, 40)
+$font-light: lighten($font, 10)
 $font-dark: darken($font, 30)
 
 $h1-fontsize: 3.6rem !default
@@ -25,7 +25,7 @@ $h5-fontsize: 1.4rem !default
 $h6-fontsize: 1.2rem !default
 
 $heading-font: 'Open Sans Condensed', sans-serif
-$body-font: 'Open Sans Condensed', sans-serif
+$body-font: 'Roboto Condensed', sans-serif
 
 body
     font-family: $body-font
@@ -37,6 +37,55 @@ html
     line-height: 1.5
     font-family: $heading-font
     font-weight: normal
+
+.fin-con
+    font-size: 2em
+    width: 100%
+    height: 80px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: lighten($tertiary, 20)
+    margin-top: 30px
+    transform: scaleX(1.4) rotate(5deg)
+    @media (min-width: 520px) and (max-width: 1080px)
+        font-size: 1.6em
+    @media (min-width: 0px) and (max-width: 520px)
+        margin-top: 30px
+        height: 60px
+.tech-con
+    width: 29%
+    display: flex
+    flex-direction: column
+    padding: 20px 40px
+    @media (min-width: 0px) and (max-width: 780px)
+        width: 95%
+        margin-left: auto
+        margin-right: auto
+        padding: 0
+    .tech-itm
+        display: flex
+        flex-direction: row
+        font-size: 1.3em
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: 1.2em
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: 1.1em
+        font-size: 1.4em
+        .itm-name
+            color: $font-light
+            min-width: 97px
+        .itm-val
+            color: $tertiary
+.temp-con
+    height: 90vh
+    width: 80%
+    margin-left: auto
+    margin-right: auto
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
 
 @media print
   body *

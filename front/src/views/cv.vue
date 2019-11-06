@@ -6,14 +6,6 @@
         <h6>Digital Nomad, primarily located in Asia.</h6>
         <h6>New Zealand Citizen.</h6>
         <div class="fin-con">~</div>
-        <div class="header-icons-home">
-            <a href="https://github.com/HamishClulee" target="_blank" class="icon-container-item">
-                <img src="https://more-art-than.science/images/github.svg" height="60"/>
-            </a>
-            <a href="https://www.linkedin.com/in/hamish-clulee-163b1950/" target="_blank" class="icon-container-item">
-                <img src="https://more-art-than.science/images/linkedin.svg" height="60" />
-            </a>
-        </div>
         <div class="key-con">
             <h6 class="exp-head">Commercial Environments &amp; Production Web Applications</h6>
             <p><em>VueJs</em> - 3+ years</p>
@@ -181,14 +173,14 @@
     h3
         margin-top: 10px
         font-size: 2.5em
-        color: $font-light
+        color: $secondary
         @media (min-width: 520px) and (max-width: 1080px)
             font-size: 2.2em
         @media (min-width: 0px) and (max-width: 520px)
             font-size: 1.6em
     h5
         font-size: 1.7em
-        color: $secondary
+        color: $font-light
         @media (min-width: 520px) and (max-width: 1080px)
             font-size: 1.5em
         @media (min-width: 0px) and (max-width: 520px)
@@ -202,31 +194,13 @@
         @media (min-width: 0px) and (max-width: 520px)
             font-size: 1.1em
 .exp-head
-    color: lighten($font, 40)
-    font-size: 1.6em
+    color: lighten($font, 20)
+    font-size: 2em
     margin: 30px 0 10px
-    @media (min-width: 520px) and (max-width: 1080px)
-        font-size: 1.3em
-    @media (min-width: 0px) and (max-width: 520px)
-        font-size: 1.2em
-.fin-con
-    font-size: 3em
-    width: 100%
-    height: 80px
-    display: flex
-    align-items: center
-    justify-content: center
-    color: $tertiary
-    margin-top: 50px
     @media (min-width: 520px) and (max-width: 1080px)
         font-size: 1.6em
     @media (min-width: 0px) and (max-width: 520px)
-        margin-top: 30px
-        height: 60px
-.header-icons-home
-    a
-        margin-right: 30px
-        margin-bottom: 25px
+        font-size: 1.3em
 .key-con
     p
         font-size: 1.5em
@@ -235,6 +209,6 @@
         @media (min-width: 0px) and (max-width: 520px)
             font-size: 1.1em
 .refs
-   color: lighten($font, 30)
+   color: lighten($font, 10)
    margin-bottom: 15px
 </style>

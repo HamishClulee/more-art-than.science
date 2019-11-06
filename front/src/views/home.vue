@@ -52,7 +52,7 @@ h1
     margin-bottom: 20px
 h2
     font-size: 3em
-    color: lighten($font, 10)
+    color: $secondary
     margin-bottom: 5px
 h3
     font-size: 2em

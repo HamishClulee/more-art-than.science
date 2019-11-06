@@ -68,6 +68,8 @@ export default {
         margin: 100px 70px 0 0
         h2
             cursor: pointer
+            @media (min-width: 0px) and (max-width: 620px)
+                font-size: 2.4em
             &:hover
                 color: lighten($tertiary, 20)
 .router-link-exact-active

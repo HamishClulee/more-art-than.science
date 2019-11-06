@@ -35,7 +35,7 @@ export default {
 <style lang="sass" scoped>
 .home-con
     padding: 10px
-    height: 90vh
+    height: 100vh
     width: 90%
     margin-left: auto
     margin-right: auto
@@ -50,18 +50,26 @@ h1, h2, h3
 h1
     font-size: 5em
     margin-bottom: 20px
+    @media (min-width: 0px) and (max-width: 620px)
+        font-size: 3em
 h2
     font-size: 3em
     color: $secondary
     margin-bottom: 5px
+    @media (min-width: 0px) and (max-width: 620px)
+        font-size: 2em
 h3
     font-size: 2em
     color: lighten($font, 20)
     margin-bottom: 10px
+    @media (min-width: 0px) and (max-width: 620px)
+        font-size: 1.5em
 p
     width: 60%
     margin-left: auto
     margin-right: auto
+    @media (min-width: 0px) and (max-width: 620px)
+        width: 80%
 .header-icons
   margin: 30px
 .header-icons-home

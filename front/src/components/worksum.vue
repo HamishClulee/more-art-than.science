@@ -58,7 +58,7 @@
             images: Array,
             title: String,
             sub: String,
-            text: String,
+            text: Array,
             islive: Boolean,
             aref: String,
             tech: Object,

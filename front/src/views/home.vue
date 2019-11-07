@@ -35,7 +35,7 @@ export default {
 <style lang="sass" scoped>
 .home-con
     padding: 10px
-    height: 100vh
+    height: 97vh
     width: 90%
     margin-left: auto
     margin-right: auto
@@ -44,7 +44,8 @@ export default {
     align-items: center
     justify-content: center
     text-align: center
-    overflow: auto
+    overflow-y: hidden
+    margin-top: 20px
 h1, h2, h3
     margin-top: 5px
 h1

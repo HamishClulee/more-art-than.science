@@ -1,6 +1,7 @@
 <template>
     <div class="cv-con" id="print-vis-on">
         <h1 class="main">Hamish Clulee</h1>
+        <h2>BSc, Software Engineering, University of Otago</h2>
         <h3>References upon request</h3>
         <h5>hamish.clulee@gmail.com</h5>
         <h6>Digital Nomad, primarily located in Asia.</h6>
@@ -188,7 +189,7 @@
     @media (min-width: 0px) and (max-width: 520px)
         width: 95%
     h1
-        margin-bottom: 10px
+        margin-bottom: 5px
         font-size: 3.5em
         @media (min-width: 520px) and (max-width: 1080px)
             font-size: 2.8em
@@ -196,11 +197,13 @@
             font-size: 2.2em
     h2
         margin-bottom: 10px
-        font-size: 3em
+        margin-top: 10px
+        font-size: 2.6em
+        color: lighten($font, 20)
         @media (min-width: 520px) and (max-width: 1080px)
-            font-size: 2.6em
+            font-size: 2.4em
         @media (min-width: 0px) and (max-width: 520px)
-            font-size: 1.8em
+            font-size: 1.5em
     h3
         margin-top: 10px
         font-size: 2.5em

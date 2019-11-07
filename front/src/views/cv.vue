@@ -183,6 +183,7 @@
     width: 80%
     margin-left: auto
     margin-right: auto
+    margin-top: 70px
     margin-bottom: 150px
     @media (min-width: 520px) and (max-width: 1080px)
         width: 90%

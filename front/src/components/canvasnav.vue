@@ -27,6 +27,18 @@
                 @click="close">
                     <router-link tag="h2" :to="{ path: '/blog'}">blog</router-link>
             </div>
+            <div
+                class="canvas-item email">
+                    <h3>hamish.clulee@gmail.com</h3>
+            </div>
+            <div class="icons">
+                <a href="https://github.com/HamishClulee" target="_blank" class="icon-container-item">
+                    <img src="https://more-art-than.science/images/github.svg" height="30"/>
+                </a>
+                <a href="https://www.linkedin.com/in/hamish-clulee-163b1950/" target="_blank" class="icon-container-item">
+                    <img src="https://more-art-than.science/images/linkedin.svg" height="30" />
+                </a>
+            </div>
         </div>
 
     </div>
@@ -42,6 +54,12 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+.email
+    margin-top: 50px
+    color: lighten($font, 40)
+.icons
+    a
+        margin: 10px
 .canvas-nav
     z-index: 6
     position: fixed

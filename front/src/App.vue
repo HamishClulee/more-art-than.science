@@ -38,17 +38,17 @@ export default {
 .god-div
     overflow-x: hidden !important
 .hamburger
-    width: 100%
     display: flex
     flex-direction: column
     align-items: flex-end
     justify-content: center
-    margin-right: 20px
     position: fixed
-    top: 10px
-    right: 0
+    top: 0px
+    right: 0px
+    padding: 40px
     cursor: pointer
-    padding: 30px
+    @media (min-width: 0px) and (max-width: 620px)
+        padding: 20px
     .line
         height: 1px
         width: 25px

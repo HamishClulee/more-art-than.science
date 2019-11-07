@@ -79,6 +79,8 @@ p
     margin-bottom: 10px
     img
         height: 50px
+        @media (min-width: 0px) and (max-width: 620px)
+            height: 30px
     @media (min-width: 0px) and (max-width: 520px)
         margin-top: 15px
         margin-bottom: 25px

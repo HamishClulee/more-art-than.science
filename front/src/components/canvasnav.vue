@@ -63,7 +63,7 @@ export default {
     @media (min-width: 0px) and (max-width: 520px)
         font-size: 0.8em
     .canvas-text-con
-        width: 100%
+        width: auto
         text-align: right
         margin: 100px 70px 0 0
         h2
@@ -73,15 +73,8 @@ export default {
             &:hover
                 color: lighten($tertiary, 20)
 .router-link-exact-active
-    display: flex
-    flex-direction: column
-    &:after
-        content: ''
-        background-color: $highlight
-        position: relative
-        width: 30px
-        height: 1px
-        left: 96%
+    color: $font
+
 .canvas
     &:after
         left: 320px
@@ -94,9 +87,12 @@ export default {
 .big-x
     cursor: pointer
     position: absolute
-    top: 23px
-    right: 15px
-    padding: 30px
+    margin-top: 10px
+    top: 0px
+    right: 0px
+    padding: 40px
+    @media (min-width: 0px) and (max-width: 620px)
+        padding: 20px
     &:hover
         opacity: 0.8
     .line

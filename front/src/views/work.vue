@@ -39,7 +39,8 @@ export default {
     components: { worksum, gallerymodal },
     data () {
         return {
-            ronin_txt: [`Static website built in October 2019 with a booking app currently in developement. 
+            ronin_txt: [
+                `Static website built in October 2019 with a booking app currently in developement. 
                 The clients are a growing accomodation business in Bali. Their primary focus is providing 
                 Co-Live-Co-Work spaces for Digital Nomads. `,
                 `The boking application that is currently in 
@@ -48,20 +49,31 @@ export default {
                 or decrease costs. `,
                 `I've included a number of screenshots of the various areas of the app, which can be seen by clicking 
                 <a class="pickup-modal-clicks" data-ref="roninimg">here</a>`],
-            neto_txt: [`I built the frontend of the web app currently  
+            neto_txt: [
+                `I built the frontend of the web app currently  
                 hosted at <a href="https://netograph.io" target="_blank">netograph.io</a>.`,
-                `This was a 
-                start up environment with a small team. Netograph provides an incredible amount of 
-                data in very fine grained form. The primary frontend challenges revolved around 
-                around creating user interfaces that displayed that detail without feelin cluttered.`,
-                `We made heavy use of an <a href="https://netograph.io/datasets/social/" target="_blank">infinite scroll library</a>, 
-                and a <a href="https://netograph.io/datasets/social/domain/facebook.com" target="_blank">masonary cards</a> 
-                system, both custom built by myself. Netograph also captures privacy and cookie policy pages via 
-                machine learning. The user interface for viewing the captured pages is worth 
-                <a href="https://netograph.io/datasets/social/recentpolicies" target="_blank">checking out</a> 
-                It uses a custom built system for display text which is captured by a headless chrominium browser, 
-                well before the painting and rendering stage, then displays it as an over to a full page 
-                screen shot captured of the same web page. Overall, this was an awesome developement experience.`],
+                `Netograph is a start up environment with a small team that provide the web app seen at the link above, 
+                and an API. The amount of data in Netographs DB is staggering, indexed by domain and IP address, 
+                each item has a huge amount of detail associated with it, and each index has a vast length, 
+                think millions of items, in some cases that number runs well into the billions.`,
+                `The primary frontend challenges revolved around around creating user interfaces that 
+                displayed that detail without overwhelming the user.`,
+                `Items of note include; an <a href="https://netograph.io/datasets/social/" target="_blank">infinite scroll library</a>,
+                which had to act in place of pagination due to how the lists being diaplyed are indexed.  
+                Custom <a href="https://netograph.io/datasets/social/domain/facebook.com" target="_blank">masonary cards</a> 
+                , designed to show the user a smaple of the data in each list, remembering that each list could 
+                contain over a million items, and each first class object (IPs, domains, superdomains) could contain 
+                up to over 10 lists. A <a href="https://netograph.io/datasets/social" target="_blank">search component</a>, 
+                letting users find needles in a gigantic haystack, in a manner that was quick and easy.`,
+                `Netograph also captures privacy and cookie policy pages.
+                Each capture displays the text from the captured site, overlayed in the original 
+                position of a full page screenshot of the page being captured.  The has been captured by a headless chrominium browser, 
+                well before the painting and rendering stage. The advantage here is that the text has been extracted and is now 
+                parsable by Netograph servers, think GDPR and regulatory compliance for privacy enforcement. 
+                The UI was designed as a sales tool to show the accuracy of the data that is being captured.
+                It's worth <a href="https://netograph.io/datasets/social/recentpolicies" target="_blank">checking out</a>.`,
+                `Overall, this was an awesome developement experience.`
+                ],
             babyaid_txt: [
                 `Static website and booking app written for a now defunct medical start up in New Zealand.`,
                 `I built a calendar app using a forked Vue calendar found on GitHub. A checkout and payment system
@@ -74,7 +86,8 @@ export default {
                 `I've included a number of screenshots of the various areas of the app, which can 
                 be seen by clicking <a class="pickup-modal-clicks" data-ref="babimg">here</a>`
                 ],
-            dbb_txt: [`Built while working with the frontend team at Fusion Sport Australia. Originally customers 
+            dbb_txt: [
+                `Built while working with the frontend team at Fusion Sport Australia. Originally customers 
                 would request custom built dashboards to aggregate their input data. This would 
                 require a lot of spec work and communication, and then lead for development.`, 
                 `We identified a large 
@@ -100,7 +113,8 @@ export default {
                 `From conversations I've had with friends who stil work at Fusion I'm told that the Dashboard Builder 
                 is big customer favorite, and a big win from a business perspective. Developing this app was still 
                 the best fun I've had while programming. I've included a number of screenshots of the various 
-                areas of the app, which can be seen by clicking <a class="pickup-modal-clicks" data-ref="dbbimg">here</a>`],
+                areas of the app, which can be seen by clicking <a class="pickup-modal-clicks" data-ref="dbbimg">here</a>`
+                ],
             babimg: [
                 "https://more-art-than.science/images/bab1-lowqual.jpg",
                 "https://more-art-than.science/images/bab3-lowqual.jpg",
@@ -207,4 +221,5 @@ export default {
     margin-left: auto
     margin-right: auto
     margin-bottom: 200px
+    margin-top: 150px
 </style>

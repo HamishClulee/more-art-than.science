@@ -48,9 +48,9 @@
                             `<ul>`,
                             `<li>Scratch build a booking, payment and calendar management app for @RONIN, 
                                 a company that provides co-working and co-living spaces for digital nomads. 
-                                Currently under developement. Details on the <a href="/work">showcase page</a>.</li>`,
+                                Currently under developement. Details on the <a href="/work">projects page</a>.</li>`,
                             `<li>Scratch build a booking, payment and staff allocation app for BabyAidNZ, an 
-                                education outfit in New Zealand. Details on the <a href="/work">showcase page</a>.</li>`,
+                                education outfit in New Zealand. Details on the <a href="/work">projects page</a>.</li>`,
                             `<li>A growing number of static websites/brochurewear sites, built from scratch and self 
                                 hosted on DigitalOcean.</li>`,
                             `</ul>`,
@@ -115,7 +115,7 @@
                             `After a month or so of handwriting dashboards using the new boilerplate and d3.js/c3.js, 
                                 I proposed that we write an app to allow customers to build their own dashboards 
                                 without needing developers. I was granted leadership of the Dashboard Builder Project. 
-                                Details on the <a href="/work">showcase</a> page. The Dashboard Builder was a big success 
+                                Details on the <a href="/work">projects page</a>. The Dashboard Builder was a big success 
                                 and continues to be a customer favorite at Fusion. While most of my time at Fusion was spent 
                                 writing <em>VueJs</em>, I was also still responsible for providing all the API support to the 
                                 frontend team, which required me to spend time wrting Java and Shell scripts. The Dashboard 

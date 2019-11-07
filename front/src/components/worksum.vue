@@ -141,12 +141,12 @@ figure
         width: 100%
         margin-left: auto
         margin-right: auto
-    padding: 0
-    transition: all 1s ease
+    padding: 5px
+    transition: all 0.5s ease
     &:hover
         background: lighten($font, 60)
         cursor: pointer
-        transition: all 1s ease
+        transition: all 0.5s ease
         border-radius: 2px
 .img-grid-0
     grid-column: 1 / span 2

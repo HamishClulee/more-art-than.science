@@ -1,7 +1,7 @@
 <template>
     <div class="god-div">
         <div> 
-            <div class="hamburger" v-if="!canvasopen" @click="togglecanvas">
+            <div :class="$route.name === 'home' ? 'pulse' : ''" class="hamburger" v-if="!canvasopen" @click="togglecanvas">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -37,6 +37,8 @@ export default {
 <style lang="sass" scoped>
 .god-div
     overflow-x: hidden !important
+.pulse
+    animation: pulse 2s infinite
 .hamburger
     display: flex
     flex-direction: column
@@ -46,6 +48,7 @@ export default {
     top: 0px
     right: 0px
     padding: 40px
+    border-radius: 50%
     cursor: pointer
     @media (min-width: 0px) and (max-width: 620px)
         padding: 20px
@@ -54,4 +57,31 @@ export default {
         width: 25px
         background-color: $tertiary
         margin-top: 6px
+</style>
+<style>
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.4);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 30px rgba(255, 102, 0, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 6px rgba(255, 102, 0, 0);
+    }
+}
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.6);
+        box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.6);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 30px rgba(255, 102, 0, 0);
+        box-shadow: 0 0 0 30px rgba(255, 102, 0, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 6px rgba(255, 102, 0, 0);
+        box-shadow: 0 0 0 6px rgba(255, 102, 0, 0);
+    }
+}
 </style>

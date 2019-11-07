@@ -220,5 +220,5 @@ export default {
     margin-left: auto
     margin-right: auto
     margin-bottom: 200px
-    margin-top: 150px
+    margin-top: 70px
 </style>

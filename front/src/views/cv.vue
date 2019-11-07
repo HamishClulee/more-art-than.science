@@ -51,7 +51,7 @@
                                 Currently under developement. Details on the <a href="/work">projects page</a>.</li>`,
                             `<li>Scratch build a booking, payment and staff allocation app for BabyAidNZ, an 
                                 education outfit in New Zealand. Details on the <a href="/work">projects page</a>.</li>`,
-                            `<li>A growing number of static websites/brochurewear sites, built from scratch and self 
+                            `<li>A growing number of static websites/brochurewear sites, built using Vue and Sass and self 
                                 hosted on DigitalOcean.</li>`,
                             `</ul>`,
                             `~`,
@@ -76,10 +76,23 @@
                                 a new crawl. At the time I left there were over 2000 threads, which performed a capture in 
                                 around 2 minutes and were constantly running. Netograph has a lot of data, 19 billion http 
                                 request pairs captured at last count!`,
-                            `Netograph is primarily focused on security and privacy insights, but has the potential to provide 
-                                intelligence in almost any industry due to the size of the database and the level of detail 
-                                that website capture provided. This was an awesome place to work and I thoroughly enjoyed the 
-                                challenges encountered.`,
+                            `Things that are indivually worth mentiong are, the 
+                                <a href="https://netograph.io/datasets/social/" target="_blank">infinite scroll library</a>,
+                                which had to act in place of pagination due to how the lists being diaplyed are indexed.  
+                                Custom <a href="https://netograph.io/datasets/social/domain/facebook.com" target="_blank">masonary cards</a> 
+                                , designed to show the user a smaple of the data in each list, remembering that each list could 
+                                contain over a million items, and each first class object (IPs, domains, superdomains) could contain 
+                                up to over 10 lists. A <a href="https://netograph.io/datasets/social" target="_blank">search component</a>, 
+                                letting users find needles in a gigantic haystack, in a manner that was quick and easy.`,
+                                `Netograph also captures privacy and cookie policy pages.
+                                Each capture displays the text from the captured site, overlayed in the original 
+                                position of a full page screenshot of the page being captured.  The has been captured by a headless chrominium browser, 
+                                well before the painting and rendering stage. The advantage here is that the text has been extracted and is now 
+                                parsable by Netograph servers, think GDPR and regulatory compliance for privacy enforcement. 
+                                The UI was designed as a sales tool to show the accuracy of the data that is being captured.
+                                It's worth <a href="https://netograph.io/datasets/social/recentpolicies" target="_blank">checking out</a>.`,
+                            `Overall, this was an awesome developement experience.`,
+                            `<span class="remote">This was a 100% remote position</span>`,
                         ],
                         references: true,
                     },
@@ -95,6 +108,7 @@
                                 Photoshop file provided by a Allow designer. I was also responsible for overhauling 
                                 the frontend tooling and build system, to enact a <em>VueJs</em> and Webpack boilerplate, 
                                 which was in usage until the company folded early this year.`,
+                            `<span class="remote">This was a 100% remote position</span>`,
                         ],
                         references: false,
                     },
@@ -103,25 +117,32 @@
                         employer: 'Fusion Sport Inc.',
                         dates: 'October 2017 - April 2018 (7 months)',
                         description: [
-                            `Fusion is a sports science company that sells web and hardware products designed to 
+                            `Fusion is a sports science company, based in Brisbane, Australia. They sell hardware products 
+                                and provide a web app, both designed to 
                                 provide athletes and sports teams with competitive advantages.`,
-                            `My main focus was Smartabase; Fusion's main product. It's a web application with a 
+                            `Please note that Fusion Sport accuired Profiler Corp, where I was working 
+                                at the time, details of my work at Profiler can be found below.`,
+                            `The Fusion Sport Client list is impressive, you can check it out 
+                                <a href="https://www.fusionsport.com/clients/" target="_blank>here</a>, 
+                                working directly for internationally recognisable sports teams was a real buzz.`,
+                            `My main focus was Smartabase; Fusion's primary web product. Smartbase functions on a 
                                 "data-in-insights-out" model. Most of my time at Fusion was spent on the "...insights-out" 
                                 part of their business, I wrote software that generated charts and tables from the data 
                                 provided by the customer. I rebuilt frontend tooling, to replace Gulp and JQuery with a 
                                 custom Webpack and <em>VueJs</em> boilerplate. The new boilerplate reduced lead time 
                                 by a significant amount, the new tooling setup was heralded as very large success and 
-                                is still in usage today.`,
-                            `After a month or so of handwriting dashboards using the new boilerplate and d3.js/c3.js, 
-                                I proposed that we write an app to allow customers to build their own dashboards 
-                                without needing developers. I was granted leadership of the Dashboard Builder Project. 
+                                is still in usage today.`, 
+                            `While most of my time at Fusion was spent using <em>Vue</em> to build dashboards, I 
+                                was also responsible for providing all the API support to the 
+                                frontend team, which required me to spend time wrting Java and Shell scripts, and still
+                                sequestered to write and debug Java on regularar basis. `,
+                            `A noteable highlight; after identifying a large number of elements being commonly requested by
+                                customers in their dashboard specifications, I proposed that we write an app to allow 
+                                customers to use those elements 
+                                without the need to directly employ developers. I was granted leadership of the Dashboard Builder Project. 
                                 Details on the <a href="/work">projects page</a>. The Dashboard Builder was a big success 
-                                and continues to be a customer favorite at Fusion. While most of my time at Fusion was spent 
-                                writing <em>VueJs</em>, I was also still responsible for providing all the API support to the 
-                                frontend team, which required me to spend time wrting Java and Shell scripts. The Dashboard 
-                                Builder project continues to be the most enjoyable project I have ever worked on. 
-                                We were given a lot of autonomy, and produced a highly usable and performant piece of javascript 
-                                in a short period of time.`,
+                                and based on feedback from collegaues still working at Fusion, appears to be a customer favorite.`,
+                            `<span class="remote">This was a 100% remote position</span>`,
                         ],
                         references: true,
                     },
@@ -130,13 +151,23 @@
                         employer: 'Profiler Corporation',
                         dates: 'August 2016 - October 2017 (1 year 3 months)',
                         description: [
-                            `Profiler is sports science company based in Dunedin, New Zealand. Most of
-                                my time was spent writing Java on the back end of a large web portal which
-                                focused on providing custom form entry to sports teams and athletes.`,
+                            `This was a graduate position which I was offered in the second half of 
+                            my third year at the University of Otago.`,
+                            `Profiler is sports science company based in Dunedin, New Zealand. Profiler was 
+                                responsible for the creation of Smartabase, a web application built to assist 
+                                with athlete and sport team management. The app had two main areas of focus. 
+                                First, data in, users were able to create very detailed custom forms. Second, 
+                                insights out, which was where I was orginally assigned due to my ReactJs 
+                                experience and passion for UI design and build. The first few months were spent 
+                                prototyping and designing a new UI for some of the 'insights out' parts of the app.
+                                Pivots occured and my focus shifted to be more backend focused, writing Java, 
+                                providing API endpoints, debugging and refactoring.`,
                             `Nearer
-                                the end of my time in this position my focus shifted to be far more fron end
+                                the end of my time in this position my focus shifted back to being far more frontend
                                 focused, with a lot of my time spent writing <em>VueJS</em> and beginning to increase its
                                 usage throughout the code base.`,
+                            `Profiler Corp was acquired by Fusion, which meant a new position, details are above.`,
+                            `<span class="remote">This was a 100% remote position</span>`,
                         ],
                         references: true,
                     },

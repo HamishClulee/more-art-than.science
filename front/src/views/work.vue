@@ -52,12 +52,11 @@ export default {
             neto_txt: [
                 `I built the frontend of the web app currently  
                 hosted at <a href="https://netograph.io" target="_blank">netograph.io</a>.`,
-                `Netograph is a start up environment with a small team that provide the web app seen at the link above, 
-                and an API. The amount of data in Netographs DB is staggering, indexed by domain and IP address, 
+                `The amount of data in Netograph's DB is staggering, primarily indexed by domain and IP address, 
                 each item has a huge amount of detail associated with it, and each index has a vast length, 
                 think millions of items, in some cases that number runs well into the billions.`,
                 `The primary frontend challenges revolved around around creating user interfaces that 
-                displayed that detail without overwhelming the user.`,
+                displayed that level of detail without overwhelming the user.`,
                 `Items of note include; an <a href="https://netograph.io/datasets/social/" target="_blank">infinite scroll library</a>,
                 which had to act in place of pagination due to how the lists being diaplyed are indexed.  
                 Custom <a href="https://netograph.io/datasets/social/domain/facebook.com" target="_blank">masonary cards</a> 

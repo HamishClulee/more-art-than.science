@@ -63,13 +63,14 @@ export default {
                 contain over a million items, and each first class object (IPs, domains, superdomains) could contain 
                 over 10 lists. A <a href="https://netograph.io/datasets/social" target="_blank">search component</a>, 
                 enabling users find very specific pieces of information in very large set.`,
-                `Netograph also captures privacy and cookie policy pages.
-                Each capture displays the text from the captured site, overlayed in the original 
-                position of a full page screenshot of the page being captured.  The has been captured by a headless chrominium browser, 
-                well before the painting and rendering stage. The advantage here is that the text has been extracted and is now 
-                parsable by Netograph servers, think GDPR and regulatory compliance for privacy enforcement. 
-                The UI was designed as a sales tool to show the accuracy of the data that is being captured.
-                It's worth <a href="https://netograph.io/datasets/social/recentpolicies" target="_blank">checking out</a>.`,
+                `Netograph also captures privacy and cookie policy pages. 
+                The text and layout data is captured prior 
+                to the painting and rendering stage in the browser lifecycle. 
+                Each capture displayed in the app shows the captured text, overlaying its captured position  
+                on a full page screenshot of URL in question, text is then searchable and sortable.
+                You can check it
+                out <a href="https://netograph.io/datasets/social/recentpolicies" target="_blank">here</a>. The UI is pretty cool, 
+                and unlike anything I've seen before.`,
                 `Overall, this was an awesome developement experience.`
                 ],
             babyaid_txt: [
@@ -88,12 +89,12 @@ export default {
             dbb_txt: [
                 `Built while working at Fusion Sport Australia.`,
                 `Shortly after my start date I was transfered 
-                into the frontend team and tasked with improving processes, finding ways to free up developer time
+                into the frontend team tasked with improving processes, finding ways to free up developer time
                 and to help clear the backlog of custom dashboards. As it stood, custom
                 dashboards required a lot of back and forth to build a solid specification, and then a 
                 reasonably long lead time to complete development.`, 
-                `As a team we identified elements of a dashboards that were requested on a regular basis and 
-                found a large number of them could be generalised past the loose components that were in 
+                `As a team we identified elements of dashboards that were commonly requested, and 
+                found a large number that could be further generalised past the loose components that were in 
                 place at the time.`,
                 `I prototyped an app that would allow creation of dashboards without needing developers. 
                 The prototype was picked up and approved by management, I was lucky enough to be given 
@@ -102,11 +103,11 @@ export default {
                 Sections were contained on pages, widgets were contained in sections.`,
                 `Widgets were split in to two groups, display and input. For example, display widgets 
                 included line, spline, area and bar graphs built using c3.js and d3.js, a table widget for 
-                displaying pure tabular data, and a tile widget for displaying single items; either 
-                strings or numbers, think fastest 100m sprint this week, or monthly average caloric 
+                displaying pure tabular data, and a tile widget for displaying single items; think fastest 
+                100m sprint this week, or monthly average caloric 
                 intake.`,
-                `All of the widdgets had customisable icons, editable background title and subtitle colors 
-                and were able to be repositioned in sections 
+                `All of the widgets had customisable icons, color pickers for background, title and subtitle colors 
+                and were able to be repositioned in, and into new sections 
                 and pages via drag and drop.`,
                 `In addition to the working on the frontend I built the API in Java, the deploy and 
                 integrations pipeline (using shell scripts and 

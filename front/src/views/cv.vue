@@ -66,37 +66,37 @@
                         employer: 'Netograph',
                         dates: 'August 2018 - August 2019 (1 year 1 month)',
                         description: [
-                            `Netograph provides a web app and an API service, their frontend is written in <em>VueJs</em> 
+                            `Netograph provides a web app and API. Their frontend is written in <em>VueJs</em> 
                                 and Typescript, backed by a custom webpack configuration. Visualisations are written in 
                                 d3.js. I was responsible for the vast majority of the frontend code currently hosted at 
                                 <a href="https://netograph.io" target="_blank">https://netpgraph.io</a>.`,
                             `Netograph's product is data. That data is gathered by a web crawler. Beginning by crawling 
-                                open social media platforms like Twitter and 4chan, each crawler thread searches for URLS, and visits those 
-                                encountered usin a headless browser and
+                                open social media platforms like Twitter and 4chan, each crawler thread searches for URLs, runs them in a 
+                                headless browser and
                                 records information like IP addresses, subdomains, SSL certificates, satellites, roots, aliases and more.
-                                Netographs servers then cross index for connections with existing data. 
+                                Netograph's servers then cross index for connections with existing data. 
                                 At the time I left there were over 2000 threads, which performed a capture in 
                                 around 2 minutes and were constantly running. Netograph has a staggering amount of data, 
                                 19 billion (and counting) http request pairs captured, with major domains like google and 
                                 facebook having millions of data points associated with them.`,
-                            `The primary frontend challenges then revolved around presenting that level of complexity, and 
+                            `The primary frontend challenges revolved around presenting that data and its inherent level of complexity, and 
                                 scale, in a user friendly manner.`,
                             `Note worthy achievements include, the 
                                 <a href="https://netograph.io/datasets/social/" target="_blank">infinite scroll library</a>,
                                 which had to act in place of pagination due to how lists are displayed and indexed.  
-                                Custom <a href="https://netograph.io/datasets/social/domain/facebook.com" target="_blank">masonary cards</a> 
-                                , designed to show the user a sample of the data in each list, remembering that each list could 
-                                contain over a million items, and each first class object (IPs, domains, superdomains) could contain 
+                                A system of custom <a href="https://netograph.io/datasets/social/domain/facebook.com" target="_blank">masonary cards</a>, 
+                                designed to show the user a sample of the data associated with the first class object (IPs, domains, superdomains) viewing, remembering that each list could 
+                                contain over a million items, and each first class object could contain 
                                 up to 10 lists. A <a href="https://netograph.io/datasets/social" target="_blank">search component</a>, 
                                 letting users find needles in a gigantic haystack, in a manner that was quick and easy.`,
                                 `Finally, Netograph captures privacy and cookie policy pages. 
                                 The text and layout data is captured prior 
                                 to the painting and rendering stage in the browser lifecycle. 
                                 Each capture displayed in the app shows the captured text, overlaying its captured position  
-                                in a full page screenshot of URL in question, text is then searchable and sortable.
+                                on a full page screenshot of URL in question, text is then searchable and sortable.
                                 You can check it
                                 out <a href="https://netograph.io/datasets/social/recentpolicies" target="_blank">here</a>.`,
-                            `Overall, this was an awesome developement experience.`,
+                            `Overall, this was an awesome developement experience, and a unforgettable opportunity.`,
                             `<span class="remote">This was a 100% remote position</span>`,
                         ],
                         references: true,
@@ -111,10 +111,9 @@
                                 templates for devs that worked directly for healthcare firm.`, 
                                 `I was employed on and off for a number of these prototypes, creating small, standalone 
                                 web apps from a series of 
-                                Photoshop files provided by a Allow designer.`,
+                                Photoshop files provided by an Allow designer.`,
                                 `I was also responsible for overhauling 
-                                the frontend tooling and build system to help make other contract developers more productive 
-                                and make onboarding less cumbersome. 
+                                the frontend tooling and build system to help make other contract developers more productive. 
                                 I created a <em>VueJs</em> and Webpack boilerplate to function as a base for new prototypes. 
                                 It included a large number of UI components that conformed to the Allow Design styleguide. 
                                 The boilerplate was successful in reducing the lag created between 
@@ -133,30 +132,32 @@
                             `Fusion is a sports science company, based in Brisbane, Australia. They sell hardware products 
                                 and provide a web app, all designed to 
                                 provide athletes and sports teams with competitive advantages.`,
-                            `Please note that Fusion Sport acquired Profiler Corp, where I was working 
-                                at the time, details of my work at Profiler can be found below.`,
+                            `Please note that Fusion Sport acquired Profiler Corp and all of its staff while I was working 
+                                at Profiler. I've listed the two as seperate positions. Details of my work at Profiler can be found below.`,
                             `The Fusion Sport Client list is impressive, you can check it out 
                                 <a href="https://www.fusionsport.com/clients/" target="_blank">here</a>, 
                                 working directly for internationally recognisable sports teams was a real buzz.`,
                             `My main focus was Smartabase; Fusion's primary web product. Smartbase functions on a 
                                 "data-in-insights-out" model. Most of my time at Fusion was spent on working with 
                                 the frontend team, whose primary focus was building dashboards.`,
-                            `Note worthy achievements include, rebuilding the tooling used by the frontend team, 
+                            `Note worthy achievements: `,
+                            `Rebuilding the tooling used by the frontend team, 
                                 replacing Gulp and JQuery with 
                                 a custom Webpack and <em>VueJs</em> boilerplate. The new boilerplate reduced lead time 
-                                by a significant amount, and is still in usage today. 
-                                Being granted leadership of the Dasboard Builder project. After 
+                                by a significant amount, and is still in usage today.`,
+                            `Being granted leadership of the Dasboard Builder project. After 
                                 identifying the most commonly requested items in 
-                                customer dashboards with the team, I protyped an application that enabled 
+                                customer dashboards with the team, I prototyped an application that enabled 
                                 creation of dashboards without developer involvement.
-                                It was approved by management, and the Dashboard Builder was born. based on 
+                                It was approved for resourcing by management, and the Dashboard Builder was born. based on 
                                 feedback from collegaues still working at Fusion it appears to remain a
                                 customer favorite. More details are available on the <a href="/work">projects page</a>.`, 
                             `While most of my time at Fusion was spent with the frontend team, I 
                                 was also responsible for providing all the API support for dashboards and the 
                                 Dashboard Builder, and at times required to fill in for custom developement 
                                 requests that required backend developement. 
-                                This meant I spent time wrting and debugging Java on regular basis.`,
+                                This meant I did spend a non-trivial amount of time writing and debugging Java and 
+                                interacting with the PSQL database.`,
                             `An awesome place to work, great team spirit, and a lot of engaging challenges.`,
                             `<span class="remote">This was a 100% remote position</span>`,
                         ],
@@ -171,19 +172,24 @@
                                 and maintained a web application called Smartabase, built to assist 
                                 with management of sports teams and athlete development. The app had two main 
                                 areas of focus. 
-                                First, data in, users were able to create very detailed custom forms for 
-                                usage after training sessions, after games and for nutrition and medical 
-                                data input. Second, 
-                                insights out, which was where I was orginally assigned due to my ReactJs 
+                                First, data in, users were able to create very detailed custom forms. General usage was for data entry
+                                after training sessions or games, recording athlete metric progresions, nutritional and wellness reports and medical 
+                                data but there was a long tail of clients that used the platform for very specific use cases. 
+                                Second, 
+                                insights out, usually in the form of dashboards, but Smartabase was also used for calendar management 
+                                and sheduling on a regular basis, and also some mapping and GIS/GPS applications.`,
+                                `I was orginally assigned to the insights-out part of Smartabase, due to my ReactJs 
                                 experience and passion for UI design and build. The first few months were spent 
-                                prototyping and designing a new UI for some new features planned 
-                                for the 'insights out' side of the business.
+                                prototyping, designing and building new UI features.
                                 Pivots occured, and I shifted to being more backend focused, writing new features in Java, 
                                 providing API endpoints, debugging and refactoring.`,
                             `Nearer the end of my time in this position my focus shifted back to the frontend, 
                                 with a most of my time being spent writing <em>VueJS</em> and beginning to increase its
                                 usage throughout the code base.`,
-                            `Profiler Corp was acquired by Fusion, which meant a new position, details are above.`,
+                            `Please note that Fusion Sport acquired Profiler Corp and all of its staff while I was working 
+                                at Profiler. I've listed the two as seperate positions. Details of my work at Fusion Sport can be found above.`,
+                            `Lots of autonomy and room to move in directions that complimented your skill sets and passions, 
+                                and a great team, full of awesome talented people. This was a good job.`,
                             `<span class="remote">This was a 100% remote position</span>`,
                         ],
                         references: true,

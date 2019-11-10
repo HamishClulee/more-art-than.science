@@ -222,11 +222,11 @@
         margin-bottom: 10px
         margin-top: 10px
         font-size: 2.6em
-        color: lighten($font, 20)
+        color: lighten($font, 10)
         @media (min-width: 520px) and (max-width: 1080px)
             font-size: 2.4em
         @media (min-width: 0px) and (max-width: 520px)
-            font-size: 1.5em
+            font-size: 1.8em
     h3
         margin-top: 10px
         font-size: 2.5em

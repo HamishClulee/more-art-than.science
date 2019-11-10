@@ -57,6 +57,9 @@ export default {
 .email
     margin-top: 50px
     color: lighten($font, 40)
+    h3
+        @media (min-width: 0px) and (max-width: 620px)
+            font-size: 2em
 .icons
     a
         margin: 10px
@@ -84,6 +87,8 @@ export default {
         width: auto
         text-align: right
         margin: 100px 70px 0 0
+        @media (min-width: 0px) and (max-width: 620px)
+            margin: 50px 20px 0 0
         h2
             cursor: pointer
             @media (min-width: 0px) and (max-width: 620px)

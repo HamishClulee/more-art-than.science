@@ -8,7 +8,6 @@
 <script>
 import vueimage from '../../components/vueimage.vue'
 import { images } from './assets/test.js'
-console.log(images)
 export default {
     name: 'ronin',
     components: { vueimage },

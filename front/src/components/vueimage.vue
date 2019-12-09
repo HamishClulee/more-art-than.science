@@ -1,99 +1,126 @@
 <template>
     <div class="image-con">
-
-        <div :id="`img-${hash}`" class="base" :class="status === 'loaded' ? 'show' : 'hide'" ></div>
-        <!-- <slot >
-
-        </slot> -->
-        <svg class="base" width="100%" height="400" :class="status !== 'loaded' ? 'show' : 'hide'">
-            <rect width="100%" height="400" :style="{ fill: perc2color(Math.floor(hash / 100000)), stroke:'none'}" />
+        <div :id="`img-${hash}`" class="base" :class="status === 'loaded' ? 'show' : 'hide'" >
+            
+        </div>
+        <svg :id="`svg-${hash}`" class="base" width="100%" :height="svgheight" :class="status !== 'loaded' ? 'show' : 'hide'">
+            <rect width="100%" :height="svgheight" :style="{ fill: perc2color(Math.floor(hash / 10000000)), stroke:'none'}" />
+            <!-- <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">{{ `I am ${eltop}px from the top of the page` }}</text> -->
         </svg>
-        <!-- <svg width="100%" >
-            <rect width="100%" :style="{ fill: '#f3f8ff', stroke:'none'}" />
-        </svg> -->
     </div>
 </template>
 
 <script>
-// TODO for background : 
-// Color map svgs while loading
-// a scroll location check (if this.$el.YPos - window.pageheight < 2000 load image)
-// define array of various image sizes for request at different screen widths
-// possible choice between loading spinner and svg background
-const Status = {
-    LOADING: 'loading',
-    LOADED: 'loaded',
-    error: 'error',
-}
+// TODO: 
+//
+// - define array of various image sizes for request at different screen widths
+//
+// - possible choice between loading spinner and svg background
+//
 export default {
     name: 'vueimage',
     props: {
         imgsrc: String,
+        scrolltrigger: Number,
     },
     data () {
         return {
             image: null,
-            status: Status.LOADING,
+            status: 'loading',
             loaderror: false,
             hash: null,
             el: null,
             hidesvg: false,
             attr: '',
+            eltop: null,
+            windowtop: null,
+            scrollticking: false,
+            scrollloc: 0,
+            ratio: null,
+            svgel: null,
+            svgheight: 0,
         }
     },
     created() {
-        this.hash = Math.floor((Math.random() * 1000000) + 1)
+        this.hash = Math.floor((Math.random() * 99999999) + 1)
+        this.scrollloc = window.scrollY
     },
     mounted() {
+        this.svgel = document.getElementById(`svg-${this.hash}`)
+
+        this.svgheight = Math.floor((this.svgel.getBoundingClientRect().right - this.svgel.getBoundingClientRect().left) * 0.66)
+
+        this.windowtop = Math.abs(document.body.getBoundingClientRect().top)
+
+        window.addEventListener('scroll', this.scrolling)
+    
+        this.windowpos = Math.abs(document.body.getBoundingClientRect().top)
+
         this.attr = this.$el.firstElementChild.attributes[0].nodeName
         this.el = document.getElementById(`img-${this.hash}`)
 
-        if (this.imgsrc && this.el) {
-            this.createLoader()
-        } else {
-            this.handleError()
-        }
+        this.$nextTick(() => { 
+            this.eltop = this.$el.getBoundingClientRect().top 
+            if (this.imgsrc && this.el && this.shouldinit) this.createLoader()
+            else if (!this.imgsrc || !this.el) this.handleError()
+        })
     },
     methods: {
+        scrolling () {
+
+            this.scrollloc = window.scrollY
+
+            if (!this.scrollticking) {
+
+                window.requestAnimationFrame(() => {
+
+                    if (this.status !== 'loaded') {
+                        
+                        if (this.scrolltrigger + this.scrollloc > this.eltop) {
+                            this.createLoader()
+                        }
+
+                        // console.log('eltop -> ', this.eltop)
+                        // console.log('scrollloc -> ', this.scrollloc)
+
+                    }
+
+                    this.scrollticking = false
+                })
+
+                this.scrollticking = true
+
+            }
+
+        },
         perc2color(perc) {
-            var r = Math.round(510 - 5.10 * perc)
-            var g = 245
-            var b = 245
-            var h = r * 0x10000 + g * 0x100 + b * 0x1;
-            return '#' + ('000000' + h.toString(16)).slice(-6);
+            let h = Math.round(510 - 5.10 * perc) * 0x10000 + 62965
+            return '#' + ('000000' + h.toString(16)).slice(-6)
         },
         handleError() {
             this.loaderror = true
+            this.status = 'error'
         },
         createLoader() {
-
-            this.destroyLoader()
-            this.status = Status.LOADING
-
             this.image = new Image()
             this.image.onload = this.handleLoad
             this.image.onerror = this.handleError
             this.image.src = this.imgsrc
-
-            this.recursecomplete()
-            
-        },
-        recursecomplete() {
             this.image.setAttribute(this.attr, '')
             this.el.appendChild(this.image)
-        },
-        destroyLoader() {
-            this.loaderror = false
-            if (this.image) {
-                this.image.onload = null
-                this.image.onerror = null
-                this.image = null
-            }
+            this.status = 'loaded'
         },
         handleLoad() {
-            this.destroyLoader()
-            this.status = Status.LOADED
+            
         }
+    },
+    computed: {
+        shouldinit() {
+            return this.eltop < this.scrolltrigger
+        },
+    },
+    beforeDestroy() {
+        window.removeEventListener('scroll', this.scrolling)
     },
 }
 </script>
@@ -101,6 +128,8 @@ export default {
 .base
     opacity: 1
     transition: opacity 0.5s ease, visibility 0.5s ease
+    object-fit: fill
+    width: 100%
 .show
     visibility: visible
     opacity: 1
@@ -111,6 +140,7 @@ export default {
     height: 0
     transition: opacity 0.5s ease, visibility 0.5s ease
 img
-    height: auto
     width: 100%
+    object-fit: fill
+    border: 
 </style>

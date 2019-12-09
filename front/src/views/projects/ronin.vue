@@ -1,7 +1,13 @@
 <template>
     <div class="temp-con">
         <div class="image-con">
-            <vueimage class="vueimg" v-for="(v, i) in test" :key="i" :imgsrc="`https://more-art-than.science/images/${v}`"></vueimage>
+            <!-- :imgsrc="`https://more-art-than.science/images/${v}`" -->
+            <vueimage 
+                class="vueimg" v-for="(v, i) in test"
+                :imgsrc="`https://more-art-than.science/images/${v}`"
+                :key="i"
+                :scrolltrigger="2000">
+            </vueimage>
         </div>
     </div>
 </template>
@@ -35,7 +41,6 @@ export default {
                         '1680': '',
                     },
                     bgcolor: '#deecff',
-
                 },
                 {
                     oneshot: 'https://more-art-than.science/images/dbb1.png',
@@ -83,6 +88,6 @@ export default {
     .vueimg
         width: 49%
         margin: 2px
-        height: auto
+        min-height: 100%
 
 </style>

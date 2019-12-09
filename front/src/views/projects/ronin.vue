@@ -2,11 +2,11 @@
     <div class="temp-con">
         <div class="image-con">
             <!-- :imgsrc="`https://more-art-than.science/images/${v}`" -->
-            <vueimage 
+            <vueimage
                 class="vueimg" v-for="(v, i) in test"
-                :imgsrc="`https://more-art-than.science/images/${v}`"
                 :key="i"
-                :scrolltrigger="2000">
+                :imgsrc="`https://more-art-than.science/images/${v}`"
+                :scrolltrigger="1000">
             </vueimage>
         </div>
     </div>

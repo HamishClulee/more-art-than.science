@@ -5,17 +5,17 @@
         </div>
         <svg :id="`svg-${hash}`" class="base" width="100%" :height="svgheight" :class="status !== 'loaded' ? 'show' : 'hide'">
             <rect width="100%" :height="svgheight" :style="{ fill: perc2color(Math.floor(hash / 10000000)), stroke:'none'}" />
-            <!-- <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">{{ `I am ${eltop}px from the top of the page` }}</text> -->
         </svg>
     </div>
 </template>
 
 <script>
-// TODO: 
-//
+// TODO:
 // - define array of various image sizes for request at different screen widths
 //
 // - possible choice between loading spinner and svg background
+//
+// - implement error behavior, if src incorrect or server unresponsive
 //
 export default {
     name: 'vueimage',
@@ -67,31 +67,16 @@ export default {
     },
     methods: {
         scrolling () {
-
             this.scrollloc = window.scrollY
-
             if (!this.scrollticking) {
-
                 window.requestAnimationFrame(() => {
-
-                    if (this.status !== 'loaded') {
-                        
-                        if (this.scrolltrigger + this.scrollloc > this.eltop) {
-                            this.createLoader()
-                        }
-
-                        // console.log('eltop -> ', this.eltop)
-                        // console.log('scrollloc -> ', this.scrollloc)
-
+                    if (this.status !== 'loaded' && (this.scrolltrigger + this.scrollloc > this.eltop)) {
+                        this.createLoader()
                     }
-
                     this.scrollticking = false
                 })
-
                 this.scrollticking = true
-
             }
-
         },
         perc2color(perc) {
             let h = Math.round(510 - 5.10 * perc) * 0x10000 + 62965
@@ -111,7 +96,7 @@ export default {
             this.status = 'loaded'
         },
         handleLoad() {
-            
+            // TODO unsure that this even needs impl
         }
     },
     computed: {
@@ -142,5 +127,4 @@ export default {
 img
     width: 100%
     object-fit: fill
-    border: 
 </style>

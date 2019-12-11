@@ -22,6 +22,7 @@ export default {
     props: {
         imgsrc: String,
         scrolltrigger: Number,
+        srcmap: Object,
     },
     data () {
         return {
@@ -93,7 +94,13 @@ export default {
             this.image.src = this.imgsrc
             this.image.setAttribute(this.attr, '')
             this.el.appendChild(this.image)
+            if (this.srcmap) {
+                this.applysrcset()
+            }
             this.status = 'loaded'
+        },
+        applysrcset() {
+            this.image.setAttribute('srcset', `${this.srcmap['480']} 1767w, ${this.srcmap['880']} 4832w, ${this.srcmap['1280']} 7971w`)
         },
         handleLoad() {
             // TODO unsure that this even needs impl

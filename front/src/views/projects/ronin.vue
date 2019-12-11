@@ -4,19 +4,16 @@
         <div class="response-con">
             <vueimage
                 imgsrc="https://more-art-than.science/images/test-small.png"
-                :srcmap="testsingle.srcmap"
-                :scrolltrigger="1000">
+                :srcmap="testsingle.srcmap">
             </vueimage>
         </div>
 
         <h1>Grid Testing</h1>
         <div class="image-con">
-            <!-- :imgsrc="`https://more-art-than.science/images/${v}`" -->
             <vueimage
                 class="vueimg" v-for="(v, i) in test"
                 :key="i"
-                :imgsrc="`https://more-art-than.science/images/${v}`"
-                :scrolltrigger="1000">
+                :imgsrc="`https://more-art-than.science/images/${v}`">
             </vueimage>
         </div>
     </div>
@@ -33,9 +30,9 @@ export default {
             testsingle: {
                 srcmap:
                 {
-                    '480': 'https://more-art-than.science/images/test-small.png',
-                    '880': 'https://more-art-than.science/images/test-medium.png',
-                    '1280': 'https://more-art-than.science/images/test-large.png',
+                    'small': 'https://more-art-than.science/images/test-small.png',
+                    'medium': 'https://more-art-than.science/images/test-medium.png',
+                    'large': 'https://more-art-than.science/images/test-large.png',
                 },
                 bgcolor: '#f3f8ff',
             },

@@ -21,7 +21,6 @@ export default {
     name: 'vueimage',
     props: {
         imgsrc: String,
-        scrolltrigger: Number,
         srcmap: Object,
     },
     data () {
@@ -40,6 +39,7 @@ export default {
             ratio: null,
             svgel: null,
             svgheight: 0,
+            scrolltrigger: 2000,
         }
     },
     created() {
@@ -100,7 +100,7 @@ export default {
             this.status = 'loaded'
         },
         applysrcset() {
-            this.image.setAttribute('srcset', `${this.srcmap['480']} 1767w, ${this.srcmap['880']} 4832w, ${this.srcmap['1280']} 7971w`)
+            this.image.setAttribute('srcset', `${this.srcmap['small']} 480w, ${this.srcmap['medium']} 1280w, ${this.srcmap['large']} 1980w`)
         },
         handleLoad() {
             // TODO unsure that this even needs impl

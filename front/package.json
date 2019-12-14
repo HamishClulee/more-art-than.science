@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@recursivecoconut/vueimage": "^0.1.2",
     "axios": "^0.18.1",
     "node-sass": "^4.10.0",
     "path": "^0.12.7",

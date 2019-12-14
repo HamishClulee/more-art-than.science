@@ -23,7 +23,9 @@ import vueimage from '../../components/vueimage.vue'
 import { images } from './assets/test.js'
 export default {
     name: 'ronin',
-    components: { vueimage },
+    components: {
+        vueimage
+    },
     data () {
         return {
             test: images,

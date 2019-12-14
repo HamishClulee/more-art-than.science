@@ -11,11 +11,15 @@
 
 <script>
 // TODO:
-// - define array of various image sizes for request at different screen widths
+// - allow user to set background color of svg tiles using a prop
 //
-// - possible choice between loading spinner and svg background
+// - possible choice between svg background and a slot
 //
-// - implement error behavior, if src incorrect or server unresponsive
+// - implement error behavior, if src incorrect or server unresponsive, display ddfault 404, or slot 404
+//
+// - SEO behavior considerations - alt tags, make sure alt tags are rendered before crawl
+// 
+// - The h x w ratio for the svg to be settable via a prop with solid defaults
 //
 export default {
     name: 'vueimage',

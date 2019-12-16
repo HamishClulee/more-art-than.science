@@ -14,7 +14,8 @@
             <vueimage
                 class="vueimg" v-for="(v, i) in test"
                 :key="i"
-                :imgsrc="`https://more-art-than.science/images/${v}`">
+                :imgsrc="`https://more-art-than.science/images/${v}`"
+                :alttag="`Just another faker lat tag displaying things ${i * Math.random()} times`">
             </vueimage>
         </div>
     </div>

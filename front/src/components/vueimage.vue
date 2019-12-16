@@ -106,6 +106,7 @@ export default {
             this.image.onerror = this.handleError
             this.image.src = this.imgsrc
             this.image.setAttribute(this.attr, '')
+            this.image.setAttribute('alt', this.alttag)
             this.el.appendChild(this.image)
             if (this.srcmap) {
                 this.applysrcset()

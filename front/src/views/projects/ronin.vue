@@ -4,7 +4,8 @@
         <div class="response-con">
             <vueimage
                 imgsrc="https://more-art-than.science/images/test-small.png"
-                :srcmap="testsingle.srcmap">
+                :srcmap="testsingle.srcmap"
+                alttag="Placeholder image with text inside">
             </vueimage>
         </div>
 
@@ -91,8 +92,8 @@ export default {
 .temp-con
     display: flex
     flex-direction: column
-    margin-top: 200px
     margin-bottom: 200px
+    margin-top: 100px
     width: 100%
     align-items: center
     justify-content: center
@@ -114,7 +115,7 @@ export default {
     margin-right: auto
 
 h1
-    margin-top: 2em
+    margin-top: 1em
     margin-bottom: 1em
 
 </style>

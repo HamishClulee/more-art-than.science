@@ -19,6 +19,7 @@
 
 <script>
 // TODO:
+// - add js implementation of srcset using windowwidth
 // - allow user to set background color of svg tiles using a prop
 //
 // - possible choice between svg background and a slot
@@ -32,12 +33,32 @@
 export default {
     name: 'vueimage',
     props: {
-        imgsrc: String,
-        srcmap: Object,
-        alttag: String,
+        imgsrc: {
+            type: String,
+            required: true,
+        },
+        srcmap: {
+            type: Object,
+            required: false,
+            default: null,
+        },
+        breaksizes: {
+            type: Object,
+            required: false,
+            default: {
+                'small': 780,
+                'medium': 1480,
+                'large': 1980,
+            }
+        },
+        alttag: {
+            type: String,
+            required: true,
+        },
     },
     data () {
         return {
+            windowwidth: 0,
             image: null,
             status: 'loading',
             loaderror: false,
@@ -56,6 +77,9 @@ export default {
         }
     },
     created() {
+        if (this.srcmap) {
+            this.setsrcforwidth()
+        }
         this.hash = Math.floor((Math.random() * 99999999) + 1)
         this.scrollloc = window.scrollY
     },
@@ -80,6 +104,11 @@ export default {
         })
     },
     methods: {
+        setsrcforwidth() {
+            if (this.windowwidth < this.breaksizes['small']) this.src = this.srcmap['small']
+            else if (this.windowwidth >= this.breaksizes['small'] && this.windowwidth < this.breaksizes['medium']) this.src = this.srcmap['medium']
+            else this.src = this.srcmap['large']
+        },
         scrolling () {
             this.scrollloc = window.scrollY
             if (!this.scrollticking) {
@@ -108,17 +137,8 @@ export default {
             this.image.setAttribute(this.attr, '')
             this.image.setAttribute('alt', this.alttag)
             this.el.appendChild(this.image)
-            if (this.srcmap) {
-                this.applysrcset()
-            }
             this.status = 'loaded'
         },
-        applysrcset() {
-            this.image.setAttribute('srcset', `${this.srcmap['small']} 480w, ${this.srcmap['medium']} 1280w, ${this.srcmap['large']} 1980w`)
-        },
-        handleLoad() {
-            // TODO unsure that this even needs impl
-        }
     },
     computed: {
         shouldinit() {

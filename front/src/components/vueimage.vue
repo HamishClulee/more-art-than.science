@@ -45,10 +45,12 @@ export default {
         breaksizes: {
             type: Object,
             required: false,
-            default: {
-                'small': 780,
-                'medium': 1480,
-                'large': 1980,
+            default: () => {
+                return  {
+                    'small': 780,
+                    'medium': 1480,
+                    'large': 1980,
+                }
             }
         },
         alttag: {

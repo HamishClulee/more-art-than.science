@@ -18,14 +18,11 @@
 
 <script>
 // TODO:
-// - add js implementation of srcset using windowwidth
 // - allow user to set background color of svg tiles using a prop
 //
 // - possible choice between svg background and a slot
 //
 // - implement error behavior, if src incorrect or server unresponsive, display ddfault 404, or slot 404
-//
-// - SEO behavior considerations - alt tags, make sure alt tags are rendered before crawl
 // 
 // - The h x w ratio for the svg to be settable via a prop with solid defaults
 //
@@ -59,6 +56,7 @@ export default {
     },
     data () {
         return {
+            intsrc: '',
             windowwidth: 0,
             image: null,
             status: 'loading',
@@ -78,7 +76,10 @@ export default {
         }
     },
     created() {
+        // avoid mutating prop directly
+        this.intsrc = this.imgsrc
 
+        // generate UID for the image component
         this.hash = Math.floor((Math.random() * 99999999) + 1)
 
         // set up scroll location
@@ -106,18 +107,18 @@ export default {
 
         this.$nextTick(() => { 
             this.eltop = this.$el.getBoundingClientRect().top 
-            if (this.imgsrc && this.el && this.shouldinit) this.createLoader()
-            else if (!this.imgsrc || !this.el) this.handleError()
+            if (this.intsrc && this.el && this.shouldinit) this.createLoader()
+            else if (!this.intsrc || !this.el) this.handleError()
         })
     },
     methods: {
         setsrcforwidth() {
             if (this.windowwidth < this.breaksizes['small']) {
-                this.imgsrc = this.srcmap['small']
+                this.intsrc = this.srcmap['small']
             } else if (this.windowwidth >= this.breaksizes['small'] && this.windowwidth < this.breaksizes['medium']) {
-                this.imgsrc = this.srcmap['medium']
+                this.intsrc = this.srcmap['medium']
             } else {
-                this.imgsrc = this.srcmap['large']
+                this.intsrc = this.srcmap['large']
             }
         },
         scrolling () {
@@ -144,7 +145,7 @@ export default {
             this.image = new Image()
             this.image.onload = this.handleLoad
             this.image.onerror = this.handleError
-            this.image.src = this.imgsrc
+            this.image.src = this.intsrc
             this.image.setAttribute(this.attr, '')
             this.image.setAttribute('alt', this.alttag)
             this.el.appendChild(this.image)

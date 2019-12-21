@@ -1,6 +1,6 @@
 <template>
     <div class="temp-con">
-        
+
         <h1>Responsive Testing</h1>
 
         <div class="response-con">
@@ -16,7 +16,7 @@
             </vueimage>
         </div>
 
-        <!-- <h1>Grid Testing</h1>
+        <h1>Grid Testing</h1>
         <div class="image-con">
             <vueimage
                 class="vueimg" v-for="(v, i) in test"
@@ -24,7 +24,7 @@
                 :imgsrc="`https://more-art-than.science/images/${v}`"
                 :alttag="`Just another faker lat tag displaying things ${i * Math.random()} times`">
             </vueimage>
-        </div> -->
+        </div>
     </div>
 </template>
 <script>

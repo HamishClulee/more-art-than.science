@@ -12,8 +12,7 @@
             width="100%"
             :height="svgheight"
         />
-            <!-- <rect width="100%" :height="svgheight" :style="{ fill: perc2color(Math.floor(hash / 10000000)), stroke:'none'}" /> -->
-    
+        <!-- <rect width="100%" :height="svgheight" :style="{ fill: perc2color(Math.floor(hash / 10000000)), stroke:'none'}" /> -->
     </div>
 </template>
 
@@ -79,11 +78,19 @@ export default {
         }
     },
     created() {
+
+        this.hash = Math.floor((Math.random() * 99999999) + 1)
+
+        // set up scroll location
+        this.scrollloc = window.scrollY
+        window.addEventListener('scroll', this.scrolling)
+
+        // set up window width listener
+        this.windowwidth = window.innerWidth
+
         if (this.srcmap) {
             this.setsrcforwidth()
         }
-        this.hash = Math.floor((Math.random() * 99999999) + 1)
-        this.scrollloc = window.scrollY
     },
     mounted() {
         this.svgel = document.getElementById(`svg-${this.hash}`)
@@ -91,8 +98,6 @@ export default {
         this.svgheight = Math.floor((this.svgel.getBoundingClientRect().right - this.svgel.getBoundingClientRect().left) * 0.66)
 
         this.windowtop = Math.abs(document.body.getBoundingClientRect().top)
-
-        window.addEventListener('scroll', this.scrolling)
     
         this.windowpos = Math.abs(document.body.getBoundingClientRect().top)
 
@@ -107,9 +112,13 @@ export default {
     },
     methods: {
         setsrcforwidth() {
-            if (this.windowwidth < this.breaksizes['small']) this.src = this.srcmap['small']
-            else if (this.windowwidth >= this.breaksizes['small'] && this.windowwidth < this.breaksizes['medium']) this.src = this.srcmap['medium']
-            else this.src = this.srcmap['large']
+            if (this.windowwidth < this.breaksizes['small']) {
+                this.imgsrc = this.srcmap['small']
+            } else if (this.windowwidth >= this.breaksizes['small'] && this.windowwidth < this.breaksizes['medium']) {
+                this.imgsrc = this.srcmap['medium']
+            } else {
+                this.imgsrc = this.srcmap['large']
+            }
         },
         scrolling () {
             this.scrollloc = window.scrollY

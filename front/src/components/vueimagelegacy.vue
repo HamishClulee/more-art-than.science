@@ -1,20 +1,23 @@
 <template>
-    <figure class="image-con">
+    <div class="image-con">
+        <div :id="`img-${hash}`" class="base" :class="status === 'loaded' ? 'show' : 'hide'" >
+            
+        </div>
         <img
+            :class="status !== 'loaded' ? 'show' : 'hide'"
             src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgaWQ9InN2ZzgiCiAgIHZlcnNpb249IjEuMSIKICAgdmlld0JveD0iMCAwIDM0Ljk2Mjc5OSAzNS42NjIwNTIiCiAgIGhlaWdodD0iMzUuNjYyMDUybW0iCiAgIHdpZHRoPSIzNC45NjI3OTltbSI+CiAgPGRlZnMKICAgICBpZD0iZGVmczIiIC8+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhNSI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGU+PC9kYzp0aXRsZT4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGcKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtODAuODg2OTA5LC0xMTIuNTQ3NjIpIgogICAgIGlkPSJsYXllcjEiPgogICAgPHJlY3QKICAgICAgIHk9IjExMi41NDc2MiIKICAgICAgIHg9IjgwLjg4NjkwOSIKICAgICAgIGhlaWdodD0iMzUuNjYyMDUyIgogICAgICAgd2lkdGg9IjM0Ljk2Mjc5OSIKICAgICAgIGlkPSJyZWN0ODE1IgogICAgICAgc3R5bGU9Im9wYWNpdHk6MC43NjU5OTk5NTtmaWxsOiNkNmU3ZmY7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNjE1MTI0OTQ7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MDtzdHJva2Utb3BhY2l0eToxIiAvPgogIDwvZz4KPC9zdmc+Cg=="
-            :id="`vue-image-${hash}`"
-            :data-src="intsrc"
+            :id="`svg-${hash}`"
             :alt="alttag"
             width="100%"
+            :height="svgheight"
         />
-    </figure>
+        <!-- <rect width="100%" :height="svgheight" :style="{ fill: perc2color(Math.floor(hash / 10000000)), stroke:'none'}" /> -->
+    </div>
 </template>
 
 <script>
 // TODO:
 // - Implement IntersectionObserver and check if supported, if not use scroll listener implementation - test both
-//
-// - implement optional caption via prop
 //
 // - Implement src and data-src
 //
@@ -58,7 +61,21 @@ export default {
         return {
             intsrc: '',
             windowwidth: 0,
+            image: null,
+            status: 'loading',
+            loaderror: false,
             hash: null,
+            el: null,
+            hidesvg: false,
+            attr: '',
+            eltop: null,
+            windowtop: null,
+            scrollticking: false,
+            scrollloc: 0,
+            ratio: null,
+            svgel: null,
+            svgheight: 0,
+            scrolltrigger: 2000,
         }
     },
     created() {
@@ -68,7 +85,11 @@ export default {
         // generate UID for the image component
         this.hash = Math.floor((Math.random() * 99999999) + 1)
 
-        // set up window width
+        // set up scroll location
+        this.scrollloc = window.scrollY
+        window.addEventListener('scroll', this.scrolling)
+
+        // set up window width listener
         this.windowwidth = window.innerWidth
 
         if (this.srcmap) {
@@ -76,15 +97,22 @@ export default {
         }
     },
     mounted() {
+        this.svgel = document.getElementById(`svg-${this.hash}`)
 
-        const imageObserver = new IntersectionObserver(entries => {
-            if(entries[0].isIntersecting) {
-                const lazyImage = entries[0].target
-                lazyImage.src = lazyImage.dataset.src
-            }
-        });
+        this.svgheight = Math.floor((this.svgel.getBoundingClientRect().right - this.svgel.getBoundingClientRect().left) * 0.66)
 
-        imageObserver.observe(document.getElementById(`vue-image-${this.hash}`));
+        this.windowtop = Math.abs(document.body.getBoundingClientRect().top)
+    
+        this.windowpos = Math.abs(document.body.getBoundingClientRect().top)
+
+        this.attr = this.$el.firstElementChild.attributes[0].nodeName
+        this.el = document.getElementById(`img-${this.hash}`)
+
+        this.$nextTick(() => { 
+            this.eltop = this.$el.getBoundingClientRect().top 
+            if (this.intsrc && this.el && this.shouldinit) this.createLoader()
+            else if (!this.intsrc || !this.el) this.handleError()
+        })
     },
     methods: {
         setsrcforwidth() {
@@ -96,7 +124,45 @@ export default {
                 this.intsrc = this.srcmap['large']
             }
         },
-    }
+        scrolling () {
+            this.scrollloc = window.scrollY
+            if (!this.scrollticking) {
+                window.requestAnimationFrame(() => {
+                    if (this.status !== 'loaded' && (this.scrolltrigger + this.scrollloc > this.eltop)) {
+                        this.createLoader()
+                    }
+                    this.scrollticking = false
+                })
+                this.scrollticking = true
+            }
+        },
+        perc2color(perc) {
+            let h = Math.round(510 - 5.10 * perc) * 0x10000 + 62965
+            return '#' + ('000000' + h.toString(16)).slice(-6)
+        },
+        handleError() {
+            this.loaderror = true
+            this.status = 'error'
+        },
+        createLoader() {
+            this.image = new Image()
+            this.image.onload = this.handleLoad
+            this.image.onerror = this.handleError
+            this.image.src = this.intsrc
+            this.image.setAttribute(this.attr, '')
+            this.image.setAttribute('alt', this.alttag)
+            this.el.appendChild(this.image)
+            this.status = 'loaded'
+        },
+    },
+    computed: {
+        shouldinit() {
+            return this.eltop < this.scrolltrigger
+        },
+    },
+    beforeDestroy() {
+        window.removeEventListener('scroll', this.scrolling)
+    },
 }
 </script>
 <style lang="sass" scoped>
@@ -119,7 +185,4 @@ img
     object-fit: fill
 .hidden
     height: 0 !important
-figure
-    margin: 0
-    padding: 0
 </style>

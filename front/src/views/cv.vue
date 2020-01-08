@@ -43,7 +43,7 @@
                         employer: 'AduroLabs Vietnam',
                         dates: 'December 2019 - Present',
                         description: [
-                            `AduroLabs is a Health and Wellness serice provider. I'm primarily tasked with leadership and mentoring for the front end teams.`,
+                            `AduroLabs is a Health and Wellness service provider. I'm primarily tasked with leadership and mentoring for the front end teams.`,
                         ],
                         references: true,
                     },

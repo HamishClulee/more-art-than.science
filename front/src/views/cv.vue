@@ -39,25 +39,11 @@
             return {
                 jobs: [
                     {
-                        title: 'Full Stack Web Developer',
-                        employer: 'Freelancing',
-                        dates: 'April 2015 - Present (4+ years)',
+                        title: 'Senior Frontend Developer',
+                        employer: 'AduroLabs Vietnam',
+                        dates: 'December 2019 - Present',
                         description: [
-                            `Since early 2015 I have taken on a number of freelance web dev jobs, both while working 
-                                in waged positions and as a full time freelancer.`,
-                            `Breif summary of works:`,
-                            `<ul>`,
-                            `<li>Scratch build a booking, payment and calendar management app for @RONIN, 
-                                a company that provides co-working and co-living spaces for digital nomads. 
-                                Currently under developement. Details on the <a href="/work">projects page</a>.</li>`,
-                            `<li>Scratch build a booking, payment and staff allocation app for BabyAidNZ, an 
-                                education outfit in New Zealand. Details on the <a href="/work">projects page</a>.</li>`,
-                            `<li>A growing number of static websites/brochurewear sites, built using Vue and Sass and self 
-                                hosted on DigitalOcean.</li>`,
-                            `</ul>`,
-                            `~`,
-                            `Almost everything I do while freelancing finds a way to make use of <em>VueJs</em> in some way, 
-                                shape or form.`,
+                            `AduroLabs is a Health and Wellness serice provider. I'm primarily tasked with leadership and mentoring for the front end teams.`,
                         ],
                         references: true,
                     },

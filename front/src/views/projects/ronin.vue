@@ -24,7 +24,7 @@
                 class="vueimg" v-for="(v, i) in test"
                 :key="i"
                 :imgsrc="`https://more-art-than.science/images/${v}`"
-                :alttag="`Just another faker lat tag displaying things ${i * Math.random()} times`">
+                :alttag="`Fake alt tag displaying things ${i * Math.random()} times`">
             </vueimage>
         </div>
     </div>
@@ -47,7 +47,6 @@ export default {
                     'medium': 'https://more-art-than.science/images/test-medium.png',
                     'large': 'https://more-art-than.science/images/test-large.png',
                 },
-                bgcolor: '#f3f8ff',
             },
             testers: [
                 {

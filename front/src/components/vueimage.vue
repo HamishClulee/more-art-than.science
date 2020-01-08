@@ -7,12 +7,12 @@
             :alt="alttag"
             width="100%"
         />
+        <figcaption>Tester for caption</figcaption>
     </figure>
 </template>
 
 <script>
 // TODO:
-// - Implement IntersectionObserver and check if supported, if not use scroll listener implementation - test both
 //
 // - implement optional caption via prop
 //
@@ -62,7 +62,6 @@ export default {
         return {
             intsrc: '',
             windowwidth: 0,
-
             hash: null,
         }
     },

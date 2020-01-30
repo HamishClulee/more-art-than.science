@@ -14,7 +14,6 @@
 
 <script>
 import canvasnav from './components/canvasnav'
-
 export default {
     name: 'app',
     components: { canvasnav },

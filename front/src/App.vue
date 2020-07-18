@@ -1,22 +1,23 @@
 <template>
     <div class="god-div">
-        <div> 
+        <matsnav></matsnav>
+        <!-- <div> 
             <div :class="$route.name === 'home' ? 'pulse' : ''" class="hamburger" v-if="!canvasopen" @click="togglecanvas">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
             <canvasnav v-else></canvasnav>
-        </div>
+        </div> -->
         <router-view></router-view>
     </div>
 </template>
 
 <script>
-import canvasnav from './components/canvasnav'
+import matsnav from './components/matsnav'
 export default {
     name: 'app',
-    components: { canvasnav },
+    components: { matsnav },
     data() {
         return {
             canvasopen: false,

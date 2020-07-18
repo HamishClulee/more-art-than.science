@@ -1,9 +1,23 @@
 <template>
     <div class="home-con">
         <h1>Hamish Clulee</h1>
-        <h2>Full Stack Web Developer</h2>
-        <h3>Specialising in VueJs</h3>
-        <p>Born in New Zealand, currently living in Asia. It's more than likely you will find me working on the frontend. I'm passionate about user interfaces and frontend ops.</p>
+        <h2>Technical Lead</h2>
+        <h3>
+            Specialising in VueJs, JavaScript and all things 
+            Frontend
+        </h3>
+        <p>
+            I'm passionate about complex UI/UX builds
+            and optimising Frontend Ops. A big believer that 
+            attitude is the main ingredient in creating good 
+            devs and great teams.
+        </p>
+        <p>
+            I'm well read and versed in Software Engineering 
+            as a discipline. Develop the basics first, do the 
+            simple stuff well, and everything else will fall 
+            into place.
+        </p>
         <div class="header-icons-home">
             <a href="https://github.com/HamishClulee" target="_blank" class="icon-container-item">
                 <img src="https://more-art-than.science/images/github.svg" height="30"/>

@@ -4,7 +4,8 @@ import Router from 'vue-router'
 const home = () => import('../views/home.vue')
 const work = () => import('../views/work.vue')
 const cv = () => import('../views/cv.vue')
-const blog = () => import('../views/blog.vue')
+const blog = () => import('../views/bloglist.vue')
+const posts = () => import('../views/posts.vue')
 const notfound = () => import('../views/notfound')
 const ronin = () => import('../views/projects/ronin.vue')
 
@@ -39,6 +40,11 @@ export default new Router({
             path: '/blog',
             name: 'blog',
             component: blog,
+        },
+        {
+            path: '/posts/:title',
+            name: 'posts',
+            component: posts,
         },
         {
             path: '/cv',

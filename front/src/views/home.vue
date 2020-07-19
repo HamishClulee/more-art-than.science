@@ -1,5 +1,6 @@
 <template>
     <div class="home-con">
+        <img src="/images/0.jpeg" class="avatar"/>
         <h1>Hamish Clulee</h1>
         <h2>Technical Lead</h2>
         <h3>
@@ -14,9 +15,9 @@
         </p>
         <p>
             I'm well read and versed in Software Engineering 
-            as a discipline. Develop the basics first, do the 
-            simple stuff well, and everything else will fall 
-            into place.
+            as a discipline. I try to maintain adherence to the 
+            basics, do the simple stuff well and watch everything 
+            else fall into place.
         </p>
         <div class="header-icons-home">
             <a href="https://github.com/HamishClulee" target="_blank" class="icon-container-item">
@@ -47,9 +48,12 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.avatar
+    border: 2px solid $font
+    border-radius: 50%
+    width: 175px
 .home-con
     padding: 10px
-    height: 90vh
     width: 90%
     margin-left: auto
     margin-right: auto
@@ -59,7 +63,7 @@ export default {
     justify-content: center
     text-align: center
     overflow-y: hidden
-    margin-top: 20px
+    margin-top: 100px
 h1, h2, h3
     margin-top: 5px
 h1

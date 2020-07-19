@@ -26,7 +26,7 @@
             <h3>{{ v.title }}</h3>
             <h5>{{ v.dates }}</h5>
             <h6 class="refs" v-if="v.references">References available</h6>
-            <p v-for="(p, x) in v.description" :key="x" v-html="p"></p>
+            <p v-for="(p, x) in v.description" :key="x" v-html="p" class="des-para"></p>
             <div class="fin-con">~</div>
         </div>
     </div>
@@ -39,11 +39,20 @@
             return {
                 jobs: [
                     {
-                        title: 'Senior Frontend Developer',
+                        title: 'Frontend Tech Lead',
                         employer: 'AduroLabs Vietnam',
                         dates: 'December 2019 - Present',
                         description: [
-                            `AduroLabs is a Health and Wellness service provider. I'm primarily tasked with leadership and mentoring for the front end teams.`,
+                            `AduroLabs is a Health and Wellness service provider.`,
+                            `I'm primarily 
+                            tasked with leadership and mentoring for the front end teams. 
+                            Daily responsibilities include code reviews, coaching, writing 
+                            technical documemtation, making architecture decisions and managing 
+                            sprints and tickets.`,
+                            `Higher level responsibilities include interviewing 
+                            potential hires, technical product management, building better agile 
+                            processes and interfacing with other teams and departments within the 
+                            company.`,
                         ],
                         references: true,
                     },
@@ -236,6 +245,8 @@
             font-size: 1.2em
         @media (min-width: 0px) and (max-width: 520px)
             font-size: 1.1em
+    .des-para
+        margin-bottom: 20px
 .exp-head
     font-size: 2em
     margin: 30px 0 10px

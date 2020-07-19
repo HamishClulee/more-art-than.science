@@ -9,9 +9,16 @@
         </h3>
         <p>
             I'm passionate about complex UI/UX builds
-            and optimising Frontend Ops. A big believer that 
-            attitude is the main ingredient in creating good 
-            devs and great teams.
+            and optimising Frontend Ops. 
+            I'm well read and versed in Software Engineering as a discipline.
+            I stay focused on the basics and doing the simple stuff well.
+            Complexity is unavoidable, the goal is to avoid adding to it when 
+            solving the problem.
+        </p>
+        <p>
+            I'm a big believer that attitude is the main ingredient in creating good 
+            devs and great teams, that attitude can be fostered and that results 
+            will follow naturally.
         </p>
         <div class="header-icons-home">
             <a href="https://github.com/HamishClulee" target="_blank" class="icon-container-item">

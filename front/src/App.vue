@@ -1,14 +1,6 @@
 <template>
     <div class="god-div">
         <matsnav></matsnav>
-        <!-- <div> 
-            <div :class="$route.name === 'home' ? 'pulse' : ''" class="hamburger" v-if="!canvasopen" @click="togglecanvas">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <canvasnav v-else></canvasnav>
-        </div> -->
         <router-view></router-view>
     </div>
 </template>
@@ -38,6 +30,10 @@ export default {
 <style lang="sass" scoped>
 .god-div
     overflow-x: hidden !important
+    background-repeat: no-repeat
+    background-attachment: fixed
+    background-position: right
+    background-size: contain
 .pulse
     animation: pulse 2s infinite
 .hamburger

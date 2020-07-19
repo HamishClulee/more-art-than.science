@@ -49,7 +49,7 @@ export default {
 <style lang="sass" scoped>
 .home-con
     padding: 10px
-    height: 97vh
+    height: 90vh
     width: 90%
     margin-left: auto
     margin-right: auto

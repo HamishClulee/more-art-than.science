@@ -88,7 +88,7 @@ export default {
     right: 0
     transition: all 1s ease
     background-color: white
-    color: $primary
+    color: $font
     height: 100vh
     width: 100%
     overflow: hidden !important
@@ -111,7 +111,7 @@ export default {
         content: ''
         width: 10px
         height: 2px
-        background-color: $primary
+        background-color: $tertiary
         position: relative
         top: 2px
         right: 2px
@@ -125,17 +125,19 @@ export default {
             left: 348px
 .cta
     background-color: $highlight
-    color: $tertiary
+    color: $font
 .cta-canvas
     background-color: $highlight
-    color: $tertiary
+    color: $font
     width: 250px
     margin-top: 15px
 .navbar-con, .navbar-left, .navbar-right
     display: flex
     flex-direction: row
     a
-        color: $link
+        color: $font
+        letter-spacing: 2px
+        font-size: 1.1em
         text-transform: uppercase
 .navbar-con
     position: fixed
@@ -143,7 +145,9 @@ export default {
     top: 0
     z-index: 2
     height: 60px
+    opacity: 0.9
     background-color: white
+    border-bottom: 1px solid lighten($font, 60)
 .navbar-right
     align-items: center
     justify-content: flex-end
@@ -163,7 +167,7 @@ export default {
     .line
         height: 2px
         width: 25px
-        background-color: $highlight
+        background-color: $font
         margin-top: 4px
 .big-x
     cursor: pointer
@@ -173,7 +177,7 @@ export default {
     &:hover
         opacity: 0.8
     .line
-        background-color: $highlight
+        background-color: $font
         transform: rotate(-45deg)
         &:first-child
             transform: rotate(45deg)

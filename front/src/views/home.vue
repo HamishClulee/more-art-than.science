@@ -13,12 +13,6 @@
             attitude is the main ingredient in creating good 
             devs and great teams.
         </p>
-        <p>
-            I'm well read and versed in Software Engineering 
-            as a discipline. I try to maintain adherence to the 
-            basics, do the simple stuff well and watch everything 
-            else fall into place.
-        </p>
         <div class="header-icons-home">
             <a href="https://github.com/HamishClulee" target="_blank" class="icon-container-item">
                 <img src="https://more-art-than.science/images/github.svg" height="30"/>

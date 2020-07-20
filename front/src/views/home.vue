@@ -19,7 +19,7 @@
         <p>
             I'm a big believer that attitude is the main ingredient in creating good 
             devs and great teams, that attitude can be fostered and that teaching is the 
-            most effective way to continue leanring.
+            most effective way to continue learning.
         </p>
         <div class="header-icons-home">
             <a href="https://github.com/HamishClulee" target="_blank" class="icon-container-item">

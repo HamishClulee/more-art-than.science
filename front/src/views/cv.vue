@@ -99,7 +99,7 @@
                     {
                         title: 'Contract Frontend Developer',
                         employer: 'Allow Design',
-                        dates: 'Intermittent between January 2017 - February 2019 (Contracts totalling 9+ months)',
+                        dates: 'Intermittent between January 2017 - February 2019 (Contracts totalling 12 months)',
                         description: [
                             `Allow Design was a studio based in Dunedin, New Zealand. They had one primary client, 
                                 a US healthcare giant. They would create functioning mini applications as development 
@@ -200,7 +200,7 @@
     width: 80%
     margin-left: auto
     margin-right: auto
-    margin-top: 70px
+    margin-top: 90px
     margin-bottom: 150px
     @media (min-width: 520px) and (max-width: 1080px)
         width: 90%

@@ -57,7 +57,7 @@
                         references: true,
                     },
                     {
-                        title: 'Senior Frontend Developer',
+                        title: 'Lead Frontend Developer',
                         employer: 'Netograph',
                         dates: 'August 2018 - August 2019 (1 year 1 month)',
                         description: [

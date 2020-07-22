@@ -109,15 +109,15 @@ export default {
                 then to use it as a base for building out Hue.`,
             ],
             ronin_txt: [
-                `Static website built in October 2019 with a booking app currently in developement. 
+                `Static website and booking application built in October 2019.
                 The clients are a growing accomodation business in Bali. Their primary focus is providing 
                 Co-Live-Co-Work spaces for Digital Nomads.`,
-                `The booking application that will allow customers and guests to check availability of rooms, book rooms 
-                and co-working desks, make payments and include customisable packages which will increase 
-                or decrease costs. `],
+                `Covid has seen the 
+                owners unable to continue their business, I've left the static part of the site on
+                the internet.`],
             neto_txt: [
                 `I built the frontend of the web app currently  
-                hosted at <a href="https://netograph.io" target="_blank">netograph.io</a>.`,
+                hosted at https://netograph.io (click this tile to visit the live site).`,
                 `The amount of data in Netograph's DB is staggering, primarily indexed by domain and IP address, 
                 each item has a huge amount of detail associated with it, and each index having a vast length, 
                 think millions of items, in some cases that number runs well into the billions.`,
@@ -125,18 +125,19 @@ export default {
                 displayed that level of detail without overwhelming the user.`
                 ],
             babyaid_txt: [
-                `Static website and booking app written for a now defunct medical start up in New Zealand.`,
-                `I built a calendar app using a forked Vue calendar found on GitHub. A checkout and payment system
-                built using a hashed URL stored in the DB so that bookings would persist over time and could be 
-                returned to at any time.`
+                `Static website, booking and scheduling app written for a now defunct medical start up in New Zealand.`,
+                `I built a calendar app using a forked Vue calendar found on GitHub. A checkout and payment 
+                system using Stripe and an Admin tool for staff to manage trainer and course sheduling.`,
+                `The app was used by the business for almost a year with very few problems.`,
                 ],
             dbb_txt: [
-                `Built while working at Fusion Sport Australia.`,
-                `Shortly after my start date I was transfered 
-                into the frontend team tasked with improving processes, finding ways to free up developer time
-                and to help clear the backlog of custom dashboards. As it stood, custom
-                dashboards required a lot of back and forth to build a solid specification, and then a 
-                reasonably long lead time to complete development.`,
+                `Built while working at Fusion Sport Australia. Allowed customers to create 
+                dashboards using a no-code web app.`,
+                `Prior to this projects a team 
+                of three FE devs was writting the dashboards by hand. I spec'ed, prototyped and designed the system, 
+                was given leadership of the project and worked with two other devs to complete the project in around 6 months. 
+                The Dashboard Builder is still in usage now by very well known internationa sports teams and 
+                organisations.`,
             ],
             babimg: "https://more-art-than.science/images/bab1-lowqual.jpg",
             hue_img: "/images/hueletters.png",

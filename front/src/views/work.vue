@@ -2,41 +2,77 @@
     <div class="work-con">
         <gallerymodal v-if="showmodal" :images="act_array"></gallerymodal>
 
-        <worksum
-            title="Dashboard Builder" sub="Web App"
-            :images="dbbimg" :text="dbb_txt"
-            :tech="dbb_tech">
-        </worksum>
+        <h1>Current Projects</h1>
 
-        <worksum 
-            title="Netograph" sub="Web App" 
-            :images="netimg" :text="neto_txt"
-            :islive="true" aref="https://netograph.io"
-            :tech="neto_tech">
-        </worksum>
+        <section class="cards-container">
 
-        <worksum
-            title="@RONIN" sub="Website"
-            :images="roninimg" :text="ronin_txt"
-            :islive="true" aref="https://atronin.space"
-            :tech="ronin_tech">
-        </worksum>
+            <featurecard
+                title="Hue" sub="OSS"
+                :images="dbbimg" :text="dbb_txt"
+                :tech="dbb_tech"
+            ></featurecard>
 
-        <worksum
-            title="Baby Aid NZ" sub="Web App"
-            :images="babimg" :text="babyaid_txt"
-            :tech="baby_tech">
-        </worksum>
+            <featurecard
+                title="Welcome QR" sub="Web App" 
+                :images="netimg" :text="neto_txt"
+                :islive="true" aref="https://netograph.io"
+                :tech="neto_tech"
+            ></featurecard>
+
+            <featurecard
+                title="Create MEVN App" sub="OSS"
+                :images="roninimg" :text="ronin_txt"
+                :islive="true" aref="https://atronin.space"
+                :tech="ronin_tech"
+            ></featurecard>
+
+        </section>
+
+        <h1>Older Projects</h1>
+
+        <section class="cards-container">
+
+            <featurecard
+                title="Dashboard Builder" sub="Web App"
+                :images="dbbimg" :text="dbb_txt"
+                :tech="dbb_tech"
+            ></featurecard>
+
+            <featurecard
+                title="Netograph" sub="Web App" 
+                :images="netimg" :text="neto_txt"
+                :islive="true" aref="https://netograph.io"
+                :tech="neto_tech"
+            ></featurecard>
+
+            <featurecard
+                title="@RONIN" sub="Website"
+                :images="roninimg" :text="ronin_txt"
+                :islive="true" aref="https://atronin.space"
+                :tech="ronin_tech"
+            ></featurecard>
+
+        </section>
+
+        <section class="cards-container">
+
+            <featurecard
+                title="Baby Aid NZ" sub="Web App"
+                :images="babimg" :text="babyaid_txt"
+                :tech="baby_tech"
+            ></featurecard>
+
+        </section>
 
     </div>
 </template>
 
 <script>
-import worksum from '../components/worksum.vue'
-import gallerymodal from '../components/gallerymodal.vue'
+import gallerymodal from '../components/gallerymodal'
+import featurecard from '../components/featurecard'
 export default {
     name: 'work',
-    components: { worksum, gallerymodal },
+    components: { gallerymodal, featurecard },
     data () {
         return {
             ronin_txt: [
@@ -229,5 +265,14 @@ export default {
     margin-left: auto
     margin-right: auto
     margin-bottom: 200px
-    margin-top: 70px
+    margin-top: 90px
+    h1
+        margin-left: 20%
+.cards-container
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    width: 100%
+    margin: 0 auto
+    justify-content: center
 </style>

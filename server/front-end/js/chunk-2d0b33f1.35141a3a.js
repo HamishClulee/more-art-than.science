@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0b33f1"],{"280e":function(n,e){n.exports='<h1 id="this-worked">This Worked</h1>\n<h2 id="well-done-bro">Well Done Bro</h2>\n<p><em>~</em></p>\n<p>Something something something</p>\n'}}]);
+//# sourceMappingURL=chunk-2d0b33f1.35141a3a.js.map

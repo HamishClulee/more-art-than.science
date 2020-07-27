@@ -1,5 +1,7 @@
 .post-container
     padding: 1em
+    display: flex
+    flex-direction: column
     max-width: 800px
     margin: 70px auto
     width: 98%
@@ -7,18 +9,23 @@
     h1
         color: $secondary
         font-size: 4em
+        margin-left: -3px
+
     h2
-        color: $font
+        font-style: italic
+        color: lighten($font, 30)
         font-size: 2.5em
+        margin-left: -3px
     h3
-        color: lighten($font, 5)
+        color: lighten($font, 30)
+        font-size: 1.8em
     pre
         padding: 10px
         background-color: $font-very-light
         color: $tertiary
         line-height: 1.8
     p, ul, li
-        color: lighten($font, 10)
+        color: $font
     p
         font-size: 1.3em
     em

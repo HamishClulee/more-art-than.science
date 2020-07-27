@@ -18,7 +18,7 @@ nil** nimbi, et manu lassata inevitabile habent si insigne?
 
 <em>~</em>
 
-## Lacrimisque est vetuere velut urbem fumis
+### Lacrimisque est vetuere velut urbem fumis
 
 Maior significent suo constitit sub ignis, sum ut tacito vindicat custos
 nimbosi. Atlantiades temperiem mirabantur moritura [numine
@@ -37,7 +37,7 @@ adessent iustissime non cesserunt subnixa ulvae contemptor agitare.
     }
     mailAiff = scsi_copyright(vramPayload + footerAnd, 3);
 
-## Collibus castris idem pater faciem coepit
+### Collibus castris idem pater faciem coepit
 
 Via dissuadere retentos ad sustinet ceris quae ulvam, moderatior cornua.
 Secundis nunc properas inque, deicit arma toris.

@@ -8,7 +8,7 @@ const blog = () => import('../views/bloglist')
 const posts = () => import('../views/posts')
 const notfound = () => import('../views/notfound')
 const ronin = () => import('../views/projects/ronin')
-const styles = () => import('../views/posts/betterstyles')
+const postwrapper = () => import('../views/posts/postwrapper')
 
 Vue.use(Router)
 
@@ -33,9 +33,9 @@ export default new Router({
             component: work,
         },
         {
-            path: '/blog/how-to-organise-your-styles',
-            name: 'better-styles',
-            component: styles,
+            path: '/blog/:urlname',
+            name: 'post',
+            component: postwrapper,
         },
         {
             path: '/work/ronin',

@@ -24,11 +24,11 @@
 
 <script>
 import { posts } from './posts/posts.js'
-import bloglink from '../components/bloglink'
+// import bloglink from '../components/bloglink'
 export default {
     name: 'blog',
     components: {
-        bloglink,
+        // bloglink,
     },
     data () {
         return {
@@ -50,7 +50,7 @@ export default {
     margin-left: auto
     margin-right: auto
     h1
-        text-align: left
-        width: 100%
-        margin-bottom: 20px
+        // text-align: left
+        // width: 100%
+        // margin-bottom: 20px
 </style>

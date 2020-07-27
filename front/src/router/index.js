@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-const home = () => import('../views/home.vue')
-const work = () => import('../views/work.vue')
-const cv = () => import('../views/cv.vue')
-const blog = () => import('../views/bloglist.vue')
-const posts = () => import('../views/posts.vue')
+const home = () => import('../views/home')
+const work = () => import('../views/work')
+const cv = () => import('../views/cv')
+const blog = () => import('../views/bloglist')
+const posts = () => import('../views/posts')
 const notfound = () => import('../views/notfound')
-const ronin = () => import('../views/projects/ronin.vue')
+const ronin = () => import('../views/projects/ronin')
+const styles = () => import('../views/posts/betterstyles')
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
             path: '/work',
             name: 'work',
             component: work,
+        },
+        {
+            path: '/blog/how-to-organise-your-styles',
+            name: 'better-styles',
+            component: styles,
         },
         {
             path: '/work/ronin',

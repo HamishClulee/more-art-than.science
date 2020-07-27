@@ -1,18 +1,22 @@
-# Nam hic
+# How To Better Organise Your Styles
 
-## Debent caeli heros supplex noverit rudis
+## In Large Codebases with Lots of Dependencies
+
+<em>~</em>
 
 Lorem markdownum dicente. Harenis et vocem, se reverti capillos et tibi prement
 Seriphon Caenea. Manetque per [sitim
 nata](http://numen.net/virgineumquevirgo.html) saetaeque clangore quoniam movit,
 facite: usque vidi pleni, non. Incommendataque exierat excute tot **maestis ante
-nil** nimbi, *incerto*, et manu lassata inevitabile habent si insigne?
+nil** nimbi, et manu lassata inevitabile habent si insigne?
 
 - Sensit et suoque dixit
 - Baucis satus qua fortius feramus Iunonis ictus
 - Vulnus sidere
 - Desint tristis et pati sedatis frena non
 - Ego cum igne et accipe posset vitium
+
+<em>~</em>
 
 ## Lacrimisque est vetuere velut urbem fumis
 

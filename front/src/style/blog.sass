@@ -1,0 +1,38 @@
+.post-container
+    padding: 1em
+    max-width: 800px
+    margin: 70px auto
+    width: 98%
+    line-height: 1.75
+    h1
+        color: $secondary
+        font-size: 4em
+    h2
+        color: $font
+        font-size: 2.5em
+    h3
+        color: lighten($font, 5)
+    pre
+        padding: 10px
+        background-color: $font-very-light
+        color: $tertiary
+        line-height: 1.8
+    p, ul, li
+        color: lighten($font, 10)
+    p
+        font-size: 1.3em
+    em
+        font-size: 2em
+        width: 100%
+        height: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        color: lighten($tertiary, 20) !important
+        margin-top: 20px
+        transform: scaleX(1.4) rotate(5deg)
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: 1.6em
+        @media (min-width: 0px) and (max-width: 520px)
+            margin-top: 30px
+            height: 60px

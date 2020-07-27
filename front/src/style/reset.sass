@@ -1,0 +1,80 @@
+body
+    font-family: $body-font
+    color: $font
+    padding: 0
+    margin: 0
+
+html
+    line-height: 1.5
+    font-family: $heading-font
+    font-weight: normal
+
+.fin-con
+    font-size: 2em
+    width: 100%
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: lighten($tertiary, 20)
+    margin-top: 20px
+    transform: scaleX(1.4) rotate(5deg)
+    @media (min-width: 520px) and (max-width: 1080px)
+        font-size: 1.6em
+    @media (min-width: 0px) and (max-width: 520px)
+        margin-top: 30px
+        height: 60px
+
+.tech-con
+    width: 29%
+    display: flex
+    flex-direction: column
+    padding: 20px 40px
+    @media (min-width: 0px) and (max-width: 780px)
+        width: 95%
+        margin-left: auto
+        margin-right: auto
+        padding: 0
+    .tech-itm
+        display: flex
+        flex-direction: row
+        font-size: 1.3em
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: 1.2em
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: 1.1em
+        font-size: 1.4em
+        .itm-name
+            color: $font-light
+            min-width: 97px
+        .itm-val
+            color: $tertiary
+
+span
+    color: lighten($font, 20)
+    font-style: italic !important
+
+@media print
+  body *
+    visibility: hidden
+  #print-vis-on, #print-vis-on *
+    visibility: visible
+  #print-vis-on
+    position: absolute
+    left: 0
+    top: 0
+    margin-bottom: 0
+    h1, h2, h3, h4, h5, h6
+        margin-top: 10px
+        margin-bottom: 10px
+    .fin-con
+        height: 10px
+        margin-top: 10px
+        margin-bottom: 10px
+    .key-con, .job-con
+        font-size: 95%
+    .job-con
+        h2
+            font-size: 2.6em
+    .header-icons-home
+        display: none

@@ -136,8 +136,7 @@ export default {
     flex-direction: row
     a
         color: $font
-        letter-spacing: 2px
-        font-size: 1.1em
+        font-size: 1.2em
         text-transform: uppercase
 .navbar-con
     position: fixed

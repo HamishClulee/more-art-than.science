@@ -69,18 +69,19 @@ export default {
 h1, h2, h3
     margin-top: 5px
 h1
-    font-size: 5em
-    margin-bottom: 20px
+    font-size: 4em
+    margin-bottom: 10px
+    margin-top: 10px
     @media (min-width: 0px) and (max-width: 620px)
         font-size: 3em
 h2
-    font-size: 3em
+    font-size: 2.7em
     color: $secondary
     margin-bottom: 5px
     @media (min-width: 0px) and (max-width: 620px)
         font-size: 2em
 h3
-    font-size: 2em
+    font-size: 1.8em
     color: lighten($font, 20)
     margin-bottom: 10px
     @media (min-width: 0px) and (max-width: 620px)
@@ -89,10 +90,11 @@ p
     width: 60%
     margin-left: auto
     margin-right: auto
+    margin-bottom: 10px
     @media (min-width: 0px) and (max-width: 620px)
         width: 80%
 .header-icons
-  margin: 30px
+  margin: 10px
 .header-icons-home
     margin-top: 30px
     text-align: center

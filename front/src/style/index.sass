@@ -4,6 +4,7 @@ $tertiary: #ff5722
 $highlight: #03A9F4
 $link: #2196F3
 $font: #575757
+$code: #1d50f9
 
 $primary-light: lighten($primary, 10)
 $primary-dark: darken($primary, 20)
@@ -25,13 +26,34 @@ $h4-fontsize: 2rem !default
 $h5-fontsize: 1.4rem !default
 $h6-fontsize: 1.2rem !default
 
-$heading-font: 'Open Sans Condensed', sans-serif
-$body-font: 'Roboto Condensed', sans-serif
+$heading-font: 'Crimson Text', serif
+$body-font: 'Nunito Sans', sans-serif
 
 @import "reset"
 @import "typography"
 @import "blog"
 @import "button"
+
+span.remote
+    font-family: $heading-font
+
+mark.divider
+    font-size: 2.8em
+    font-family: $body-font
+    width: 100%
+    background-color: transparent
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: lighten($tertiary, 20) !important
+    margin-top: 25px
+    transform: scaleX(1.4) rotate(5deg)
+    @media (min-width: 520px) and (max-width: 1080px)
+        font-size: 1.6em
+    @media (min-width: 0px) and (max-width: 520px)
+        margin-top: 30px
+        height: 60px
 
 
 

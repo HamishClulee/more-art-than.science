@@ -1,45 +1,75 @@
+$blog-sub-heading-font: $heading-font
+$blog-main-font: $heading-font
+
 .post-container
     padding: 1em
     display: flex
     flex-direction: column
-    max-width: 800px
+    max-width: 900px
     margin: 70px auto
-    width: 98%
-    line-height: 1.75
+    width: 95%
+    line-height: 1.6
+    img
+        max-width: 800px
+        margin: 0 auto
+    a
+        font-family: $heading-font
+        font-size: 1.5rem
     h1
         color: $secondary
         font-size: 4em
+        font-family: $blog-main-font
         margin-left: -3px
-
+        margin-bottom: 15px
     h2
         font-style: italic
-        color: lighten($font, 30)
-        font-size: 2.5em
-        margin-left: -3px
+        color: lighten($font, 20)
+        font-family: $blog-main-font
+        font-size: 2rem
+        margin: 5px 0 30px -3px
     h3
-        color: lighten($font, 30)
-        font-size: 1.8em
+        color: darken($font, 30)
+        font-size: 1.9em
+        font-family: $body-font
+        padding-top: 50px
+    h4, h5, h6
+        font-family: $blog-sub-heading-font
+        color: darken($font, 40)
     pre
+        code
+            font-size: 1.1rem
         padding: 10px
-        background-color: $font-very-light
-        color: $tertiary
+        background-color: lighten($font-very-light, 10)
+        color: $code
         line-height: 1.8
-    p, ul, li
+    code
+        color: $code
+        font-size: 1.5rem
+    p, ul, li, ol, em, strong
         color: $font
+        font-family: $blog-main-font
+        letter-spacing: normal
     p
-        font-size: 1.3em
-    em
-        font-size: 2em
+        font-size: 1.5rem
+    ul, ol
+        font-size: 1.5rem
+        margin-left: 20px
+    blockquote
+        border-left: 4px solid $font-very-light
+        padding-left: 20px
+        margin: 5px 0 20px 20px
+        p
+            margin: 2px 0
+            color: $font-light
+            font-style: italic
+    table
+        font-family: arial, sans-serif
+        border-collapse: collapse
         width: 100%
-        height: 40px
-        display: flex
-        align-items: center
-        justify-content: center
-        color: lighten($tertiary, 20) !important
-        margin-top: 20px
-        transform: scaleX(1.4) rotate(5deg)
-        @media (min-width: 520px) and (max-width: 1080px)
-            font-size: 1.6em
-        @media (min-width: 0px) and (max-width: 520px)
-            margin-top: 30px
-            height: 60px
+    td, th
+        border: 1px solid #dddddd
+        text-align: left
+        padding: 8px
+    tr:nth-child(even)
+        background-color: #dddddd
+

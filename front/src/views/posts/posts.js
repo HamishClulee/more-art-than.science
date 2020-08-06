@@ -7,10 +7,12 @@
 //     brief: String,
 // }
 
+const ROUTER_NAME = 'post'
+
 export const posts = [
     {
         linkto: { 
-            name: 'post',
+            name: ROUTER_NAME,
             params: { 
                 urlname: 'hue',
                 mdfilename: 'hue.md'
@@ -18,12 +20,11 @@ export const posts = [
         },
         title: 'Project write up: Hue',
         date: '15 Jun 2020',
-        mdfilename: 'hue.md',
-        brief: 'Learnings on managing styles in chaotic Vue codebases Learnings on managing styles in chaotic Vue codebases Learnings on managing styles in chaotic Vue codebases',
+        brief: 'Managing styles in chaotic Vue codebases Learnings on managing styles in chaotic Vue codebases',
     },
     {
         linkto: { 
-            name: 'post',
+            name: ROUTER_NAME,
             params: { 
                 urlname: 'style-organisation-in-chaotic-places',
                 mdfilename: 'betterstyles.md',
@@ -31,38 +32,54 @@ export const posts = [
         },
         title: 'Organising Style Out Of Chaos',
         date: '15 Jun 2020',
-        mdfilename: 'betterstyles.md',
         brief: 'Learnings on managing styles in chaotic Vue codebases',
     },
+    {
+        linkto: { 
+            name: ROUTER_NAME,
+            params: { 
+                urlname: 'lorem-ipsum',
+                mdfilename: 'lorem.md',
+            }
+        },
+        title: 'Lorem Ipsum Markdown',
+        date: '15 Jun 2020',
+        brief: 'Styling template',
+    },
+    {
+        linkto: { 
+            name: ROUTER_NAME,
+            params: { 
+                urlname: 'lorem-ipsum-2',
+                mdfilename: 'lorem2.md',
+            }
+        },
+        title: 'Lorem Ipsum Markdown Longer version',
+        date: '15 Jun 2020',
+        brief: 'Another Styling template',
+    },
+    {
+        linkto: { 
+            name: ROUTER_NAME,
+            params: { 
+                urlname: 'reacty-act-17-dans-thing',
+                mdfilename: 'dan.md',
+            }
+        },
+        title: 'More stolen content from the intwerwebs',
+        date: '15 Jun 2020',
+        brief: 'During my time on the React team, I’ve been lucky to see how [Jordan](https://twitter.com/jordwalke), [Sebastian](https://twitter.com/sebmarkbage), [Sophie](https://twitter.com/sophiebits) and other tenured team members approach problems. In this post',
+    },
+    {
+        linkto: { 
+            name: ROUTER_NAME,
+            params: { 
+                urlname: 'so-desperate-for-ghost-points',
+                mdfilename: 'vuecheat.md',
+            }
+        },
+        title: 'A dude wants them internets fames',
+        date: '15 Jun 2020',
+        brief: 'Why would you event care, isnt it obvious that this sort of thing wont really work, man?',
+    },
 ]
-
-// {
-//     linkto: { name: 'posts', params: { urlname: 'welcome-qr' } },
-//     title: 'Project write up: Welcome QR Codes',
-//     date: '10 October 2019',
-//     brief: '',
-// },
-// {
-//     linkto: { name: 'posts', params: { urlname: 'create-mevn' } },
-//     title: 'Project write up: Create MEVN App',
-//     date: '12 July 2018',
-//     brief: '',
-// },
-// {
-//     linkto: { name: 'posts', params: { urlname: 'dashboard-builder' } },
-//     title: 'Project write up: Dashboard Builder',
-//     date: '01/06/2018',
-//     brief: '',
-// },
-// {
-//     linkto: { name: 'posts', params: { urlname: 'baby-aid-nz' } },
-//     title: 'Project write up: Baby Aid NZ',
-//     date: '06/02/2017',
-//     brief: '',
-// },
-// {
-//     linkto: { name: 'posts', params: { urlname: 'netograph' } },
-//     title: 'Project write up: Netograph',
-//     date: '01/06/2018',
-//     brief: '',
-// },

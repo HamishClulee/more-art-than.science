@@ -229,13 +229,13 @@ Directives are special Vue commands.
 | v-html  |       outputs raw html data from a value ([!] XSS [!])       |
 |  v-on   |                listens on an event (click...)                |
 | v-model | Create a two-way binding on a form input element or a component. |
-|         |                                                              |
+                                                              
 
-###### Shortcuts
+#### Shortcuts
 
-v-on: --> @
+`v-on: --> @`
 
-v-bind: --> :
+`v-bind: --> :`
 
 
 
@@ -520,19 +520,19 @@ And then in the parent we listen to this event with the v-on directive.
 
 #### Child -> Child
 
-* ###### Method #1
+* #### Method #1
 
   ​	Emetting event like we did [here](####Child -> Parent).
 
-* ###### Method #2
+* #### Method #2
 
   ​	Passing a callback as a prop
 
-* ###### Method #3
+* #### Method #3
 
   ​	Using an Event Bus, which is a separeted Vue instance. We use ``$emit`` with this instance 	and we listen from events coming from that Bus.
 
-###### Event Bus
+#### Event Bus
 
 ```javascript
 // main.js
@@ -750,7 +750,7 @@ With slots we can pass content (entire HTML blocks) between components
 
 Rendering and dynamic content is related to the parent.
 
-###### Multiple Slots
+#### Multiple Slots
 
 If you want to render the content multiple times then just place as many ``<slot>`` as you want.
 
@@ -892,7 +892,7 @@ Vue.directive('directive-name', {
 </p>
 ```
 
-###### Arguments
+#### Arguments
 
 ```javascript
 Vue.directive('directive-name', {
@@ -913,7 +913,7 @@ Vue.directive('directive-name', {
 </p>
 ```
 
-###### Modifiers
+#### Modifiers
 
 ```javascript
 Vue.directive('directive-name', {
@@ -1176,7 +1176,7 @@ Example:
 
 If you want to mix animation and transitions make sure to indicate which one determines the lenght of the effect with the ``type=''`` keyword.
 
-###### Onload animation
+#### Onload animation
 
 We can use the initial attachment to the DOM with the ``appear`` attribute on the ``transition`` element.
 
@@ -1480,7 +1480,7 @@ And we have to use it like this ``increment({duration: 1000})`` by passing an ob
 
 Note that this example is related to the previous mutation example.
 
-###### Edge with v-model
+#### Edge with v-model
 
 Imagine we have an input field and we want to bind the value in real time to a computed property. We also have a getter in the store that returns it, a mutation that does something with that and an action that commits the mutation. In order to set the value in the store in real time we have to use a `setter` inside the computed property, which is something really rare.
 

@@ -8,7 +8,7 @@ $blog-main-font: $heading-font
     max-width: 900px
     margin: 70px auto
     width: 95%
-    line-height: 1.6
+    line-height: 1.4
     img
         max-width: 800px
         margin: 0 auto
@@ -21,6 +21,7 @@ $blog-main-font: $heading-font
         font-family: $blog-main-font
         margin-left: -3px
         margin-bottom: 15px
+        margin-top: 40px
     h2
         font-style: italic
         color: lighten($font, 20)
@@ -34,7 +35,7 @@ $blog-main-font: $heading-font
         padding-top: 50px
     h4, h5, h6
         font-family: $blog-sub-heading-font
-        color: darken($font, 40)
+        color: darken($font, 5)
     pre
         code
             font-size: 1.1rem
@@ -49,13 +50,15 @@ $blog-main-font: $heading-font
         color: $font
         font-family: $blog-main-font
         letter-spacing: normal
+        margin: 12px 0
     p
         font-size: 1.5rem
+        margin: 12px 0
     ul, ol
         font-size: 1.5rem
         margin-left: 20px
     blockquote
-        border-left: 4px solid $font-very-light
+        border-left: 4px solid $primary
         padding-left: 20px
         margin: 5px 0 20px 20px
         p
@@ -63,13 +66,15 @@ $blog-main-font: $heading-font
             color: $font-light
             font-style: italic
     table
-        font-family: arial, sans-serif
         border-collapse: collapse
         width: 100%
+        margin-bottom: 20px
     td, th
-        border: 1px solid #dddddd
+        border: 1px solid $font-very-light
         text-align: left
         padding: 8px
+    th
+        text-transform: uppercase
     tr:nth-child(even)
-        background-color: #dddddd
+        background-color: lighten($font-very-light, 12)
 

@@ -2,7 +2,7 @@
 
 ## Test new blogging sass in all possible permutations
 
-<p class="divider">~</em>
+<mark class="divider">~</mark>
 
 Lorem markdownum dicente. Harenis et vocem, se reverti capillos et tibi prement
 Seriphon Caenea. Manetque per [sitim
@@ -16,7 +16,7 @@ nil** nimbi, et manu lassata inevitabile habent si insigne?
 - Desint tristis et pati sedatis frena non
 - Ego cum igne et accipe posset vitium
 
-<p class="divider">~</em>
+<mark class="divider">~</mark>
 
 ### Lacrimisque est vetuere velut urbem fumis
 

@@ -8,7 +8,14 @@
 </template>
 
 <script>
-import hljs from 'highlight.js';
+import highlightjs from 'highlight.js/lib/highlight'
+
+// Languages import
+import javascript from 'highlight.js/lib/languages/javascript'
+
+// Register languages
+highlightjs.registerLanguage('javascript', javascript)
+
 export default {
     name: 'betterstyles',
     data () {
@@ -22,7 +29,7 @@ export default {
         }).then(() => {
             this.$nextTick(() => {
                 document.querySelectorAll('pre code').forEach((block) => {
-                    hljs.highlightBlock(block)
+                    highlightjs.highlightBlock(block)
                 })
             })
         })

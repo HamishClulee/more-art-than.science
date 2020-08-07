@@ -91,7 +91,7 @@
                                 on a full page screenshot of URL in question, text is then searchable and sortable.
                                 You can check it
                                 out <a href="https://netograph.io/datasets/social/recentpolicies" target="_blank">here</a>.`,
-                            `Overall, this was an awesome developement experience, and a unforgettable opportunity.`,
+                            `Overall, this was an awesome developement experience, and an unforgettable opportunity.`,
                             `<span class="remote">This was a 100% remote position</span>`,
                         ],
                         references: true,

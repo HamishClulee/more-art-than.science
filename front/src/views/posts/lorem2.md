@@ -1,32 +1,22 @@
-# h1 Heading 8-)
-## h2 Heading
+# H1 Used for Main titles
+## H2 Heading - used a sub header
+<strong>Hamish Clulee</strong>
+<small class="post-date">1st January, 1804</small>
+
+> Lorem ipsum dog whistle told forrest to cut trees, get out of the way Nancy, there is a fly in my soup.
+
 ### h3 Heading
 #### h4 Heading
 
 
-## Horizontal Rules
-
-___
+### Horizontal Rules
 
 ---
-
-***
-
-
-## Typographic replacements
-
-Enable typographer option to see result.
-
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
-
-test.. test... test..... test?..... test!....
-
-!!!!!! ???? ,,  -- ---
 
 "Smartypants, double quotes" and 'single quotes'
 
 
-## Emphasis
+### Emphasis
 
 **This is bold text**
 
@@ -39,7 +29,7 @@ _This is italic text_
 ~~Strikethrough~~
 
 
-## Blockquotes
+### Blockquotes
 
 
 > Blockquotes can also be nested...
@@ -47,7 +37,7 @@ _This is italic text_
 > > > ...or with spaces between arrows.
 
 
-## Lists
+### Lists
 
 Unordered
 
@@ -75,7 +65,7 @@ Start numbering with offset:
 1. bar
 
 
-## Code
+### Code
 
 Inline `code`
 
@@ -103,7 +93,66 @@ var foo = function (bar) {
 console.log(foo(5));
 ```
 
-## Tables
+```sass
+$primary: #fbc02d
+$secondary: #00bfa5
+$tertiary: #ff5722
+$highlight: #03A9F4
+$link: #2196F3
+$font: #575757
+$code: #1d50f9
+
+$primary-light: lighten($primary, 10)
+$primary-dark: darken($primary, 20)
+$secondary-light: lighten($secondary, 10)
+$secondary-dark: darken($secondary, 10)
+$tertiary-light: lighten($tertiary, 20)
+$tertiary-dark: darken($tertiary, 20)
+$highlight-light: lighten($highlight, 20)
+$highlight-dark: darken($highlight, 30%)
+$link-light: lighten($link, 20)
+$font-light: lighten($font, 10)
+$font-very-light: lighten($font, 50)
+$font-dark: darken($font, 30)
+
+$h1-fontsize: 3.6rem !default
+$h2-fontsize: 3.1rem !default
+$h3-fontsize: 2.4rem !default
+$h4-fontsize: 2rem !default
+$h5-fontsize: 1.4rem !default
+$h6-fontsize: 1.2rem !default
+
+$heading-font: 'Crimson Text', serif
+$body-font: 'Nunito Sans', sans-serif
+
+@import "reset"
+@import "typography"
+@import "blog"
+@import "button"
+
+span.remote
+    font-family: $heading-font
+
+mark.divider
+    font-size: 2.1rem
+    font-family: $body-font
+    width: 100%
+    background-color: transparent
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: lighten($tertiary, 20) !important
+    margin-top: 25px
+    transform: scaleX(1.4) rotate(5deg)
+    @media (min-width: 520px) and (max-width: 1080px)
+        font-size: 1.6em
+    @media (min-width: 0px) and (max-width: 520px)
+        margin-top: 30px
+        height: 60px
+```
+
+### Tables
 
 | Option | Description |
 | ------ | ----------- |
@@ -120,7 +169,7 @@ Right aligned columns
 | ext    | extension to be used for dest files. |
 
 
-## Links
+### Links
 
 [link text](http://dev.nodeca.com)
 
@@ -129,9 +178,11 @@ Right aligned columns
 Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 
-## Images
+### Images
+
 
 ![Minion](https://octodex.github.com/images/minion.png)
+
 ![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 
 Like links, Images also have a footnote style syntax

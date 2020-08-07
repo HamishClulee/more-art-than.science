@@ -7,11 +7,26 @@ $blog-main-font: $heading-font
     flex-direction: column
     max-width: 900px
     margin: 70px auto
-    width: 95%
+    width: 94%
     line-height: 1.4
+    hr
+        border-bottom: 1px solid $primary
+        border-left: none
+        border-right: none
+        border-top: none
+        height: 10px
+        width: 100%
+        margin-bottom: 50px
+    strong
+        font-weight: bold
+    em
+        font-style: italic
     img
-        max-width: 800px
+        width: 50%
         margin: 0 auto
+        padding: 0 auto
+        position: relative
+        left: 25%
     a
         font-family: $heading-font
         font-size: 1.5rem
@@ -36,15 +51,44 @@ $blog-main-font: $heading-font
     h4, h5, h6
         font-family: $blog-sub-heading-font
         color: darken($font, 5)
+        padding-top: 40px
     pre
+        font-family: "Lucida Console", Monaco, monospace
+        line-height: 1.7
+        border-radius: 5px
+        display: block
+        overflow-x: auto
+        background: #161b1d
+        color: #7ea2b4
+        padding: 0.5em
         code
             font-size: 1.1rem
-        padding: 10px
-        background-color: lighten($font-very-light, 10)
-        color: $code
-        line-height: 1.8
+            font-family: "Lucida Console", Monaco, monospace
+            max-width: 100%
+            overflow-x: scroll !important
+            .hljs-comment, .hljs-quote
+                color: #7195a8
+            .hljs-variable, .hljs-template-variable, .hljs-attribute, .hljs-tag, .hljs-name, .hljs-regexp, .hljs-link, .hljs-name, .hljs-selector-id, .hljs-selector-class
+                color: #d22d72
+            .hljs-number, .hljs-meta, .hljs-built_in, .hljs-builtin-name, .hljs-literal, .hljs-type, .hljs-params
+                color: #935c25
+            .hljs-string, .hljs-symbol, .hljs-bullet
+                color: #568c3b
+            .hljs-title, .hljs-section
+                color: #257fad
+            .hljs-keyword, .hljs-selector-tag
+                color: #6b6bb8
+            .hljs
+                display: block
+                overflow-x: auto
+                background: #161b1d
+                color: #7ea2b4
+                padding: 0.5em
+            .hljs-emphasis
+                font-style: italic
+            .hljs-strong
+                font-weight: bold
     code
-        color: $code
         font-size: 1.5rem
     p, ul, li, ol, em, strong
         color: $font

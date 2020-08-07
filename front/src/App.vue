@@ -29,7 +29,7 @@ export default {
 </script>
 <style lang="sass" scoped>
 .god-div
-    overflow-x: hidden !important
+    overflow-x: hidden
     background-repeat: no-repeat
     background-attachment: fixed
     background-position: right

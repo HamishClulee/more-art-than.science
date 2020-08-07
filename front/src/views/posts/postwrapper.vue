@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import hljs from 'highlight.js';
 export default {
     name: 'betterstyles',
     data () {
@@ -18,6 +19,12 @@ export default {
     created () {
         import(`./${this.$route.params.mdfilename}`).then(res => {
             this.markdown = res.default
+        }).then(() => {
+            this.$nextTick(() => {
+                document.querySelectorAll('pre code').forEach((block) => {
+                    hljs.highlightBlock(block)
+                })
+            })
         })
     }
 }

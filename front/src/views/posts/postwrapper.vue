@@ -8,10 +8,12 @@
 </template>
 
 <script>
-import highlightjs from 'highlight.js/lib/highlight'
+import { posts } from './posts.js' 
+
+import highlightjs from 'highlight.js/lib/core.js'
 
 // Languages import
-import javascript from 'highlight.js/lib/languages/javascript'
+import javascript from 'highlight.js/lib/languages/javascript.js'
 
 // Register languages
 highlightjs.registerLanguage('javascript', javascript)
@@ -24,15 +26,27 @@ export default {
         }
     },
     created () {
-        import(`./${this.$route.params.mdfilename}`).then(res => {
+
+        import(`./${this.getMDFileName()}`).then(res => {
+
             this.markdown = res.default
+
         }).then(() => {
+
             this.$nextTick(() => {
                 document.querySelectorAll('pre code').forEach((block) => {
                     highlightjs.highlightBlock(block)
                 })
             })
+
         })
+    },
+    methods: {
+        getMDFileName() {
+            return posts.filter(item => {
+                return item.linkto.params.urlname === this.$route.params.urlname
+            })[0].linkto.params.mdfilename
+        }
     }
 }
 </script>

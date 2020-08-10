@@ -30,7 +30,7 @@ export const posts = [
                 mdfilename: 'tipsfornewplayers.md'
             }
         },
-        title: 'Tips For New PLayers (Draft)',
+        title: 'Tips For New Players (Draft)',
         date: '15 Jun 2020',
         brief: 'Things I see Vue juniors doing and how to correct them.',
     },

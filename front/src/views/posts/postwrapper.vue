@@ -8,44 +8,71 @@
 </template>
 
 <script>
-import { posts } from './posts.js' 
+import { posts } from './posts.js'
 
-import highlightjs from 'highlight.js/lib/core.js'
+import Prism from 'prismjs'
 
-// Languages import
-import javascript from 'highlight.js/lib/languages/javascript.js'
+// import highlightjs from 'highlight.js/lib/core.js'
 
-// Register languages
-highlightjs.registerLanguage('javascript', javascript)
+// // Languages import
+// import javascript from 'highlight.js/lib/languages/javascript.js'
+
+// // Register languages
+// highlightjs.registerLanguage('javascript', javascript)
+// highlightjs.registerLanguage('html', javascript)
+// highlightjs.registerLanguage('css', javascript)
 
 export default {
     name: 'betterstyles',
     data () {
         return {
-            markdown: null,
+            markdown: null
         }
     },
     created () {
 
-        import(`./${this.getMDFileName()}`).then(res => {
+        if (this.getMDFileName()) {
 
-            this.markdown = res.default
+            import(`./${this.getMDFileName()}`).then(res => {
 
-        }).then(() => {
+                this.markdown = res.default
 
-            this.$nextTick(() => {
-                document.querySelectorAll('pre code').forEach((block) => {
-                    highlightjs.highlightBlock(block)
-                })
+            }).then(() => {
+
+                Prism.highlightAll()
+
+                // this.$nextTick(() => {
+
+                //     document.querySelectorAll('pre code').forEach((block) => {
+                //         highlightjs.highlightBlock(block)
+                //     })
+
+                // })
+
             })
 
-        })
+        }
+
     },
     methods: {
         getMDFileName() {
-            return posts.filter(item => {
-                return item.linkto.params.urlname === this.$route.params.urlname
-            })[0].linkto.params.mdfilename
+
+            try {
+
+                return posts.filter(item => {
+
+                    return item.linkto.params.urlname === this.$route.params.urlname
+
+                })[0].linkto.params.mdfilename
+
+            } catch (e) {
+
+                this.$router.push({ name: 'notfound' })
+
+                return false
+
+            }
+            
         }
     }
 }

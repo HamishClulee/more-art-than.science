@@ -30,7 +30,7 @@ export const posts = [
                 mdfilename: 'tipsfornewplayers.md'
             }
         },
-        title: 'Tips For New PLayers',
+        title: 'Tips For New PLayers (Draft)',
         date: '15 Jun 2020',
         brief: 'Things I see Vue juniors doing and how to correct them.',
     },
@@ -42,7 +42,7 @@ export const posts = [
                 mdfilename: 'betterstyles.md',
             }
         },
-        title: 'Organising Style Out Of Chaos',
+        title: 'Organising Style Out Of Chaos (Draft)',
         date: '15 Jun 2020',
         brief: 'Learnings on managing styles in chaotic Vue codebases',
     },

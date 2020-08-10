@@ -451,7 +451,7 @@ computed: {
 ```
 It will perform faster, its easier to read and you are using the Vue API correctly.
 
-There is really only one place where you should be using a <template>…. when you want to group a number of elements together for conditional visibility.
+There is really only one place where you should be using a `<template>` when you want to group a number of elements together for conditional visibility.
 
 ```html
 <template v-if"something">
@@ -467,7 +467,7 @@ Anytime you find you self using !important you are probably in the wrong
 
 Another doc about writing better SCSS/CSS is in the works currently, and with our build moving to vue-cli over the next few months, how we write SCSS/CSS is going to change in the near future
 
-Everyone knows that !important is bad… right??
+Everyone knows that !important is bad, right??
 
 When you find your self in a position in which you feel like you have to use the !important rule, it is generally because the structure of the CSS/SCSS files in your code base is incorrect.
 
@@ -513,7 +513,7 @@ You can just about always replace eval() with window.Function() and as always, i
 
 ### We don't forget to commit the package-lock.json to the repo!
 
-Always commit the package-lock.json!!!
+Always commit the package-lock.json
 
 Its how we ensure that everyone on the team is running the same versions of packages in their node_modules folder. Basically, the package-lock.json builds a list of the dependencies of the packages in your package.json, in our code bases it can be thousands of packages. If one team member is running v0.12 and another team member is running v1.01 it can lead to some one saying…
 

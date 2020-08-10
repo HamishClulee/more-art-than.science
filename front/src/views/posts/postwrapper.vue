@@ -12,16 +12,6 @@ import { posts } from './posts.js'
 
 import Prism from 'prismjs'
 
-// import highlightjs from 'highlight.js/lib/core.js'
-
-// // Languages import
-// import javascript from 'highlight.js/lib/languages/javascript.js'
-
-// // Register languages
-// highlightjs.registerLanguage('javascript', javascript)
-// highlightjs.registerLanguage('html', javascript)
-// highlightjs.registerLanguage('css', javascript)
-
 export default {
     name: 'betterstyles',
     data () {
@@ -33,23 +23,9 @@ export default {
 
         if (this.getMDFileName()) {
 
-            import(`./${this.getMDFileName()}`).then(res => {
-
-                this.markdown = res.default
-
-            }).then(() => {
-
-                Prism.highlightAll()
-
-                // this.$nextTick(() => {
-
-                //     document.querySelectorAll('pre code').forEach((block) => {
-                //         highlightjs.highlightBlock(block)
-                //     })
-
-                // })
-
-            })
+            import(`./${this.getMDFileName()}`)
+                .then(res => this.markdown = res.default)
+                .then(() => Prism.highlightAll())
 
         }
 
@@ -72,7 +48,7 @@ export default {
                 return false
 
             }
-            
+
         }
     }
 }

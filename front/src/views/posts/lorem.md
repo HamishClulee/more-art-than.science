@@ -27,6 +27,7 @@ resupino, ripa ille vestes, nec sanguine illos cernere
 [cum](http://www.insanis-tuens.io/), auras, tumulumque colis. Pisces exclamat
 adessent iustissime non cesserunt subnixa ulvae contemptor agitare.
 
+```javascript
     var newsgroup = dockHeuristic(1, 3, ethicsWordWired(cgi, e_hard_localhost));
     if (daemon_buffer(1, -5)) {
         ppgaBusHibernate(scroll);
@@ -36,7 +37,7 @@ adessent iustissime non cesserunt subnixa ulvae contemptor agitare.
         radcab = 3;
     }
     mailAiff = scsi_copyright(vramPayload + footerAnd, 3);
-
+```
 ### Collibus castris idem pater faciem coepit
 
 Via dissuadere retentos ad sustinet ceris quae ulvam, moderatior cornua.

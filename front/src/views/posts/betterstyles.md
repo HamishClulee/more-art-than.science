@@ -96,7 +96,9 @@ So, we import the third party stuff first, so we can easily override it if we wa
 
 ### Where should I write this SCSS, man?
 
-Again, the order of imports is important. Once we’ve dealt with the pure third party packages, the basic question become where do I put my SCSS. Read the comments in the image above and lets think more about why we are doing this.I’m sure all of you have found times recently when you have completed your tickets functionality, the Vue side of things is good, but your CSS just won’t do what you want. It’s most probably because we have too many rules competing for the browsers attention, our CSS bundles are HUGE. Some are above 1mb of CSS uncompressed, that has a huge impact on both runtime performance and the performance of our dev enviroments and sucks the fun out of life as a developer.
+Again, the order of imports is important. Once we’ve dealt with the pure third party packages, the basic question become where do I put my SCSS. Read the comments in the image above and lets think more about why we are doing this.
+
+I’m sure all of you have found times recently when you have completed your tickets functionality, the Vue side of things is good, but your CSS just won’t do what you want. It’s most probably because we have too many rules competing for the browsers attention, our CSS bundles are HUGE. Some are above 1mb of CSS uncompressed, that has a huge impact on both runtime performance and the performance of our dev enviroments and sucks the fun out of life as a developer.
 
 Want to use a hot reload in dev that takes 20ms instead of 3s….? 
 
@@ -159,19 +161,27 @@ The specificity list within our code.. (items at the top of the list will always
         General, reusable rules written in our /style folders
     </li>
     <li>
-        Bootstrap styles.
+        Bootstrap styles
     </li>
 </ol>
 
 
 ### Really man, why are we doing this? It feels unnecessary…
 
-The SCSS thing is always a hard battle to win. It’s always much easier to just bang out spagetti SCSS for every single ticket. I understand that. We are doing this because spagetti SCSS is fine for today, and tomorrow, and maybe next week. But what happens after 3 months? 6 months? 2 years….We really need to stop making it worse, otherwise the future won’t be much fun at all. I also realise that doing SCSS in the fashion above takes a bit of getting used to and can feel a little complex…All I can say here is please give it a try, communicate more, if you are unsure about where to write a rule, or how to make a rule more general, ask me or one of the more senior guys, or take a break and commit 10 mins of your time to thinking a bit more deeply about what the best way to attack. Once you understand the model, I’m confident you will start to see how much easier life as FE developer can be when your SCSS files and folders and imports are set up like the above.Also, lets take a second and think about where we are going longer term with our FE code bases.Currently we are using Bootstrap, longer term, the aim is remove it all together. If we start writting the general reusable rules described above, at some stage in the future we will be able to do this
+The SCSS thing is always a hard battle to win. It’s always much easier to just bang out spagetti SCSS for every single ticket. I understand that. We are doing this because spagetti SCSS is fine for today, and tomorrow, and maybe next week. But what happens after 3 months? 6 months? 2 years?
+
+We really need to stop making it worse, otherwise the future won’t be much fun at all. I also realise that doing SCSS in the fashion above takes a bit of getting used to and can feel a little complex. All I can say here is please give it a try, communicate more, if you are unsure about where to write a rule, or how to make a rule more general, ask me or one of the more senior guys, or take a break and commit 10 mins of your time to thinking a bit more deeply about what the best way to attack. 
+
+Once you understand the model, I’m confident you will start to see how much easier life as FE developer can be when your SCSS files and folders and imports are set up like the above.Also, lets take a second and think about where we are going longer term with our FE code bases.Currently we are using Bootstrap, longer term, the aim is remove it all together. If we start writting the general reusable rules described above, at some stage in the future we will be able to do this.
 
 ```scss
 @import "~bootstrap/scss/bootsrap.scss"
 ```
 
-Comment out the Bootstrap import, and nothing will change.That day is still a while away, maybe 6 months, maybe more, but the more we commit to improving our SCSS, the faster it will come.Trust me, when it does come it will be a good day for all of us…Also in the works is the Figma integration with the Aduro Design Guide via API calls. So, when webpack spins up for you in dev, an API call is made to Figma, which sets all of the $variables in our variables file. You won’t have to worry about colors, or padding values or things like that anymore, the design team sets the values, you use the $variables, development speeds up, we all go to lunch early, everyone is happy. 
+Comment out the Bootstrap import, and nothing will change.That day is still a while away, maybe 6 months, maybe more, but the more we commit to improving our SCSS, the faster it will come.Trust me, when it does come it will be a good day for all of us. 
 
->But again, the more we participate in writting better SCSS, the faster we can make the big changes above a reality.Let’s make sure working on our codebases stays fun. There’s nothing worse than spending time battling bad CSS.All told.
+Also in the works is the Figma integration with the Aduro Design Guide via API calls. So, when webpack spins up for you in dev, an API call is made to Figma, which sets all of the $variables in our variables file. You won’t have to worry about colors, or padding values or things like that anymore, the design team sets the values, you use the $variables, development speeds up, we all go to lunch early, everyone is happy. 
+
+>But again, the more we participate in writting better SCSS, the faster we can make the big changes above a reality.Let’s make sure working on our codebases stays fun. There’s nothing worse than spending time battling bad CSS. 
+
+All told.

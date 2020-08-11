@@ -140,7 +140,7 @@ export default {
                 organisations.`,
             ],
             babimg: "https://more-art-than.science/images/bab1-lowqual.jpg",
-            hue_img: "/images/hueletters.png",
+            hue_img: "/images/path71-7-0.png",
             qr_img: "/images/welcomeqr.png",
             mevn_img: "/images/createmevn.png",
             netimg: "https://more-art-than.science/images/neto1-lowqual.jpg",

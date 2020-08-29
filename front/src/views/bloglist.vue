@@ -1,7 +1,7 @@
 <template>
     <div class="list-con">
         <!-- v-if="isDev" -->
-        <template v-if="isDev">
+        <!-- <template v-if="isDev"> -->
             <h1>Posts</h1>
             <h5>
                 I am currently actively building this out as a blogging engine,
@@ -17,8 +17,8 @@
                 :linkto="post.linkto"
             ></bloglink>
             <h4>No More Posts.</h4>
-        </template>
-        <template v-else>
+        <!-- </template> -->
+        <!-- <template v-else>
             <h1>This area is currently under construction.</h1>
             <h2>
                 I have a number of blog posts awaiting the completion of 
@@ -32,7 +32,7 @@
                 class="giphy-embed"
                 allowFullScreen
             ></iframe>
-        </template>
+        </template> -->
     </div>
 </template>
 

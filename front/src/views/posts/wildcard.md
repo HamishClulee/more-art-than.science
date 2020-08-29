@@ -33,7 +33,7 @@ sudo certbot certonly
     -d welcomeqr.codes 
     -d *.welcomeqr.codes
 ```
-Before Let's Encrypt a humble Frontend dev such as myself would have to go through some pain and suffering just to certify a simple site. Now it's straight forward, even for something like the subject of this blog post. In the vast majority of use cases certbot will take care of your Apache or Nginx configs, great for newbs like me, who want to spend time looking at color pallettes and monstrous NPM bundles while combing their beards and drinking artisinal craft beer. The caveat here is that for wildcard certificates you will need to write your Nginx configuration manually. 
+Before Let's Encrypt came to prominence, a humble Frontend dev such as myself would have to go through some small pain and suffering to certify a domain. Now it's straight forward, even for something like the subject of this blog post. In the vast majority of use cases certbot will take care of your Apache or Nginx configs, great for newbs like me, who want to spend time looking at color pallettes and monstrous NPM bundles while combing their beards and drinking artisinal craft beer. The caveat here is that for wildcard certificates you will need to write your Nginx configuration manually. 
 
 Certbot is an excellent package provided by Let's Encrypt, honestly top notch, please donate and build statues in honour of Josh Aas, Eric Rescorla, Peter Eckersley and J. Alex Halderman.
 

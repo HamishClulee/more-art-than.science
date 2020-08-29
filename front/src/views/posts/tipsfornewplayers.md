@@ -1,6 +1,6 @@
 # Tips For New VueJs Players
 ## Common mistakes seen in Vue codebases
-_Last updated Apr 27, 2020_
+_Last updated Aug 29, 2020_
 
 >A list of common mistakes from junior Vue devs I have observed from the last few years.
 
@@ -32,7 +32,7 @@ YouAreAwesome --> you-are-awesome
 ThisMakesDebuggingEasier --> this-makes-debugging-easier
 ```
 
-Yes - this makes debugging easier, when using VueDevTools, it's much easier to find everything if all the names: file name, name attribute in the component and the component decalration in template blocks, are all the same except for their case.
+Yes - this makes debugging easier, when using VueDevTools, it's much easier to find everything if all the names; file name, name attribute in the component and the component decalration in template blocks, are all the same except for casing.
 
 ### Not line wrapping
 
@@ -104,7 +104,7 @@ Node 12.x is an even version number, which means it's an LTS version, Long Term 
 
 I suggest using the `nvm` package, Node Version Manager. Instal it then say `nvm current` and see the output, if you are interesting in correctness you should see `12.xx.xx` or `14.xx.xx`. The most importnat thing here is seeing the same across team members.
 
-TL;DR - install `nvm` the say:
+TL;DR - install `nvm` then say:
 
 `nvm install 12.16.1 && nvm alias default 12.16.1`
 
@@ -122,18 +122,30 @@ Basically, if you write a v-for you need to provide a key
         :key="index"
     ></my-awesome-component>
 ```
-If you read the docs carefully, you will that there are some higher end performance use cases where you would not use a :key. If you think you have found one of those use cases, contact Hamish to discuss, otherwise, use a :key.
+If you read the docs carefully, you will that there are some higher end performance use cases where you would 
+not use a `:key`. If you think you have found one of those use cases, contact Hamish to discuss, otherwise, use a `:key`.
 
-For our purposes, we use the :key every time we use v-for.
+For our purposes, we use the `:key` every time we use `v-for`.
 
 
 ### Not writing reusable unit's of code or new components
 
-This item is a preview of another doc that is currently being written. Even if you're using a framework like vuetify or vue-bootstrap (which I don't encourage or agree with, but regardless), that shouldn't mean that you never write new custom components. Common cases - when using a framework- would be things like wrapper components for commonly used groups of framework components, if you are often using a set of two or three buttons, write a wrapper component called HorizontalButtonWrapper, or writing v-if / v-else blocks in a top level router component, use a component to wrap the logic and reduce the number of lines in the template block.
+This item is a preview of another post that I am currently writing. Even if you're using a framework like vuetify or 
+vue-bootstrap (which I don't encourage or agree with, but regardless), that shouldn't mean that you never write new 
+custom components. Common cases - when using a framework- would be things like wrapper components for commonly used 
+groups of framework components, if you are often using a set of two or three buttons, write a wrapper component 
+called HorizontalButtonWrapper, or writing v-if / v-else blocks in a top level router component, use a component to 
+wrap the logic and reduce the number of lines in the template block.
 
-Anytime you find you self using CTRL+C CTRL+V - write a new component, and reuse code rather than using the same code twice! One of the main advantages of using an SPA framework like Vue is code reusage. Components are how that advantage is manifested. It also provides developers the ability to really reduce bundle sizes if used correctly.
+Anytime you find you self using CTRL+C CTRL+V - write a new component, and reuse code rather than using the same 
+code twice! One of the main advantages of using an SPA framework like Vue is code reusage. Components are how 
+that advantage is manifested. It also provides developers the ability to really reduce bundle sizes if used 
+correctly.
 
-There is a limit to how far you should go, having thousands of files in your repository that are very rarely used is just another symptom of inexperience or disorganised thinking. But what I have seen much more of is huge Vue files, with a ton of spagetti code making debugging or refactoring much much slower, and as above, fully ignoring one of the main benefit's of using Vue in the first place.
+There is a limit to how far you should go, having thousands of files in your repository that are very rarely 
+used is just another symptom of inexperience or disorganised thinking. But what I have seen much more of is 
+huge Vue files, with a ton of spagetti code making debugging or refactoring much much slower, and as above, 
+fully ignoring one of the main benefit's of using Vue in the first place.
 
 The more code you resuse, the less bugs you will create.
 
@@ -285,13 +297,11 @@ If you think the eslint configuartion is wrong, talk to your team lead and chang
  
 ### Use $forceUpdate
 
-For reference on why (it's an okay exaplantion) and this does a pretty good job of explaining
-
-In general, 99% of the time, you can achieve the same results using :key and $set, and sometimes $nextTick.
+99% of the time `$forceUpdate()` is not the correct solution, you can achieve the same results using `:key` and `$set()`, and sometimes `$nextTick()`.
 
 There is almost never a reason to reload an entire component tree.
 
-If you find your self in a position in which you realy want to use it, contact me or one of the senior guys to work out a way to get around the problem. $forceUpdate can easily trigger a full page reload, which is super bad for user experience, and makes a Single Page Application behave the same way a standard HTML SSR app would behave. Not good - and can always be fixed using other Vue API methods.
+If you find your self in a position in which you realy want to use it, contact me or one of the senior guys to work out a way to get around the problem. `$forceUpdate()` can easily trigger a full page reload, which is super bad for user experience, and makes a Single Page Application behave the same way a standard HTML SSR app would behave. Not good - and can always be fixed using other Vue API methods.
 
 ### Include Magic Numbers and String Literals
 
@@ -359,19 +369,19 @@ There is really only one place where you should be using a `<template>` when you
 <template v-if="something">
   <div>{{ someOtherData }}</div>
   <cooler-component></cooler-component>
-  <span>{{ fooBar }}
+  <span>{{ fooBar }}</span>
 </template>
 ```
 
 #### Use `!important` when we don’t need to
 
-Anytime you find you self using !important you are probably in the wrong. When you find your self in a position in which you feel like you have to use the !important rule, it is generally because the structure of the CSS/SCSS files in your code base is incorrect. The biggest thing to remember is that CSS built as a hieracy, the reason you have to use !important is either because someone else used it before you (which leads to a never ending battle in CSS of over ridding rules using !important) or, because third party vendor CSS files have been included too far down in the CSS hieracy.
+Anytime you find you self using `!important` you are probably in the wrong. When you find your self in a position in which you feel like you have to use the `!important` rule, it is generally because the structure of the CSS/SCSS files in your code base is incorrect. The biggest thing to remember is that CSS built as a hieracy, the reason you have to use `!important` is either because someone else used it before you (which leads to a never ending battle in CSS of over ridding rules using `!important`) or, because third party vendor CSS files have been included too far down in the CSS hieracy.
 
-I admit that some times you will have to use !important - but - before you use it, take a moment and ask your self why you are having to use it.
+I admit that some times you will have to use `!important` - but - before you use it, take a moment and ask your self why you are having to use it.
 
-It's much better to fix the problem than avoid it. If you look at the CSS rules in the browser developer console, can you see if you’re over ridding a rule from a Vendor css file, or a rule that we wrote. If it’s a Vendor rule, then look at where it's being imported, is it in main.js? If it is, is it imported before,  or after the file you are currently working on? 
+It's much better to fix the problem than avoid it. If you look at the CSS rules in the browser developer console, can you see if you’re over ridding a rule from a Vendor css file, or a rule that we wrote. If it’s a Vendor rule, then look at where it's being imported, is it in main.js? If it is, is it imported before, or after the file you are currently working on? 
 
-If you can’t work out why your having to use !important get in touch with Hamish and get some help, it's usually pretty easy to fix.
+If you can’t work out why your having to use `!important` get in touch with Hamish and get some help, it's usually pretty easy to fix.
 
 
 ### Using a library when you could just write the code yourself

@@ -26,13 +26,25 @@ export const posts = [
         linkto: { 
             name: ROUTER_NAME,
             params: { 
+                urlname: 'wildcard-subdomains',
+                mdfilename: 'wildcard.md'
+            }
+        },
+        title: 'Wildcard subdomains on digitalocean using Express and Nginx with Let\'s Encrypt for SSL. (Draft)',
+        date: '29 Aug 2020',
+        brief: 'A quick how to explaining the steps I took to get wildcard subdomains to function as intended when working on welcomeqr.codes',
+    },
+    {
+        linkto: { 
+            name: ROUTER_NAME,
+            params: { 
                 urlname: 'tips-for-new-players',
                 mdfilename: 'tipsfornewplayers.md'
             }
         },
         title: 'Tips For New Players (Draft)',
         date: '15 Jun 2020',
-        brief: 'Things I see Vue juniors doing and how to correct them.',
+        brief: 'Some common mistakes I observe from juniors devs writing Vue; and how to correct them.',
     },
     {
         linkto: { 
@@ -44,13 +56,13 @@ export const posts = [
         },
         title: 'Organising Style Out Of Chaos (Draft)',
         date: '15 Jun 2020',
-        brief: 'Learnings on managing styles in chaotic Vue codebases',
+        brief: 'How I organise my \'style pyramid\' in the ever more complex world of SPA\'s and NPM packages.',
     },
     // {
     //     linkto: { 
     //         name: ROUTER_NAME,
     //         params: { 
-    //             urlname: 'lorem-ipsum',
+    //             urlname: 'lorem-ipsum',doing
     //             mdfilename: 'lorem.md',
     //         }
     //     },

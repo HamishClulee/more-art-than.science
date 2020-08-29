@@ -35,8 +35,12 @@ export default {
     width: 100%
     padding: 5px
     margin-bottom: 20px
+    .short-des
+        color: lighten($font-light, 5)
+        font-size: 1.2em
     .date
-        color: $font-light
+        color: darken($font-very-light, 10)
+        font-size: 1em
     p
         margin: 5px 0 10px
     h4

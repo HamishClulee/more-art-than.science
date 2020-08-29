@@ -42,8 +42,8 @@ export const posts = [
                 mdfilename: 'betterstyles.md',
             }
         },
-        title: 'Organising Style Out Of Chaos (Draft)',
+        title: 'Organising Style Out Of Chaos',
         date: '9 May 2020',
-        brief: 'How I organise my \'style pyramid\' in the ever more complex world of SPA\'s and NPM packages.',
+        brief: 'How I organise my style hieracies in the ever changing world of SPA\'s SFC and NPM packages.',
     },
 ]

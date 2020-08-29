@@ -1,23 +1,23 @@
 # Organising Style Out Of Chaos
 ## Some things I've learned that might help you to stop your code base getting so messy it scares developers away
-> This guide is intended to define how we will write our SCSS in our Vue repos moving forward. It is not intended as a rule book, but as a resource to guide you to making better decisions about where to write your SCSS and how to think about the SCSS that you are writing.
-### Idea Way To Set Up SCSS Imports and Structure For FE Codebases
-First things first. Let’s get the order of imports in our main.js files correct.
-<ol>
-    <li>
-        Import any vendor styles, this means any third party packages, make sure you import the .min.css version, usually found in the /dist directory of the packages node_module
-    </li>
-    <li>
-        index.scss file or whatever its called from the /style directory or whatever it is called.
-    </li>
-    <li>
-        Commence JavaScript set up as usual.
-    </li>
-</ol>
+> This guide is intended to assist VueJs devs that are looking forguidance around how to organise their CSS and pre-processors, specifically for projects that conform to the vue-cli structure, but the majority of info here will be applicable to all Vue codebases that are run behind a build system, basically any code bases that use SFC, in fact I have used a lot of the ideas here with React codebases as well. More of a guide than a rule book, hopefully you can glean some useful info and improve your approach.
 
-Let’s quickly ensure everyone understands CSS Specificity, then we can talk about how to apply that idea to Aduro FE code bases. Have a look at <a class="sc-hDgvsY jFsdGs" href="https://stackoverflow.com/questions/25105736/what-is-the-order-of-precedence-for-css" title="https://stackoverflow.com/questions/25105736/what-is-the-order-of-precedence-for-css" >this</a>, the basic idea is to know which rule gets applied to the broswer when there is more than one option.
+### The Ideal Way To Set Up SCSS Imports and Structure For FE Codebases
+First things first. Let’s get the order of imports in our main.js files correct.
+
+1. Import any vendor styles at the top of main.js / entry point javascript file, this means any third party packages, make sure you import the .min.css version, usually found in the `/dist` directory of the packages node_module. You may need to ensure that these imports can be parsed (assuming you are not using vue-cli).
+
+2. Create a folder for your global styles, I lean towards `/src/style/` then create an index file using whatever pre-processor extention you've choosen, for me, genrally it's `index.sass`. Import the index file or whatever its called from the /style directory into the main.js / entry point javascript file, _after the vendor styles_. This order of imports is somewhat subjective dependent on your aims and use cases. I use this order because I feel like I want the ability to overwrite vendor any badly written vendor styles, leveraging the CSS hieracy rule. Ie, imported later = higher in the hieracy.
+
+3. Commence JavaScript set up as usual.
+
+That deals with all styles that are global. Next let’s quickly ensure everyone understands CSS Specificity, then we can talk about how to apply that idea to FE code bases. Have a look at <a class="sc-hDgvsY jFsdGs" href="https://stackoverflow.com/questions/25105736/what-is-the-order-of-precedence-for-css" title="https://stackoverflow.com/questions/25105736/what-is-the-order-of-precedence-for-css" >this</a>, the basic idea is to know which rule gets applied to the broswer when there is more than one option.
+
+The image below is also pretty good as a visual representation of the point I'm trying to make.
+
+![CSS Specificity](/images/css.png "Diagram displaying CSS Specificity")
                   
-Think about the following examples …
+The aim of the list above the image is to place all of the vendor and pre-processed styles in the user-agent category, I am aware that the image and the examples I'm providing do not share a 1:1 relationship, bear with and try to take a higher level view at this point. Think about the following examples:
 
 ```scss
 // main.css
@@ -42,10 +42,7 @@ Think about the following examples …
 ```
 
 It’s a very simple/basic one, but the idea here is that there are two rules for the width of the `<div>`. Which one does the broswer choose to use?
-This example is simple, it's the most recently used rule. So the width would be 80%. 
-
-
-What about if I added these two items…
+This example is simple, it's the most recently used rule. So the width would be 80%. What about if I added these two items...
 
 ```scss
 // main.css
@@ -61,50 +58,50 @@ What about if I added these two items…
 ```
 ```html
 // Home.vue
-<template
+<template>
     <div class="page-container home-page-container" style="width: 1400px;">
         // content here
     </div>
 </template>
 ```
+Would the width be `1400px` or `80%`?
 
+This is why the most important thing to learn in CSS is Specificity. Read the links above, even if you are the Frontend ultima, read them any way. Here is the very short version, in order of importance (meaning items at the bottom of the list will always override items higher up than them).
 
-Would the width be 1400px or 80%?
+### Styles Being Used Within Vue Single File Components
 
-This is why the most important thing to learn in CSS is Specificity. Read the links above, even if you are a super pro, read them any way. Here is the very short version, in order of importance (meaning items at the top of the list will always override items lower down than them)
+So following on from the ideas above, the styles I'm about to talk about will be nearer the bottom of the items in the image. Namely; Document, inline and computed styles. Again, not a 1:1 relationship becuase styles that use the Vue `scoped` attribute effectively short circuit that list, but let's press on and things will become more clear.
+
+Here is the list of style instances that you will end up using in a typical vue-cli codebase, in the same format as the image - lower in the list will override items higher in the list.
 
 <ol class="ak-ol">
     <li>
-        Styles written via Javscript (Vue included!)
+        Styles written inside Vue style blocks.
     </li>
     <li>
-        Inline styles written on HTML elements using the standard HTML syntax
+        Styles written inside Vue `scoped` style blocks.
     </li>
     <li>
-        The !important rule
+        Inline styles written on HTML elements using the standard HTML syntax, but in our case this would most likely become styles added by the Vue `style` attribute.
     </li>
     <li>
-        The order in which the CSS is loaded into the broswer, in our use cases, basically the order in which things are imported. (more on this below)
+        Styles written via Javscript.
     </li>
 </ol>
 
-Which brings us back to the image at the start of this section.
+Which should bring us to a place where the traditional model - shown in the hieracy image above - is now replaced by our new paradigm.
 
-The order in which we import things is important, especially in complex SPA applications like ours.
+> Things to keep in mind. The order in which we import things is important, especially in complex SPA applications like ours. So, we import the third party stuff first, so we can easily override it if we want to customise, and so we don't have to use !important or an inline style to do so. After the imports are set, then the hieracy within our SFC is basically (from low to high): Style blocks, Scoped Style Blocks, Vue `style` attribute, html inline `style` attribute (these two have slighly different syntax) finally styles written via Javascript.
 
-So, we import the third party stuff first, so we can easily override it if we want to customise, and so we don't have to use !important or an inline style to do so.
+### A Note On Performance In Dev Envs
 
-### Where should I write this SCSS, man?
+Want to use a hot reload in dev that takes 20ms instead of 3s...?
 
-Again, the order of imports is important. Once we’ve dealt with the pure third party packages, the basic question become where do I put my SCSS. Read the comments in the image above and lets think more about why we are doing this.
+I suggest trying to minimise the amount of CSS pre-processing you are performing. Use vendor styles that are already compiled and import them early to allow for ease of override. Recently I worked with a code base that made no use of `scoped` style blocks and contained a vast number of .scss files (around 8k lines when compiled). The hot reload was so slow that it became useless, as it was faster to switch tabs and hit refresh in the browser. After completing the steps described above, the hot-reload was back down to matter of milliseconds. It works.
 
-I’m sure all of you have found times recently when you have completed your tickets functionality, the Vue side of things is good, but your CSS just won’t do what you want. It’s most probably because we have too many rules competing for the browsers attention, our CSS bundles are HUGE. Some are above 1mb of CSS uncompressed, that has a huge impact on both runtime performance and the performance of our dev enviroments and sucks the fun out of life as a developer.
+### Write better SCSS - How To Use Your Global Style Directory
 
-Want to use a hot reload in dev that takes 20ms instead of 3s….? 
-
-### Write better SCSS 
-
-Okay, so now we know why its important. Lets think about how to write SCSS in practice. The main goal, the most important factor in deciding what SCSS to write and where to write it, is to make resusable rules. In a perfect world, the /style directory would contain three things:
+In a perfect world, the /style directory would contain three things:
 
 <ol class="ak-ol">
     <li>
@@ -114,11 +111,11 @@ Okay, so now we know why its important. Lets think about how to write SCSS in pr
         Mixins
     </li>
     <li>
-        Default styles written in a very general fashion
+        Default styles written in a very general fashion (examples below)
     </li>
 </ol>
 
-Default styles might look something like this….
+Default styles might look something like this...
 
 ```scss
 // input.scss
@@ -147,41 +144,70 @@ input {
     }
 }
 ```
-The goal here is write styles that apply to most `<inputs>` they would be based on the values from Aduro Design guide. You are trying to acheieve a set up that makes it possible to simply put a `<input>` or `<b-input/>` element on the page, and not have to write any SCSS at all… unless, something about this specific input calls for something different from the usual Aduro input. Maybe the ticket you are working on calls for the :foucs on the input to be red… Thats when you write your styles in the `<style scoped>` block of your Vue component.
-
-Note here that until all our codebases are converted to vue-cli build systems, using $variables in the scoped style blocks should be done using the @use rule, don’t use @import it leads to duplicated styles.
-
-The specificity list within our code.. (items at the top of the list will always override items lower down than them)
-
-<ol class="ak-ol">
-    <li>
-        Scoped style blocks in .vue components
-    </li>
-    <li>
-        General, reusable rules written in our /style folders
-    </li>
-    <li>
-        Bootstrap styles
-    </li>
-</ol>
+The goal here is write styles that apply to most `<inputs>` they could be based on the values from your organisations design guide, possibly. You are trying to acheieve a set up that makes it possible to simply put a `<input>` element on the page, and not have to write any additional styles in your SFC, unless something about this specific input calls for something different from the usual design guide inspired `<input/>`. Maybe the ticket you are working on calls for the :foucs on the input to be red... Thats when you write your styles in the `<style scoped>` block of your Vue component.
 
 
-### Really man, why are we doing this? It feels unnecessary…
+```sass
+// Example of what a typography.sass file might look like
+h1, h2, h3, h4, h5, h6
+    line-height: 1.5
+    font-weight: lighter
+    font-family: $heading-font
 
-The SCSS thing is always a hard battle to win. It’s always much easier to just bang out spagetti SCSS for every single ticket. I understand that. We are doing this because spagetti SCSS is fine for today, and tomorrow, and maybe next week. But what happens after 3 months? 6 months? 2 years?
+h1
+    font-size: $h1-fontsize
+    line-height: 110%
+    margin: ($h1-fontsize / 2.3) 0 ($h2-fontsize / 2.9) 0
+    @media (min-width: 520px) and (max-width: 1080px)
+        font-size: ($h1-fontsize / 1.3)
+    @media (min-width: 0px) and (max-width: 520px)
+        font-size: ($h1-fontsize / 2.3)
 
-We really need to stop making it worse, otherwise the future won’t be much fun at all. I also realise that doing SCSS in the fashion above takes a bit of getting used to and can feel a little complex. All I can say here is please give it a try, communicate more, if you are unsure about where to write a rule, or how to make a rule more general, ask me or one of the more senior guys, or take a break and commit 10 mins of your time to thinking a bit more deeply about what the best way to attack. 
+h2
+    font-size: $h2-fontsize
+    line-height: 110%
+    margin: ($h2-fontsize / 2.3) 0 ($h2-fontsize / 2.9) 0
+h3
+    font-size: $h3-fontsize
+    line-height: 110%
+    margin: ($h3-fontsize / 2.3) 0 ($h2-fontsize / 2.9) 0
+h4
+    font-size: $h4-fontsize
+    line-height: 110%
+    margin: ($h4-fontsize / 2.3) 0 ($h2-fontsize / 2.9) 0
+h5
+    font-size: $h5-fontsize
+    line-height: 110%
+    margin: ($h5-fontsize / 2.3) 0 ($h2-fontsize / 2.9) 0
+h6
+    font-size: $h6-fontsize
+    line-height: 110%
+    margin: ($h6-fontsize / 2.3) 0 ($h2-fontsize / 2.9) 0
 
-Once you understand the model, I’m confident you will start to see how much easier life as FE developer can be when your SCSS files and folders and imports are set up like the above.Also, lets take a second and think about where we are going longer term with our FE code bases.Currently we are using Bootstrap, longer term, the aim is remove it all together. If we start writting the general reusable rules described above, at some stage in the future we will be able to do this.
+a
+    text-decoration: none
+    color: $link
+    font-family: $body-font
+    &:hover
+        color: darken($link, 10)
 
-```scss
-@import "~bootstrap/scss/bootsrap.scss"
+p
+    font-size: 1.5em
+    @media (min-width: 520px) and (max-width: 1080px)
+        font-size: 1.2em
+    @media (min-width: 0px) and (max-width: 520px)
+        font-size: 1em
+strong
+    font-weight: bold
+small
+    font-size: 75%
+    .light
+        font-weight: 300
+    .thin
+        font-weight: 200
 ```
+The goal here is to set reasoanbly wide defaults that apply in _most_ cases. The desired result is reduce the amount of styles being written in our SFC. The same as the `<input>` example above, if for some reason an atypical `<h1>` was require, that is when you would be using the `scoped` style block in your SFC.
 
-Comment out the Bootstrap import, and nothing will change.That day is still a while away, maybe 6 months, maybe more, but the more we commit to improving our SCSS, the faster it will come.Trust me, when it does come it will be a good day for all of us. 
-
-Also in the works is the Figma integration with the Aduro Design Guide via API calls. So, when webpack spins up for you in dev, an API call is made to Figma, which sets all of the $variables in our variables file. You won’t have to worry about colors, or padding values or things like that anymore, the design team sets the values, you use the $variables, development speeds up, we all go to lunch early, everyone is happy. 
-
->But again, the more we participate in writting better SCSS, the faster we can make the big changes above a reality.Let’s make sure working on our codebases stays fun. There’s nothing worse than spending time battling bad CSS. 
-
+> What we are trying to do here is achieve a system where we build smart defaults, that work in as many cases as possible, then when overrides are required, we have the awesome power of the Vue `scoped` style blocks. This will mean our CSS bundle stays small and we don't spend time fighting our CSS. It takes a bit of time to understand but once you hit grok, it's a big win for developer satisfaction - and lead time will drop as well!
+ 
 All told.

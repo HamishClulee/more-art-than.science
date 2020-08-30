@@ -2,7 +2,7 @@
     <div class="list-con">
         <h1>Posts</h1>
         <h5>
-            This are is under construction,
+            This area is under construction,
             please wear hard hat and expect some posts to be a little non-sensical and for things to move 
             and change while I iterate, check back soon!
         </h5>

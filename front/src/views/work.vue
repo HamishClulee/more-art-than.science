@@ -25,6 +25,8 @@
 
         </section>
 
+        <mark class="divider">~</mark>
+
         <h1>Older Projects</h1>
 
         <section class="cards-container">
@@ -53,18 +55,22 @@
 
         </section>
 
+        <mark class="divider">~</mark>
+
         <section class="cards-container">
-
-            <p><em>
-                The sections above are just a sample of things that I've built. 
-                Checkout my 
-                <a href="https://github.com/hamishclulee" target="_blank">
-                    GitHub
-                </a> 
-                to see more.
-            </em></p>
-
+            <p>
+                <em>
+                    The sections above are just a sample of things that I've built. 
+                    Checkout my 
+                    <a href="https://github.com/hamishclulee" target="_blank">
+                        GitHub
+                    </a> 
+                    to see more.
+                </em>
+            </p>
         </section>
+
+        <mark class="divider">~</mark>
 
         <div class="header-icons-home">
             <a href="https://github.com/HamishClulee" target="_blank" class="icon-container-item">
@@ -156,10 +162,13 @@ h1
     width: 98%
     margin-left: auto
     margin-right: auto
+    font-family: $alt-heading-font
+    @media (min-width: 0px) and (max-width: 620px)
+        font-size: 2.5em
 em
     font-style: italic
 .work-con
-    width: 98%
+    width: 95%
     margin-left: auto
     margin-right: auto
     margin-bottom: 50px

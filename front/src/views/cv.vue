@@ -8,17 +8,25 @@
         <h6>New Zealand Citizen.</h6>
         <mark class="divider">~</mark>
         <div class="key-con">
+
             <h6 class="exp-head">Commercial Environments &amp; Production Web Applications</h6>
             <p><em>VueJs</em> - 3+ years</p>
             <p>Javascript - 4+ years</p>
             <p>Java - 4+ years</p>
             <p>SASS/SCSS/CSS 4+ years</p>
-            <p>NodeJs - 2+ years</p>
+            <p>NodeJs - 3+ years</p>
             <p>Linux - 4+ years</p>
+
+            <mark class="divider">~</mark>
+
             <h6 class="exp-head">Other relevant skills</h6>
+            <p>Team Leadership 1+ year</p>
+            <p>Agile 3+ years</p>
+            <p>UI/UX Design 2+ years</p>
             <p>Working Remote - 3+ years</p>
             <p>Web Development - 5+ years</p>
-            <p>Gimp/Inkscape (linux graphics and images editors) - 5+ years</p>
+            <p>Gimp/Inkscape/Abobe suite (graphics and image editors) - 5+ years</p>
+
         </div>
         <mark class="divider">~</mark>
         <div class="job-con" v-for="(v, i) in jobs" :key="i">
@@ -46,12 +54,12 @@ export default {
                 {
                     title: 'Frontend Tech Lead',
                     employer: 'AduroLabs Vietnam',
-                    dates: 'December 2019 - Present',
+                    dates: 'January 2020 - August 2020 (8 Mmonths)',
                     description: [
                         `AduroLabs is a Health and Wellness service provider.`,
-                        `I'm primarily 
+                        `I was primarily 
                         tasked with leadership and mentoring for the front end teams. 
-                        Daily responsibilities include code reviews, coaching, writing 
+                        Daily responsibilities included code reviews, coaching, writing 
                         technical documemtation, making architecture decisions and managing 
                         sprints and tickets.`,
                         `Higher level responsibilities include interviewing 
@@ -64,7 +72,7 @@ export default {
                 {
                     title: 'Lead Frontend Developer',
                     employer: 'Netograph',
-                    dates: 'August 2018 - August 2019 (1 year 1 month)',
+                    dates: 'July 2018 - July 2019 (1 year)',
                     description: [
                         `Netograph provides a web app and API. Their frontend is written in <em>VueJs</em> 
                             and Typescript, backed by a custom webpack configuration. Visualisations are written in 
@@ -204,14 +212,11 @@ export default {
 $heading-vertical-margin: 8px
 $heading-neg-align: -2px
 .cv-con
-    width: 80%
+    width: 92%
     margin-left: auto
     margin-right: auto
+    max-width: 1100px
     margin-top: 90px
-    @media (min-width: 520px) and (max-width: 1080px)
-        width: 90%
-    @media (min-width: 0px) and (max-width: 520px)
-        width: 95%
     h1
         margin-bottom: 5px
         margin-left: $heading-neg-align
@@ -227,7 +232,7 @@ $heading-neg-align: -2px
         font-size: 2.8em
         color: lighten($font, 10)
         @media (min-width: 520px) and (max-width: 1080px)
-            font-size: 2.4em
+            font-size: 2.1em
         @media (min-width: 0px) and (max-width: 520px)
             font-size: 1.8em
     h3
@@ -237,7 +242,7 @@ $heading-neg-align: -2px
         font-size: 2.5em
         color: $secondary
         @media (min-width: 520px) and (max-width: 1080px)
-            font-size: 2.2em
+            font-size: 2em
         @media (min-width: 0px) and (max-width: 520px)
             font-size: 1.6em
     h5

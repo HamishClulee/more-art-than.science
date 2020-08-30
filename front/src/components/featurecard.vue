@@ -44,7 +44,8 @@ export default {
     transition: width 235ms 0ms cubic-bezier(0.4, 0, 0.2, 1)
     border-radius: 3px
     z-index: 1
-    width: 400px
+    width: 95%
+    max-width: 400px
 .image-container
     border-bottom: 1px solid $font-very-light
     background-repeat: no-repeat

@@ -103,7 +103,7 @@ export default {
         text-align: right
         margin: 30px 20px 0 0
         a
-            font-size: 3em
+            font-size: 2em
 .active-route
     display: flex
     flex-direction: column

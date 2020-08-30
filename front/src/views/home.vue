@@ -50,6 +50,9 @@ export default {
 .home-con
     padding: 10px
     height: 97vh
+    margin-top: 50px
+    @media (min-width: 0px) and (max-width: 840px)
+        margin-top: 80px
     width: 90%
     margin-left: auto
     margin-right: auto

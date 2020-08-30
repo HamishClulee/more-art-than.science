@@ -2,8 +2,8 @@
     <div class="list-con">
         <h1>Posts</h1>
         <h5>
-            I am currently actively building this out as a blogging engine,
-            please expect some posts to be a little non-sensical and expect things to move 
+            This are is under construction,
+            please wear hard hat and expect some posts to be a little non-sensical and for things to move 
             and change while I iterate, check back soon!
         </h5>
         <mark class="divider">~</mark>

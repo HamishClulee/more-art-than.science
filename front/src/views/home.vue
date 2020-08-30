@@ -68,16 +68,20 @@ export default {
     margin-top: 80px
 h1, h2, h3
     margin-top: 5px
+h1, h2
+    font-family: $alt-heading-font
 h1
-    font-size: 4em
+    font-size: 3.7em
     margin-bottom: 10px
     margin-top: 10px
+    letter-spacing: 0.2px
+    color: $tertiary-dark
     @media (min-width: 0px) and (max-width: 620px)
         font-size: 3em
 h2
-    font-size: 2.7em
+    font-size: 2.4em
     color: $secondary
-    margin-bottom: 5px
+    margin-bottom: 8px
     @media (min-width: 0px) and (max-width: 620px)
         font-size: 2em
 h3

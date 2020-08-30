@@ -88,7 +88,7 @@ export default {
             hue_txt: [
                 `Hue is Vue component system currently not fully complied into one cohesive repository. 
                 Some examples are available on my GitHub, many more are currently being used and 
-                improved on in other projects.`,
+                improved on in other projects. `,
                 `In time, all the recent work I've done on Welcome QR will be merged with Create MEVN, 
                 and will become an application framework; Hue.`,
             ],
@@ -96,41 +96,37 @@ export default {
                 `Originally this was repo was intended as a product to be used in the tourism 
                 industry. With the advent of Covid, and it's subsequent devastation of said industry, 
                 it has become a place to validate new dev ideas for usage in other current projects; 
-                Create-MEVN and Hue.`,
+                Create-MEVN and Hue. `,
                 `Very much still in development, but the GitHub repo is a good example of recent 
                 code I've written.`,
             ],
             mevn_txt: [
                 `Over the last two years, when starting new projects, or trying out new ideas, 
                 I've started to compile all my best practices into a template repository to 
-                speed things up when starting up.`,
+                speed things up when starting up. `,
                 `The plan is to merge all of the work done on Welcome QR into this repo, and 
                 then to use it as a base for building out Hue.`,
             ],
             ronin_txt: [
                 `Static website and booking application built in October 2019.
                 The clients are a growing accomodation business in Bali. Their primary focus is providing 
-                Co-Live-Co-Work spaces for Digital Nomads.`,
+                Co-Live-Co-Work spaces for Digital Nomads. `,
                 `Covid has seen the 
-                owners unable to continue their business, I've left the static part of the site on
-                the internet.`,
-                `This site is no longer live.`,
+                owners unable to continue their business, this site is no longer live.`,
             ],
             neto_txt: [
                 `I built the frontend of the web app currently  
-                hosted at https://netograph.io (click this tile to visit the live site).`,
+                hosted at https://netograph.io (click this tile to visit the live site). `,
                 `The amount of data in Netograph's DB is staggering, primarily indexed by domain and IP address, 
                 each item has a huge amount of detail associated with it, and each index having a vast length, 
-                think millions of items, in some cases that number runs well into the billions.`,
+                think millions of items, in some cases that number runs well into the billions. `,
                 `The primary frontend challenges revolved around around creating user interfaces that 
                 displayed that level of detail without overwhelming the user.`
                 ],
             babyaid_txt: [
-                `Static website, booking and scheduling app written for a now defunct medical start up in New Zealand.`,
+                `Static website, booking and scheduling app written for a now defunct medical start up in New Zealand. `,
                 `I built a calendar app using a forked Vue calendar found on GitHub. A checkout and payment 
-                system using Stripe and an Admin tool for staff to manage trainer and course sheduling.`,
-                `The app was used by the business for almost a year with very few problems.`,
-                `This site is no longer live.`,
+                system using Stripe and an Admin tool for staff to manage trainer and course sheduling. This site is no longer live.`,
                 ],
             dbb_txt: [
                 `Built while working at Fusion Sport Australia. Allowed customers to create 

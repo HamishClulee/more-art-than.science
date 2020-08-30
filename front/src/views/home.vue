@@ -1,8 +1,12 @@
 <template>
     <div class="home-con">
-        <img src="/images/0.jpeg" class="avatar"/>
-        <h1>Hamish Clulee</h1>
-        <h2>Technical Lead</h2>
+        <div class="avatar-container">
+            <animateavatar></animateavatar>
+            <div class="avatar-text-container">
+                <h1>Hamish Clulee</h1>
+                <h2>Technical Lead</h2>
+            </div>
+        </div>
         <h3>
             Specialising in VueJs, JavaScript and all things 
             Frontend
@@ -33,29 +37,19 @@
 </template>
 
 <script>
+import animateavatar from '../components/animateavatar'
 export default {
     name: 'home',
-    data () {
-        return {
-        }
+    components: {
+        animateavatar,
     },
-    mounted () {
-
-    },
-    methods: {
-    },
-    computed: {
-    }
 }
 </script>
 
 <style lang="sass" scoped>
-.avatar
-    border: 2px solid $font
-    border-radius: 50%
-    width: 175px
 .home-con
     padding: 10px
+    height: 97vh
     width: 90%
     margin-left: auto
     margin-right: auto
@@ -65,19 +59,35 @@ export default {
     justify-content: center
     text-align: center
     overflow-y: hidden
-    margin-top: 80px
-h1, h2, h3
+.avatar-container
+    display: flex
+    flex-direction: row
+    align-items: center
+    @media (min-width: 0px) and (max-width: 840px)
+        flex-direction: column
+.avatar-text-container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-self: center
+h2
     margin-top: 5px
+h3
+    margin-top: 25px
+    font-style: italic
 h1, h2
     font-family: $alt-heading-font
 h1
     font-size: 3.7em
     margin-bottom: 10px
-    margin-top: 10px
+    margin-top: 20px
     letter-spacing: 0.2px
     color: $tertiary-dark
+    width: 30vw
     @media (min-width: 0px) and (max-width: 620px)
         font-size: 3em
+    @media (min-width: 0px) and (max-width: 840px)
+        width: 100%
 h2
     font-size: 2.4em
     color: $secondary

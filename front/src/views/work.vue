@@ -49,7 +49,6 @@
             <featurecard
                 title="@RONIN" sub="Website"
                 :image="roninimg" :text="ronin_txt"
-                aref="https://atronin.space"
             ></featurecard>
 
         </section>
@@ -114,7 +113,9 @@ export default {
                 Co-Live-Co-Work spaces for Digital Nomads.`,
                 `Covid has seen the 
                 owners unable to continue their business, I've left the static part of the site on
-                the internet.`],
+                the internet.`,
+                `This site is no longer live.`,
+            ],
             neto_txt: [
                 `I built the frontend of the web app currently  
                 hosted at https://netograph.io (click this tile to visit the live site).`,
@@ -129,6 +130,7 @@ export default {
                 `I built a calendar app using a forked Vue calendar found on GitHub. A checkout and payment 
                 system using Stripe and an Admin tool for staff to manage trainer and course sheduling.`,
                 `The app was used by the business for almost a year with very few problems.`,
+                `This site is no longer live.`,
                 ],
             dbb_txt: [
                 `Built while working at Fusion Sport Australia. Allowed customers to create 

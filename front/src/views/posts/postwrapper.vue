@@ -3,8 +3,8 @@
         <div class="post-container" v-html="markdown">
             <!-- imported via .md file -->
         </div>
+        <navfoot></navfoot>
     </main>
-
 </template>
 
 <script>
@@ -12,8 +12,13 @@ import { posts } from './posts.js'
 
 import Prism from 'prismjs'
 
+import navfoot from '../../components/navfoot'
+
 export default {
     name: 'betterstyles',
+    components: {
+        navfoot,
+    },
     data () {
         return {
             markdown: null

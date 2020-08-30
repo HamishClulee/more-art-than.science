@@ -16,7 +16,10 @@ $blog-main-font: $heading-font
         display: flex
         align-items: center
         justify-content: center
-        width: 700px
+        width: 80%
+        min-width: 300px
+        max-width: 600px
+
     hr
         border-bottom: 1px solid $primary
         border-left: none
@@ -45,21 +48,37 @@ $blog-main-font: $heading-font
         margin-left: -3px
         margin-bottom: 15px
         margin-top: 40px
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: ($h1-fontsize / 1.3)
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: ($h1-fontsize / 1.6)
     h2
         font-style: normal
         color: lighten($font, 20)
         font-family: $blog-main-font
         font-size: 2rem
         margin: 5px 0 30px -3px
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: ($h2-fontsize / 1.3)
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: ($h2-fontsize / 2)
     h3
         color: darken($font, 30)
         font-size: 1.9em
         font-family: $body-font
         padding-top: 50px
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: ($h3-fontsize / 1.3)
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: ($h3-fontsize / 1.6)
     h4, h5, h6
         font-family: $blog-sub-heading-font
         color: darken($font, 5)
         padding-top: 40px
+        @media (min-width: 520px) and (max-width: 1080px)
+            font-size: ($h5-fontsize / 1.3)
+        @media (min-width: 0px) and (max-width: 520px)
+            font-size: ($h5-fontsize / 2)
     pre
         font-family: "Lucida Console", Monaco, monospace
         line-height: 1.7
@@ -81,6 +100,10 @@ $blog-main-font: $heading-font
         font-family: $blog-main-font
         letter-spacing: normal
         margin: 12px 0
+        @media (min-width: 520px) and (max-width: 1080px)
+            margin: 8px 0
+        @media (min-width: 0px) and (max-width: 520px)
+            margin: 3px 0
     p
         font-size: 1.5rem
         margin: 12px 0
@@ -89,10 +112,18 @@ $blog-main-font: $heading-font
     ul, ol
         font-size: 1.5rem
         margin-left: 20px
+        @media (min-width: 520px) and (max-width: 1080px)
+            margin-left: 10px
+        @media (min-width: 0px) and (max-width: 520px)
+            margin-left: 0px
     blockquote
         border-left: 4px solid $primary
         padding-left: 20px
         margin: 5px 0 20px 20px
+        @media (min-width: 520px) and (max-width: 1080px)
+            margin: 5px 0 15px 15px
+        @media (min-width: 0px) and (max-width: 520px)
+            margin: 2px 0 5px 5px
         p
             margin: 2px 0
             color: $font-light

@@ -1,14 +1,15 @@
 # Organising Style Out Of Chaos
 ## Some things I've learned that might help you to avoid CSS fatigue
 
-> This guide is intended to assist Frontend devs that are looking for guidance around how to organise their CSS and pre-processors. Specifically focused on projects that conform to the `vue-cli` structure, but the majority of info here will be applicable to all Vue codebases that are run behind a build system, basically any code bases that use SFC. I have used a lot of the ideas here with React codebases as well. This more of a guide than a rule book, hopefully you can glean some useful info and find ways to improve your approach.
+> This guide is intended to assist Frontend devs that are looking for guidance around how to organise their CSS and pre-processors. Specifically focused on projects that conform to the `vue-cli` structure, but the majority of info here will be applicable to all Vue codebases that are run behind a build system, basically any code bases that use SFC. I have used a lot of the ideas here with React codebases as well. Hopefully you can glean some useful info and find ways to improve your approach.
 
 ### The Ideal Way To Set Up SCSS Imports and Structure For FE Codebases
-First things first. Let’s get the order of imports in our main.jsentry point JS file correct.
+First things first, let’s get the order of imports in our entry point JS file correct.
 
-1. Import any vendor styles at the top of the entry point javascript file, this means any third party packages, make sure you import the `*.min.css` version, usually found in the `/dist` directory of the packages node_module. You may need to ensure that these imports can be parsed (assuming you are not using `vue-cli`), for memory webpack won't parse non-js imports by default.
+1. Import any vendor styles at the top of the entry point javascript file, this means any third party packages, make sure you import the `*.min.css` version, usually found in the `/dist` directory of the packages node_module. You may need to ensure that these imports can be parsed (if **** using `vue-cli`), for memory webpack won't parse non-js imports by default.
+1. Import any vendor styles at the top of the entry point javascript file, this means any third party packages, make sure you import the `*.min.css` version, usually found in the `/dist` directory of the packages node_module. You may need to ensure that these imports can be parsed (if **not** using `vue-cli`), for memory, webpack won't parse non-js imports by default.
 
-2. Create a folder for your global styles, I lean towards `/src/style/` then create an index file using whatever pre-processor extention you've choosen, for me, genrally it's `index.sass`. Import the index file or whatever its called from the /style directory into the main.js / entry point javascript file, _after the vendor styles_. This order of imports is somewhat subjective dependent on your aims and use cases. I use this order because I feel like I want the ability to overwrite vendor any badly written vendor styles, leveraging the CSS hieracy rule. Ie, imported later = higher in the hieracy.
+2. Create a folder for your global styles, possibly `/src/style/`, but the location and naming isn't important, then create an index file using whatever pre-processor extention you've choosen, for me, genrally it's `index.sass`. Import the index file or whatever it's called from the `/style` directory into the entry point JS file, import it _after_ the vendor styles. This order of imports is somewhat subjective dependent on your aims and use cases. I use this order because I feel like I want the ability to overwrite vendor any badly written vendor styles, leveraging the CSS hieracy rule. Ie, imported later = higher in the hieracy.
 
 3. Commence JavaScript set up as usual.
 
@@ -78,9 +79,9 @@ In a perfect world, the `/style` directory would contain three things:
 - Mixins
 - Default rules written in a broad fashion (examples below) aimed at catching the majority of use cases; typography, forms, containers etc
 
-The grey area begins when you start to think about adding helpers and utility rules to your global styles, it's a good idea and the theory is solid, but it can go too far and slow down the dev environment if not kept in check, speaking from experience, if you have a lot of juniors it will quickly become very grey. I think a good rule of thumb is based on reusage, if you know that the rule you are writting can be used in multiple places, it probably belongs in the global space.
+The grey area begins when you start to think about adding helpers and utility rules to your global styles, it's a good idea and the theory is solid, but it can quickly go too far and slow down the dev environment, speaking from experience, if you have a lot of juniors, things might get messy reasobaly fast. I think a good rule of thumb is based on reusage, if you know that the rule you are writting can be used in multiple places, it probably belongs in the global space. Again, this is more art than science, weigh your needs and use cases and spend some time thinking through the best place to draw the line between global and scoped styles. In my opinion, future proofing your application CSS is a big win for developer happiness, and therefore worth spending some time to formalize and document best practices.
 
-Default styles might look something like this...
+Anyway, default styles found in the global folder might look something like this...
 
 ```scss
 // input.scss
@@ -171,6 +172,20 @@ small
         font-weight: 200
 ```
 The goal here is to set reasoanbly wide defaults that apply in _most_ cases. The desired result is reduce the amount of styles being written in our SFC. The same as the `<input>` example above, if for some reason an atypical `<h1>` was required, you would write the rules in the `scoped` style block in your SFC. Don't forget that because of the order of your imports, and CSS Specificity rules, these global styles are organised in way that encourages them to be overidden within your SFC.
+
+In general, I'll end up with files for:
+
+- Buttons
+- Typography
+- Containers
+- Forms
+- Page Layouts
+- Mixins
+- Variables
+
+When building an app or refactoring a codebase. Where you land depends on your use case, people who are using a UI framework need to think carefully about how they want to oragnise things. All of the major frameworks I've worked with; Bulma, Foundation and Bootstrap feature documentation that directly contradicts what I'm saying here, but here goes... If you _absolutely have to use a framework_ then use the compiled minified version, and import it like a vendor stylesheet. You will feel a lot less pain six months down the track.
+
+>If you want my advise, don't use a framework. The amount of time you spend figting it to achieve what you want and the absolutely insane size of most of them equals a net negative. You'll clip the wings of your Frontend devs, and while you might move a _little_ faster to begin with, you will end up sinking a ton of time into fighting the framework down the road. CSS fatigue is a big factor in making devs unhappy!
 
 ### A Quick Note On Pre-Processor Usage and Global Variables
 

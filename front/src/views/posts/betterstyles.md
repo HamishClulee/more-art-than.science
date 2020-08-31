@@ -20,7 +20,7 @@ The image below is a pretty good visual representation of the point I'm trying t
 
 ![CSS Specificity](/images/css.png "Diagram displaying CSS Specificity")
                   
-The aim of the list - _the order of imports in your entry point_ - is to place all of the vendor and pre-processed styles in the user-agent category seen in the image above, and have the vendor styles placed in the hieracy so they can be overridden without any problems. If the vendor has written questionable CSS - no problem - its easy to override. I am aware that the image and the examples I'm providing do not share a 1:1 relationship, bear with and try to take a higher level view at this point, things will become clear as you read on. Think about the following examples:
+The aim of the list - _the order of imports in your entry point_ - is to place all of the vendor and pre-processed styles in the user-agent category seen in the image above, and have the vendor styles placed in the hieracy so they can be overridden without any problems. If the vendor has written questionable CSS - no problem - it's easy to override. I am aware that the image and the examples I'm providing do not share a 1:1 relationship, bear with and try to take a higher level view at this point, things will become clear as you read on. Think about the following examples:
 
 ```scss
 // main.css
@@ -109,7 +109,7 @@ input {
     }
 }
 ```
-The goal here is write styles that apply to most `<inputs>` they could be based on the values from your organisations design guide (a smart dev might start thinking about using a design-dev integration of some sort here). The example above aims to acheieve a set up where putting am `<input>` element on the page, requires no extra styling, unless something about this specific input calls for something different from the norm. Maybe the ticket you are working on calls for the :foucs on the input to be red... **Thats when you write your styles in the `<style scoped>` block of your Vue component.**
+The goal here is write styles that apply to most `<inputs>` they could be based on the values from your organisations design guide (a smart dev might start thinking about using a design-dev integration of some sort here). The example above aims to achieve a set up where putting am `<input>` element on the page requires no extra styling; unless something about this specific input calls for something different from the norm. Maybe the ticket you are working on calls for the `:foucs` on the input to be red... **Thats when you write your styles in the `<style scoped>` block of your Vue component.**
 
 ```sass
 // Example of what a typography.sass file might look like
@@ -234,14 +234,14 @@ So following on from the ideas above, the styles I'm about to talk about will be
 Here is the list of style instances that you will end up using in a typical vue-cli codebase, in the same format as the image - lower in the list will override items higher in the list.
 
 1. Styles written inside Vue `scoped` style blocks. 
-    - Don't forget that anything written in `scoped` style block will not apply to things like `v-html` content, or any html added dynamically via javascript (useless you are crafty and scrape the `v-data` attribute from the component, and apply it to every node of dynamic html)
+> Don't forget that anything written in `scoped` style block will not apply to things like `v-html` content, or any html added dynamically via javascript (useless you are crafty and scrape the `v-data` attribute from the component, and apply it to every node of dynamic html)
 2. Inline styles written on HTML elements using the standard HTML syntax, but in our case this would most likely become styles added by the Vue `style` attribute.
 3. Styles written via Javscript.
 
 
 Which should bring us to a place where the traditional model - _shown in the hieracy image above_ - is now replaced by our new paradigm.
 
-> Things to keep in mind. The order in which we import things is important, especially in complex SPA applications like ours. So, we import the third party stuff first, so we can easily override it if we want to customise, and so we don't have to use !important or an inline style to do so. After the imports are set, then the hieracy within our SFC is basically (from low to high): Style blocks, Scoped Style Blocks, Vue `style` attribute, html inline `style` attribute (these two have slighly different syntax) finally styles written via Javascript. 
+> Things to keep in mind. The order in which we import things is important, especially in complex SPA applications like ours. So, we import the third party stuff first, so we can easily override it if we want to customise, and so we don't have to use `!important` or an inline style to do so. After the imports are set, then the hieracy within our SFC is basically (from low to high): Scoped Style Blocks, Vue `style` attribute, html inline `style` attribute (these two have a slighly different syntax) and finally styles written via Javascript. 
 
 ### A Note On Performance In Dev Envs
 
@@ -250,5 +250,15 @@ Want to use a hot reload in dev that takes 20ms instead of 3s...?
 I suggest trying to minimise the amount of CSS pre-processing you are performing. Use vendor styles that are already compiled and import them early to allow for ease of override. Recently I worked with a code base that made no use of `scoped` style blocks and contained a vast number of .scss files (around 8k lines when compiled). The hot reload was so slow that it became useless, as it was faster to switch tabs and hit refresh in the browser. After completing the steps described above, the hot-reload was back down to matter of milliseconds. It works.
 
 > What we are trying to do here is achieve a system where we build smart defaults, that work in as many cases as possible, then when overrides are required, we have the awesome power of the Vue `scoped` style blocks. This will mean our CSS bundle stays small and we don't spend time fighting our CSS. It takes a bit of time to understand but once you hit grok, it's a big win for developer satisfaction - and lead time will drop as well!
- 
+
+### Conclusion
+
+It's a lot right? Don't use a framework, don't let juniors loose on CSS things without documentation and training and code reviews to back you up, read a 1000 word post and still don't feel super confident. Welcome to the party. It's complex.
+
+My patter whem it comes to this is two fold:
+- Don't underestimate how badly CSS can end up over time. Bundle size and abject developer frustration are things you really want to avoid if possible.
+- Try to think about this on a high level, things have changed dramatically over the last few years, we have a lot more tools at our disposal, try to use them to improve how you organise things.
+
+> Modern CSS is like an onion, use the layers intelligently or they will make you cry!
+
 All told.

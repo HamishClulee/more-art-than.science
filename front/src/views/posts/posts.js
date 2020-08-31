@@ -20,7 +20,7 @@ export const posts = [
         },
         title: 'Wildcard subdomains on digitalocean using Express and Nginx with Let\'s Encrypt for SSL.',
         date: '29 Aug 2020',
-        brief: 'A quick how to explaining the steps I took to get wildcard subdomains to function as intended when working on welcomeqr.codes',
+        brief: 'A quick explanation of the steps I took to get wildcard subdomains working for welcomeqr.codes',
     },
     {
         linkto: { 
@@ -32,7 +32,7 @@ export const posts = [
         },
         title: 'Tips For New VueJs Players',
         date: '29 Aug 2020',
-        brief: 'Some common mistakes I observe from juniors devs writing Vue; and how to correct them.',
+        brief: 'Some common mistakes I observe from juniors devs and how to correct them, primarily focused on VueJs applications.',
     },
     {
         linkto: { 
@@ -44,6 +44,6 @@ export const posts = [
         },
         title: 'Organising Style Out Of Chaos',
         date: '9 May 2020',
-        brief: 'How I organise my style hieracies in the ever changing world of SPA\'s SFC and NPM packages.',
+        brief: 'How I organise style hierarchy in the ever changing world of SPA\'s SFC and NPM packages.',
     },
 ]

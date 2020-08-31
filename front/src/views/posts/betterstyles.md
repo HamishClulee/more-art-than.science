@@ -6,13 +6,13 @@
 ### The Ideal Way To Set Up SCSS Imports and Structure For FE Codebases
 First things first, let’s get the order of imports - in our entry point JS file - correct.
 
-1. Import any vendor styles at the top of the entry point javascript file, this means any third party packages, make sure you import the `*.min.css` version, usually found in the `/dist` directory of the packages node_module. You may need to ensure that these imports can be parsed (if **not** using `vue-cli`), for memory webpack won't parse non-js imports by default.
+1. Import any vendor styles at the top of the entry point javascript file, this means any third party packages, make sure you import the `*.min.css` version, usually found in the `/dist` directory of the packages node_module. You may need to ensure that these imports can be parsed (if **not** using `vue-cli`), for memory, webpack won't parse non-js imports by default.
 
-2. Create a folder for your global styles, then create an index file using whatever pre-processor extension you've choosen, for me, genrally it's `index.sass`. Import the index file from the `/style` directory into the entry point JS file, import it _after_ the vendor styles.
+2. Create a folder for your global styles, then create an index file using whatever pre-processor extension you've choosen, for me, generally it's `index.sass`. Import the index file from the `/style` directory into the entry point JS file, import it _after_ the vendor styles.
 
 3. Commence JavaScript set up as usual.
 
-That deals with all styles that are global. Next let’s quickly ensure everyone understands CSS Specificity, then we can talk about how to apply that idea to FE code bases. Have a look at [this](https://stackoverflow.com/questions/25105736/what-is-the-order-of-precedence-for-css), the basic idea is to know which rule gets applied to the broswer when there is more than one option.
+Next let’s quickly ensure everyone understands CSS Specificity, then we can talk about how to apply that idea to FE code bases. Have a look at [this](https://stackoverflow.com/questions/25105736/what-is-the-order-of-precedence-for-css), the basic idea is to know which rule gets applied to the broswer when there is more than one option.
 
 ### Reach Grok For CSS Specificity
 
@@ -109,7 +109,13 @@ input {
     }
 }
 ```
-The goal here is write styles that apply to most `<inputs>` they could be based on the values from your organisations design guide (a smart dev might start thinking about using a design-dev integration of some sort here). The example above aims to achieve a set up where putting am `<input>` element on the page requires no extra styling; unless something about this specific input calls for something different from the norm. Maybe the ticket you are working on calls for the `:foucs` on the input to be red... **Thats when you write your styles in the `<style scoped>` block of your Vue component.**
+The goal here is write styles that apply to most `<inputs>`.
+
+They could be based on the values from your organisations design guide (a smart dev might start thinking about using a design-dev integration of some sort here).
+
+The example above aims to achieve a set up where putting am `<input>` element on the page requires no extra styling; unless something about this specific input calls for something different from the norm. Maybe the ticket you are working on calls for the `:foucs` on the input to be red?
+
+**Thats when you write your styles in the `<style scoped>` block of your Vue component.**
 
 ```sass
 // Example of what a typography.sass file might look like
@@ -182,7 +188,7 @@ In general - when building an app or refactoring a codebase - I'll end up with f
 - Mixins
 - Variables
 
-Where you land depends on your use case, people who are using a UI framework need to think carefully about how they want to oragnise things. All of the major frameworks I've worked with; Bulma, Foundation and Bootstrap feature documentation that directly contradicts what I'm saying here, but here goes... If you _absolutely have to use a framework_ then use the compiled minified version, and import it like a vendor stylesheet. You will feel a lot less pain six months down the track.
+Where you land depends on your use case, people who are using a UI framework need to think carefully about how they want to oragnise things. All of the major frameworks I've worked with; Bulma, Foundation and Bootstrap feature documentation that directly contradicts what I'm saying here, but here goes... If you _absolutely have to use a framework_ then cherrypick it outside of the codebase then use the compiled minified result and import it like a vendor stylesheet. You will feel a lot less pain six months down the track.
 
 >If you want my advise, don't use a framework. The amount of time you spend figting it to achieve what you want and the absolutely insane size of most of them equals a net negative. You'll clip the wings of your Frontend devs, and while you might move a _little_ faster to begin with, you will end up sinking a ton of time into fighting the framework down the road. CSS fatigue is a big factor in making devs unhappy!
 
@@ -231,7 +237,7 @@ This is just one of many ways to place global pre-processor variables in scope o
 
 So following on from the ideas above, the styles I'm about to talk about will be nearer the bottom of the hieracy image. Namely; Document, inline and computed styles. Again, not a 1:1 relationship becuase styles that use the Vue `scoped` attribute effectively short circuit that list, but let's press on and things will become more clear.
 
-Here is the list of style instances that you will end up using in a typical vue-cli codebase, in the same format as the image - lower in the list will override items higher in the list.
+Here is the list of style instances that you will end up using in a typical `vue-cli` codebase, in the same format as the image - lower in the list will override items higher in the list.
 
 1. Styles written inside Vue `scoped` style blocks. 
 > Don't forget that anything written in `scoped` style block will not apply to things like `v-html` content, or any html added dynamically via javascript (useless you are crafty and scrape the `v-data` attribute from the component, and apply it to every node of dynamic html)

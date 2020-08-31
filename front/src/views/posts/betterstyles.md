@@ -261,7 +261,7 @@ I suggest trying to minimise the amount of CSS pre-processing you are performing
 
 It's a lot right? Don't use a framework, don't let juniors loose on CSS things without documentation and training and code reviews to back you up, read a 1000 word post and still don't feel super confident. Welcome to the party. It's complex.
 
-My patter whem it comes to this is two fold:
+My patter when it comes to this is two fold:
 - Don't underestimate how badly CSS can end up over time. Bundle size and abject developer frustration are things you really want to avoid if possible.
 - Try to think about this on a high level, things have changed dramatically over the last few years, we have a lot more tools at our disposal, try to use them to improve how you organise things.
 

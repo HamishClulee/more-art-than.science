@@ -49,8 +49,7 @@ export default {
 <style lang="sass" scoped>
 .home-con
     padding: 10px
-    height: 97vh
-    margin-top: 50px
+    margin-top: 120px
     @media (min-width: 0px) and (max-width: 840px)
         margin-top: 80px
     width: 90%
@@ -61,36 +60,41 @@ export default {
     align-items: center
     justify-content: center
     text-align: center
-    overflow-y: hidden
 .avatar-container
     display: flex
     flex-direction: row
     align-items: center
+    margin-left: auto
+    margin-right: auto
     @media (min-width: 0px) and (max-width: 840px)
         flex-direction: column
 .avatar-text-container
     display: flex
     flex-direction: column
     justify-content: center
-    align-self: center
+    align-items: flex-start
+    @media (min-width: 0px) and (max-width: 840px)
+        align-items: center
 h2
     margin-top: 5px
 h3
     margin-top: 25px
+    margin-bottom: 40px
     font-style: italic
 h1, h2
     font-family: $alt-heading-font
+    margin-left: 20px
+    text-align: left
+    @media (min-width: 0px) and (max-width: 840px)
+        margin-left: 0
 h1
     font-size: 3.7em
     margin-bottom: 10px
     margin-top: 20px
     letter-spacing: 0.2px
-    color: $tertiary-dark
-    width: 30vw
+    width: 100%
     @media (min-width: 0px) and (max-width: 620px)
-        font-size: 3em
-    @media (min-width: 0px) and (max-width: 840px)
-        width: 100%
+        font-size: 2.5em
 h2
     font-size: 2.4em
     color: $secondary
@@ -101,15 +105,15 @@ h3
     font-size: 1.8em
     color: lighten($font, 20)
     margin-bottom: 10px
-    @media (min-width: 0px) and (max-width: 620px)
+    @media (min-width: 0px) and (max-width: 684px)
         font-size: 1.5em
 p
     width: 60%
     margin-left: auto
     margin-right: auto
     margin-bottom: 10px
-    @media (min-width: 0px) and (max-width: 620px)
-        width: 80%
+    @media (min-width: 0px) and (max-width: 840px)
+        width: 80vw
 .header-icons
   margin: 10px
 .header-icons-home

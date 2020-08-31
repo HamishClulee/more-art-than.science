@@ -64,7 +64,6 @@ $circle-weight: 3px
     animation: border-ani 6s forwards
 .kz-photo
     display: flex
-    width: 100%
     align-items: center
     justify-content: center
 .svg-image
@@ -72,8 +71,6 @@ $circle-weight: 3px
     height: 200px
     width: 200px
     z-index: 10
-.background
-
 .line
     z-index: 10
     fill: none

@@ -176,7 +176,7 @@ small
     .thin
         font-weight: 200
 ```
-The goal here is to set reasoanbly wide defaults that apply in _most_ cases. The desired result is reduce the amount of styles being written in our SFC. The same as the `<input>` example above, if for some reason an atypical `<h1>` was required, you would write the rules in the `scoped` style block in your SFC. Don't forget that because of the order of your imports, and CSS Specificity rules, these global styles are organised in way that encourages them to be overidden within your SFC.
+The goal here is to set reasoanbly wide defaults that apply in _most_ cases. The desired result is to reduce the amount of styles being written in our SFC. The same as the `<input>` example above, if for some reason an atypical `<h1>` was required, you would write the rules in the `scoped` style block in your SFC. Don't forget that because of the order of your imports, and CSS Specificity rules, these global styles are organised in way that encourages them to be overidden within your SFC.
 
 In general - when building an app or refactoring a codebase - I'll end up with files for:
 

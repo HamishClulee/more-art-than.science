@@ -6,26 +6,46 @@
         <h5>hamish.clulee@gmail.com</h5>
         <h6>Digital Nomad, primarily located in Asia.</h6>
         <h6>New Zealand Citizen.</h6>
+
         <mark class="divider">~</mark>
+
+        <p>
+            Passionate about complex UI/UX builds and optimising Frontend Ops. 
+            I'm well read and versed in Software Engineering as a discipline. 
+            I've learned that the simple things are the most important, 
+            focusing on the basics and building solid foundations is the key. 
+            Complexity is unavoidable, the goal is to solve the problem 
+            without making it worse.
+        </p>
+
+        <p>
+            I'm a big believer that attitude is the main ingredient in creating 
+            good devs and great teams, that attitude can be fostered and that 
+            teaching is the most effective way to continue learning.
+        </p>
+
+        <mark class="divider">~</mark>
+
         <div class="key-con">
 
-            <h6 class="exp-head">Commercial Environments &amp; Production Web Applications</h6>
-            <p><em>VueJs</em> - 3+ years</p>
-            <p>Javascript - 4+ years</p>
-            <p>Java - 4+ years</p>
-            <p>SASS/SCSS/CSS 4+ years</p>
-            <p>NodeJs - 3+ years</p>
-            <p>Linux - 4+ years</p>
+            <div class="key-con-item">
+                <h6 class="exp-head">Production Web Applications</h6>
+                <p>VueJs<span>3+ years</span></p>
+                <p>Javascript<span>4+ years</span></p>
+                <p>Java<span>4+ years</span></p>
+                <p>SASS/SCSS/CSS <span>4+ years</span></p>
+                <p>NodeJs<span>3+ years</span></p>
+                <p>Linux<span>4+ years</span></p>
+            </div>
 
-            <mark class="divider">~</mark>
-
-            <h6 class="exp-head">Other relevant skills</h6>
-            <p>Team Leadership 1+ year</p>
-            <p>Agile 3+ years</p>
-            <p>UI/UX Design 2+ years</p>
-            <p>Working Remote - 3+ years</p>
-            <p>Web Development - 5+ years</p>
-            <p>Gimp/Inkscape/Abobe suite (graphics and image editors) - 5+ years</p>
+            <div class="key-con-item">
+                <h6 class="exp-head">Other Relevant Skills</h6>
+                <p>Team Leadership <span>1+ year</span></p>
+                <p>UI/UX Design <span>2+ years</span></p>
+                <p>Working Remote <span>3+ years</span></p>
+                <p>Web Development <span>5+ years</span></p>
+                <p>Gimp/Inkscape/Adobe suite <span>5+ years</span></p>
+            </div>
 
         </div>
         <mark class="divider">~</mark>
@@ -271,13 +291,6 @@ $heading-neg-align: -2px
         margin-bottom: 15px
     .first-des-para
         margin-top: 20px
-.exp-head
-    font-size: 2em
-    margin: 30px 0 15px !important
-    @media (min-width: 520px) and (max-width: 1080px)
-        font-size: 1.6em
-    @media (min-width: 0px) and (max-width: 520px)
-        font-size: 1.3em
 .refs
    color: lighten($font, 10)
    margin-bottom: 15px
@@ -285,4 +298,40 @@ $heading-neg-align: -2px
    font-style: italic
 p.divider
     font-size: 2.2em
+.key-con
+    display: flex
+    flex-direction: row
+    @media (min-width: 0px) and (max-width: 1215px)
+        flex-direction: column
+    .key-con-item
+        .exp-head
+            font-size: 2em
+            margin: 30px 0 15px !important
+            text-align: left
+            display: flex
+            max-width: 410px
+            width: 95%
+            position: relative
+            left: -4px
+            @media (min-width: 520px) and (max-width: 1080px)
+                font-size: 1.6em
+            @media (min-width: 0px) and (max-width: 520px)
+                font-size: 1.3em
+        display: flex
+        width: 100%
+        flex-direction: column
+        align-items: center
+        @media (min-width: 0px) and (max-width: 1215px)
+            margin-left: 0
+        p
+            max-width: 410px
+            width: 95%
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            span
+                width: 90px
+                display: flex
+                align-items: flex-end
+                font-family: $heading-font
 </style>

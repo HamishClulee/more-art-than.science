@@ -57,6 +57,12 @@ export default {
     min-height: 375px
     p
         font-size: 1em
+    h3
+        font-family: $alt-heading-font
+        font-size: 2em
+    h5
+        color: $secondary
+        font-size: 1.6em
 .button-container
     border-top: 1px solid $font-very-light
     .card-button

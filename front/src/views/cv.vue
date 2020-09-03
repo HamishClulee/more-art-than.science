@@ -9,8 +9,13 @@
 
         <mark class="divider">~</mark>
 
-        <p>
-            Passionate about complex UI/UX builds and optimising Frontend Ops. 
+        <p class="des-text first-des-para">
+            Passionate about all things Frontend.
+            I'm a big believer that attitude is the main ingredient in creating 
+            good devs and great teams, that attitude can be fostered and that 
+            teaching is the most effective way to continue learning.
+        </p>
+        <p class="des-text">
             I'm well read and versed in Software Engineering as a discipline. 
             I've learned that the simple things are the most important, 
             focusing on the basics and building solid foundations is the key. 
@@ -18,32 +23,29 @@
             without making it worse.
         </p>
 
-        <p>
-            I'm a big believer that attitude is the main ingredient in creating 
-            good devs and great teams, that attitude can be fostered and that 
-            teaching is the most effective way to continue learning.
-        </p>
+
 
         <mark class="divider">~</mark>
 
         <div class="key-con">
 
             <div class="key-con-item">
-                <h6 class="exp-head">Production Web Applications</h6>
+                <h6 class="exp-head">Commercial Web Applications</h6>
                 <p>VueJs<span>3+ years</span></p>
-                <p>Javascript<span>4+ years</span></p>
+                <p>Javascript<span>5+ years</span></p>
                 <p>Java<span>4+ years</span></p>
-                <p>SASS/SCSS/CSS <span>4+ years</span></p>
+                <p>SASS/SCSS/CSS <span>5+ years</span></p>
                 <p>NodeJs<span>3+ years</span></p>
-                <p>Linux<span>4+ years</span></p>
+                <p>Linux<span>5+ years</span></p>
             </div>
 
             <div class="key-con-item">
                 <h6 class="exp-head">Other Relevant Skills</h6>
-                <p>Team Leadership <span>1+ year</span></p>
+                <p>Mentoring<span>3+ years</span></p>
+                <p>Coaching<span>4+ years</span>
+                <p>Team Leadership <span>~2 years</span></p>
                 <p>UI/UX Design <span>2+ years</span></p>
                 <p>Working Remote <span>3+ years</span></p>
-                <p>Web Development <span>5+ years</span></p>
                 <p>Gimp/Inkscape/Adobe suite <span>5+ years</span></p>
             </div>
 
@@ -289,6 +291,8 @@ $heading-neg-align: -2px
             font-size: 1.1em
     .des-para
         margin-bottom: 15px
+    .des-text
+        font-family: $heading-font
     .first-des-para
         margin-top: 20px
 .refs

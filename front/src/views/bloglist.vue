@@ -1,11 +1,7 @@
 <template>
     <div class="list-con">
-        <h1>Posts</h1>
-        <h5>
-            This area is under construction,
-            please wear hard hat and expect some posts to be a little non-sensical and for things to move 
-            and change while I iterate, check back soon!
-        </h5>
+        <h1>Blog Posts</h1>
+
         <mark class="divider">~</mark>
         <bloglink
             v-for="(post, index) in posts"
@@ -63,6 +59,8 @@ export default {
     align-items: center
     flex-direction: column
     min-height: 100vh
+    h1
+        font-size: 2.8em
     h5
         font-style: italic
 </style>

@@ -28,7 +28,7 @@ export default {
 
         if (this.getMDFileName()) {
 
-            import(`./${this.getMDFileName()}`)
+            import(`./live/${this.getMDFileName()}`)
                 .then(res => this.markdown = res.default)
                 .then(() => Prism.highlightAll())
 

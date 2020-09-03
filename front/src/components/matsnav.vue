@@ -1,7 +1,7 @@
 <template>
     <div class="navbar-con">
         <div class="navbar-left">
-            <!-- logo placeholder -->
+            <img class="logo" src="/images/mats.png" />
         </div>
         <div class="navbar-right">
             <div class="text-item" :class="checkvis('home') ? 'active-route' : ''">
@@ -184,19 +184,18 @@ export default {
             top: 2px
         height: 2px
         width: 35px
-.logo-con
-    height: 80px
+.navbar-left
     display: flex
     align-items: center
+    justify-content: center
+    margin-left: 20px
     cursor: pointer
     @media (min-width: 0px) and (max-width: 520px)
         height: 60px
     &:hover
         opacity: 0.8
-    img
-        height: 50px
-        @media (min-width: 0px) and (max-width: 520px)
-            height: 30px
+    .logo
+        height: 40px
 
 .text-item
     padding: 0 20px

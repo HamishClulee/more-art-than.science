@@ -3,14 +3,14 @@
         <div class="avatar-container">
             <animateavatar></animateavatar>
             <div class="avatar-text-container">
-                <h1>Hamish Clulee</h1>
-                <h2>Technical Lead</h2>
+                <h1>Technical Lead</h1>
+                <h3>
+                    Specialising in VueJs, JavaScript and all things 
+                    Frontend
+                </h3>
             </div>
         </div>
-        <h3>
-            Specialising in VueJs, JavaScript and all things 
-            Frontend
-        </h3>
+
         <p>
             Passionate about complex UI/UX builds
             and optimising Frontend Ops. 
@@ -49,7 +49,7 @@ export default {
 <style lang="sass" scoped>
 .home-con
     padding: 10px
-    margin-top: 120px
+    min-height: 98vh
     @media (min-width: 0px) and (max-width: 840px)
         margin-top: 80px
     width: 90%
@@ -75,18 +75,14 @@ export default {
     align-items: flex-start
     @media (min-width: 0px) and (max-width: 840px)
         align-items: center
-h2
-    margin-top: 5px
-h3
-    margin-top: 25px
-    margin-bottom: 40px
-    font-style: italic
-h1, h2
+h1, h3
     font-family: $alt-heading-font
     margin-left: 20px
+    margin-bottom: 5px
     text-align: left
     @media (min-width: 0px) and (max-width: 840px)
         margin-left: 0
+        text-align: center
 h1
     font-size: 3.7em
     margin-bottom: 10px
@@ -104,6 +100,8 @@ h2
 h3
     font-size: 1.8em
     color: lighten($font, 20)
+    margin-top: 5px
+    font-style: italic
     margin-bottom: 10px
     @media (min-width: 0px) and (max-width: 684px)
         font-size: 1.5em

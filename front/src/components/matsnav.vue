@@ -1,7 +1,8 @@
 <template>
     <div class="navbar-con">
         <div class="navbar-left">
-            <img class="logo" src="/images/mats.png" />
+            <!-- <img class="logo" src="/images/mats.png" /> -->
+            <animateword class="svg-actual"></animateword>
         </div>
         <div class="navbar-right">
             <div class="text-item" :class="checkvis('home') ? 'active-route' : ''">
@@ -58,8 +59,12 @@
     </div>
 </template>
 <script>
+import animateword from './animateword'
 export default {
     name: 'navbar',
+    components: {
+        animateword,
+    },
     data() {
         return {
             canvasopen: false,
@@ -79,6 +84,8 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+.svg-actual
+    height: 50px
 .canvas-nav
     z-index: 6
     position: absolute
@@ -188,7 +195,7 @@ export default {
     display: flex
     align-items: center
     justify-content: center
-    margin-left: 20px
+    margin-left: -40px
     cursor: pointer
     @media (min-width: 0px) and (max-width: 520px)
         height: 60px

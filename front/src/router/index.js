@@ -8,6 +8,7 @@ const blog = () => import('../views/bloglist')
 const notfound = () => import('../views/notfound')
 const ronin = () => import('../views/projects/ronin')
 const postwrapper = () => import('../views/posts/postwrapper')
+const hackery = () => import('../views/hackery')
 
 Vue.use(Router)
 
@@ -25,6 +26,11 @@ export default new Router({
             path: '/',
             name: 'home',
             component: home
+        },
+        {
+            path: '/hackery',
+            name: 'hackery',
+            component: hackery
         },
         {
             path: '/work',

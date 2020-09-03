@@ -270,6 +270,7 @@ $heading-neg-align: -2px
         margin-bottom: 15px
     .des-text
         font-family: $heading-font
+        text-align: center
     .first-des-para
         margin-top: 20px
 .refs

@@ -12,19 +12,23 @@
         </div>
 
         <p>
-            Passionate about complex UI/UX builds
-            and optimising Frontend Ops. 
-            I'm well read and versed in Software Engineering as a discipline.
+            Passionate about complex UI's, sharpening pencils, 
+            VueJs and all things Javascript. 
+        </p>
+        <p>
             I've learned that the simple things are the most important, focusing on 
             the basics and building solid foundations is the key.
             Complexity is unavoidable, the goal is to solve the problem without 
             making it worse. 
         </p>
         <p>
-            I'm a big believer that attitude is the main ingredient in creating good 
+            A big believer that attitude is the main ingredient in creating good 
             devs and great teams, that attitude can be fostered and that teaching is the 
             most effective way to continue learning.
         </p>
+
+        <mark class="divider">~</mark>
+
         <div class="header-icons-home">
             <a href="https://github.com/HamishClulee" target="_blank" class="icon-container-item">
                 <img src="https://more-art-than.science/images/github.svg" height="30"/>
@@ -49,7 +53,7 @@ export default {
 <style lang="sass" scoped>
 .home-con
     padding: 10px
-    min-height: 94vh
+    min-height: 100vh
     margin-top: 30px
     @media (min-width: 0px) and (max-width: 840px)
         margin-top: 80px

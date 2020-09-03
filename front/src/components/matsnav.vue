@@ -1,7 +1,6 @@
 <template>
     <div class="navbar-con">
         <div class="navbar-left">
-            <!-- <img class="logo" src="/images/mats.png" /> -->
             <animateword class="svg-actual"></animateword>
         </div>
         <div class="navbar-right">
@@ -195,10 +194,8 @@ export default {
     display: flex
     align-items: center
     justify-content: center
-    margin-left: -40px
+    margin-left: 10px
     cursor: pointer
-    @media (min-width: 0px) and (max-width: 520px)
-        height: 60px
     &:hover
         opacity: 0.8
     .logo

@@ -1,7 +1,6 @@
 <template>
 <svg
-   width="323.40063"
-   height="101.12894"
+   style="width: 130px;"
    viewBox="0 0 105 33">
   <g transform="translate(-15.860471,-66.214981)">
     <g

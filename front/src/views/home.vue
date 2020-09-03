@@ -49,10 +49,11 @@ export default {
 <style lang="sass" scoped>
 .home-con
     padding: 10px
-    min-height: 98vh
+    min-height: 94vh
+    margin-top: 30px
     @media (min-width: 0px) and (max-width: 840px)
         margin-top: 80px
-    width: 90%
+    width: 95%
     margin-left: auto
     margin-right: auto
     display: flex
@@ -66,6 +67,7 @@ export default {
     align-items: center
     margin-left: auto
     margin-right: auto
+    margin-bottom: 15px
     @media (min-width: 0px) and (max-width: 840px)
         flex-direction: column
 .avatar-text-container
@@ -99,17 +101,21 @@ h2
         font-size: 2em
 h3
     font-size: 1.8em
-    color: lighten($font, 20)
+    color: lighten($font, 25)
     margin-top: 5px
+    max-width: 600px
     font-style: italic
     margin-bottom: 10px
     @media (min-width: 0px) and (max-width: 684px)
         font-size: 1.5em
 p
-    width: 60%
+    width: 95%
+    min-width: 300px
+    max-width: 800px
     margin-left: auto
     margin-right: auto
     margin-bottom: 10px
+    text-align: left
     @media (min-width: 0px) and (max-width: 840px)
         width: 80vw
 .header-icons

@@ -120,7 +120,7 @@ export default {
                                     letting users find needles in a gigantic haystack, in a manner that was quick and easy.
                                 </li>
                             </ul>`,
-                        `Overall, this was an awesome developement experience, and an unforgettable opportunity.`,
+                        `Overall, this was an awesome development experience, and an unforgettable opportunity.`,
                         `<span class="remote">This was a 100% remote position</span>`,
                     ],
                     references: true,

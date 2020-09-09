@@ -76,7 +76,7 @@ export default {
                 {
                     title: 'Frontend Tech Lead',
                     employer: 'AduroLabs Vietnam',
-                    dates: 'January 2020 - August 2020 (8 Mmonths)',
+                    dates: 'January 2020 - August 2020 (8 Months)',
                     description: [
                         `AduroLabs is a Health and Wellness service provider.`,
                         `I was primarily 
@@ -98,7 +98,7 @@ export default {
                     description: [
                         `Netograph provides a web app and API. Their frontend is written in <em>VueJs</em> 
                             and Typescript, backed by a custom webpack configuration. Visualisations are written in 
-                            d3.js. I designed the UI, and wrote the vast majority frontend code currently hosted at 
+                            d3.js. I designed the UI and website, and wrote the vast majority frontend code currently hosted at 
                             <a href="https://netograph.io" target="_blank">https://netograph.io</a>.`,
                         `Note worthy achievements include:
                             <ul>
@@ -141,8 +141,8 @@ export default {
                             I created a <em>VueJs</em> and Webpack boilerplate to function as a base for new prototypes. 
                             It included a large number of UI components that conformed to the Allow Design styleguide. 
                             The boilerplate was successful in reducing the lag created between 
-                            designers and developers which occured when prototypes didn't match the styleguide, and reduced lead time. 
-                            It remained in usage until the company folded early this year.`,
+                            designers and developers which occured when prototypes didn't match the style guide, and reduced lead time. 
+                            It remained in usage until the company folded early in 2019.`,
                         `Some fun challenges, especially building a component library from scratch.`,
                         `<span class="remote">This was a 100% remote position</span>`,
                     ],
@@ -156,13 +156,13 @@ export default {
                         `Fusion is a sports science company, based in Brisbane, Australia. They sell hardware products 
                             and provide a web app, all designed to 
                             provide athletes and sports teams with competitive advantages.`,
-                        `Please note that Fusion Sport acquired Profiler Corp and all of its staff while I was working 
+                        `Please note that Fusion Sport acquired Profiler Corp and all of it's staff while I was working 
                             at Profiler. I've listed the two as seperate positions. Details of my work at Profiler can be found below.`,
                         `The Fusion Sport Client list is impressive, you can check it out 
                             <a href="https://www.fusionsport.com/clients/" target="_blank">here</a>, 
                             working directly for internationally recognisable sports teams was a real buzz.`,
                         `Note worthy achievements: `,
-                        `Rebuilding the tooling used by the frontend team, 
+                        `Rebuilding the tooling used by the Frontend team, 
                             replacing Gulp and JQuery with 
                             a custom Webpack and <em>VueJs</em> boilerplate. The new boilerplate reduced lead time 
                             by a significant amount, and is still in usage today.`,

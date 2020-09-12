@@ -14,6 +14,18 @@ export const posts = [
         linkto: { 
             name: ROUTER_NAME,
             params: { 
+                urlname: 'one-build-system-to-rule-them',
+                mdfilename: 'sharedcode.md'
+            }
+        },
+        title: 'One Build System - Multiple Apps - Shared Components',
+        date: '12 Sept 2020',
+        brief: 'How to achieve this and how to maintain developer experience while doing so. One linter, one typescript config, one build system for all your frontend reporsitories and a shared compnents/files directory within the same ecosystem.',
+    },
+    {
+        linkto: { 
+            name: ROUTER_NAME,
+            params: { 
                 urlname: 'wildcard-subdomains',
                 mdfilename: 'wildcard.md'
             }

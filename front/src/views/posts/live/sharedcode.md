@@ -56,7 +56,7 @@ It _does work_ but it produced some strange results, and I think I found a bette
 ### The Solution
 Apologies for the pre-amble, here is the lamb sauce.
 
-### `vue.config.js`
+`vue.config.js`
 ```javascript
 const path = require('path')
 
@@ -83,8 +83,7 @@ module.exports = {
     },
 }
 ```
-
-### `package.json`
+`package.json`
 ```javascript
 {
   "name": "example config",
@@ -103,8 +102,7 @@ module.exports = {
   }
 }
 ```
-
-### Folder Structure
+`folder structure`
 ```
 /
     .git

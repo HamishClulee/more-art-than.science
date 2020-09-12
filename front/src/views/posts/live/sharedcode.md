@@ -10,7 +10,7 @@ While working on WelcomeQr I was in a position where it made sense to create a s
 
 So, that is also the _why_. I wanted to manage all my frontend code using one build and lint setup (I'm using typescript so linting etc is a little more complex, and therefore makes using one config all the more important.)
 
-### Things I Tried On The Road To Completetion
+### Things I Tried On The Road To Completion
 
 I generally start things in a naive manner and that's by no means a negative. I find when I'm attempting something that is new to me making a branch and trying to go directly from A to B has been useful and effective. Sometimes it works first time, other times not so much, this was the latter.
 

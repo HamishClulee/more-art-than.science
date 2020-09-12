@@ -53,14 +53,6 @@ module.exports = {
 
 It _does work_ but it produced some strange results, and I think I found a better solution which stayed closer to the documented way of doing things.
 
-### VueCli Limitations
-
-> Disclaimer: I'm really liking VueCli, this is by no means a critique, but like any abstraction designed to make life easier, there is a point where if your use-case becomes sufficently different from the norm the abstraction can actually become a hinderance, I'm getting pretty close to that point, but believe that this item of work should add enough future proofing so that I don't ever hit the tipping point in this project.
-
-Because I have enough experience writing webpack configs to have been able to achieve what I wanted by rewritting from scratch, I did come very close to removing it VueCli altogether, in the end I stayed with it, reasons to follow.
-
-The biggest issue was the inability to configure the `/public` folder, but I got around that using some hackery, and am happy with the results. 
-
 ### The Solution
 Apologies for the pre-amble, here is the lamb sauce.
 

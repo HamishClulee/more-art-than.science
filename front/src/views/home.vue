@@ -5,15 +5,13 @@
             <div class="avatar-text-container">
                 <h1>Technical Lead</h1>
                 <h3>
-                    Specialising in VueJs, JavaScript and all things 
-                    Frontend
+                    Specialised in VueJs.
                 </h3>
             </div>
         </div>
 
         <p>
-            Passionate about complex UI's, sharpening pencils, 
-            VueJs and all things Javascript. 
+            Passionate about complex UI's, sharpening pencils and all things Javascript. 
         </p>
         <p>
             I've learned that the simple things are the most important, focusing on 
@@ -105,7 +103,7 @@ h2
         font-size: 2em
 h3
     font-size: 1.8em
-    color: lighten($font, 25)
+    color: $secondary
     margin-top: 5px
     max-width: 600px
     font-style: italic

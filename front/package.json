@@ -11,7 +11,7 @@
     "@recursivecoconut/vueimage": "^0.1.2",
     "axios": "^0.18.1",
     "babel-plugin-prismjs": "^2.0.1",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.23.0",
     "path": "^0.12.7",
     "node-sass": "^4.14.1",
     "sass-loader": "^7.1.0",
